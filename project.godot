@@ -26,6 +26,7 @@ project/assembly_name="C3 Winter Project"
 [global_group]
 
 Player=""
+
 [input]
 
 Dash={

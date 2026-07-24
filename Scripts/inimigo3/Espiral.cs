@@ -6,7 +6,6 @@ using System.Security.Cryptography.X509Certificates;
 public partial class Espiral : Node2D
 {
 	[Export] public PackedScene enemy = GD.Load<PackedScene>("res://Scenes/Entities/inimigo3/inimigo_3.tscn"); //objeto que será spwanado
-
 	[Export] public Node2D anchor; //usado para manter o centro do surgimento no player
 	
 	Node2D ponto; 
@@ -30,11 +29,11 @@ public partial class Espiral : Node2D
 	public void instance(int pos)
 	{
 		//instancia
-		Node2D instance = (Node2D) enemy.Instantiate();	
+		Inimigo3 instance = (Inimigo3) enemy.Instantiate();	
 		//alterar a posicao
 		instance.Position = ponto.Position;
 		//atribuindo o alvo
-		
+		instance.target = anchor;
 		//print 
 		GD.Print($"ponto{pos}");
 		//addicioando

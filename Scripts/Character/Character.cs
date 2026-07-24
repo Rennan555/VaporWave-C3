@@ -16,6 +16,7 @@ public abstract partial class Character : CharacterBody2D
 			velocity += GetGravity() * (float)delta;
 		}
 		
+		Velocity = velocity;
 		MoveAndSlide();
 	}
 }

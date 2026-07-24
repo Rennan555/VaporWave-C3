@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cg6h7yhluk1va"]
+
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="1_tleey"]
+[ext_resource type="PackedScene" uid="uid://coeu7u28fa6qj" path="res://Scenes/Entities/Mascot/Mascot.tscn" id="2_8s0c0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(1246, 309)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
+size = Vector2(116, 510)
+
+[sub_resource type="Curve2D" id="Curve2D_tleey"]
+bake_interval = 512.0
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 364, 383, 0, 0, 0, 0, 395.0139, 336.99997, 0, 0, 0, 0, 457.04166, 326.99997, 0, 0, 0, 0, 528.6944, 328.99997, 0, 0, 0, 0, 581.09717, 351.99997, 0, 0, 0, 0, 597.13885, 388.99997, 0, 0, 0, 0, 646.3333, 338.99997, 0, 0, 0, 0, 741.51385, 321.99997, 0, 0, 0, 0, 814.2361, 338.99997, 0, 0, 0, 0, 878.4028, 389.99997, 0, 0, 0, 0, 923.3194, 334.99997, 0, 0, 0, 0, 988.55554, 320.99997, 0, 0, 0, 0, 1038.8195, 321.99997, 0, 0, 0, 0, 1092.2916, 389.99997, 0, 0, 0, 0, 1024.9166, 340.99997, 0, 0, 0, 0, 999.25, 256.99997, 0, 0, 0, 0, 1034.5416, 205.99998, 0, 0, 0, 0, 1097.6388, 179.99998, 0, 0, 0, 0, 1019.56946, 134.99998, 0, 0, 0, 0, 990.69446, 68.99999, 0, 0, 0, 0, 1098.7083, -22.999998)
+}
+point_count = 21
+
+[node name="MascotTest" type="Node2D" unique_id=1003143019]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=547332501]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=643864818]
+position = Vector2(599, 572)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1536505810]
+position = Vector2(15, 235)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1755465098]
+position = Vector2(1146, 209)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("1_tleey")]
+position = Vector2(189, 299)
+
+[node name="MascotBody" parent="." unique_id=1403908216 node_paths=PackedStringArray("Path", "PathFollow") instance=ExtResource("2_8s0c0")]
+position = Vector2(364, 383)
+Path = NodePath("../PathsNode/Path2D")
+PathFollow = NodePath("../PathsNode/Path2D/PathFollow2D")
+
+[node name="PathsNode" type="Node2D" parent="." unique_id=576699250]
+
+[node name="Path2D" type="Path2D" parent="PathsNode" unique_id=453820718]
+position = Vector2(38.636353, 0)
+scale = Vector2(0.9350649, 1)
+curve = SubResource("Curve2D_tleey")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathsNode/Path2D" unique_id=1157394694]
+position = Vector2(364, 383)
+rotation = -0.9775865

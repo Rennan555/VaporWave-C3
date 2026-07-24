@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://v5swx05ffkfp"]
+
+[ext_resource type="Script" uid="uid://sjxbeliijtbc" path="res://Scripts/inimigo3/Espiral.cs" id="1_5xs74"]
+[ext_resource type="Texture2D" uid="uid://bkd2ykqnha40y" path="res://Scenes/Entities/inimigo3/prototipoinimigo3/Archimedean_spiral.svg" id="1_8d8xw"]
+
+[node name="Espiral" type="Node2D" unique_id=256898189]
+script = ExtResource("1_5xs74")
+
+[node name="ponto1" type="Node2D" parent="." unique_id=18956552]
+
+[node name="ponto2" type="Node2D" parent="." unique_id=851438672]
+position = Vector2(-1, 58)
+
+[node name="ponto3" type="Node2D" parent="." unique_id=1945141238]
+position = Vector2(76, 0)
+
+[node name="ponto4" type="Node2D" parent="." unique_id=559689455]
+position = Vector2(-3, -97)
+
+[node name="ponto5" type="Node2D" parent="." unique_id=1969560477]
+position = Vector2(-121, -1)
+
+[node name="ponto6" type="Node2D" parent="." unique_id=844433686]
+position = Vector2(-4, 133)
+
+[node name="ponto7" type="Node2D" parent="." unique_id=162125651]
+position = Vector2(157, 0)
+
+[node name="ponto8" type="Node2D" parent="." unique_id=1444938108]
+position = Vector2(-6, -174)
+
+[node name="ponto9" type="Node2D" parent="." unique_id=842466046]
+position = Vector2(-203, 2)
+
+[node name="ponto10" type="Node2D" parent="." unique_id=152483600]
+position = Vector2(-1, 207)
+
+[node name="ponto11" type="Node2D" parent="." unique_id=1992333640]
+position = Vector2(230, 3)
+
+[node name="ArchimedeanSpiral" type="Sprite2D" parent="." unique_id=131518300]
+visible = false
+position = Vector2(18, 18)
+scale = Vector2(0.7953846, 0.77166665)
+texture = ExtResource("1_8d8xw")
+
+[node name="Timer" type="Timer" parent="." unique_id=625730040]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

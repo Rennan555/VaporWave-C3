@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgx2y6wnkp7rg"]
+[gd_scene format=3 uid="uid://cgx2y6wnkp7rg"]
 
 [ext_resource type="PackedScene" uid="uid://djsvet7ji413l" path="res://Scenes/Entities/Character/Character.tscn" id="1_7kpwk"]
 [ext_resource type="Script" uid="uid://utemeyqi07q" path="res://Scripts/Player/Player.cs" id="2_pmdnf"]
@@ -8,11 +8,26 @@
 radius = 66.0
 height = 138.0
 
-[node name="PlayerBody" instance=ExtResource("1_7kpwk")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(128, 65)
+
+[node name="PlayerBody" unique_id=2041397587 instance=ExtResource("1_7kpwk")]
 script = ExtResource("2_pmdnf")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_tm67w")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+[node name="TestSprite" type="Sprite2D" parent="." index="2" unique_id=287378986]
 texture = ExtResource("3_akw4a")
+
+[node name="ActionArea" type="Area2D" parent="." index="3" unique_id=514338346]
+collision_layer = 2
+collision_mask = 2
+
+[node name="ActionCollision" type="CollisionShape2D" parent="ActionArea" index="0" unique_id=1176722715]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, 32.5)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[connection signal="DamageTaken" from="." to="." method="TakeDamage"]

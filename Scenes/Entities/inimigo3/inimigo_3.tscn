@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://crqaqox6llos5"]
+
+[ext_resource type="Script" uid="uid://dqkknmlp21iu5" path="res://Scripts/inimigo3/Inimigo3.cs" id="1_ieqnb"]
+[ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="2_4cybe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1t688"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4cybe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndkhv"]
+size = Vector2(114, 116)
+
+[node name="inimigo3" type="CharacterBody2D" unique_id=841623304]
+scale = Vector2(0.64, 0.48000002)
+script = ExtResource("1_ieqnb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=569488787]
+sprite_frames = SubResource("SpriteFrames_1t688")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=168186752]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1441256720]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1146727078]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

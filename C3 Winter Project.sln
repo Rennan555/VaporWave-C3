@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C3 Winter Project", "C3 Winter Project.csproj", "{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{7B6E00AA-B972-4F27-BC99-7CF4B18DE914}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

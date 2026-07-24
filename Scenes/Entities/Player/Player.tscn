@@ -1,5 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgx2y6wnkp7rg"]
+[gd_scene load_steps=5 format=3 uid="uid://cgx2y6wnkp7rg"]
 
 [ext_resource type="PackedScene" uid="uid://djsvet7ji413l" path="res://Scenes/Entities/Character/Character.tscn" id="1_7kpwk"]
+[ext_resource type="Script" uid="uid://utemeyqi07q" path="res://Scripts/Player/Player.cs" id="2_pmdnf"]
+[ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="3_akw4a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm67w"]
+radius = 66.0
+height = 138.0
 
 [node name="PlayerBody" instance=ExtResource("1_7kpwk")]
+script = ExtResource("2_pmdnf")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CapsuleShape2D_tm67w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("3_akw4a")

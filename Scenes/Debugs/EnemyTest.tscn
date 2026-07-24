@@ -25,8 +25,14 @@ shape = SubResource("RectangleShape2D_r4htj")
 position = Vector2(1168, 226)
 shape = SubResource("RectangleShape2D_r4htj")
 
-[node name="CascadeBody" parent="." unique_id=570213956 instance=ExtResource("1_wkv1f")]
-position = Vector2(943, 78)
-
 [node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("2_cafok")]
 position = Vector2(218, 199)
+
+[node name="CascadeBody" parent="." unique_id=570213956 instance=ExtResource("1_wkv1f")]
+position = Vector2(235, 3)
+
+[node name="CascadeBody2" parent="." unique_id=1262838470 instance=ExtResource("1_wkv1f")]
+position = Vector2(228, -307)
+
+[node name="CascadeBody8" parent="." unique_id=1637810224 instance=ExtResource("1_wkv1f")]
+position = Vector2(231, -162)

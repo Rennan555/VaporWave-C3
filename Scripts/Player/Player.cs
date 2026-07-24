@@ -4,7 +4,7 @@ using System;
 public partial class Player : Character
 {
 	// Status do Player
-	private float Life = 10.0f;
+	private float Life = 3.0f;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
@@ -74,9 +74,19 @@ public partial class Player : Character
 		MoveAndSlide();
 	}
 	
+	public void PlayerDie()
+	{
+		QueueFree();
+	}
+	
 	public void TakeDamage(float damage)
 	{
-		GD.Print($"Dano tomado: {damage}");
+		GD.Print($"Dano tomado: {damage}, Vida: {this.Life}");
 		this.Life -= damage;
+		
+		if (this.Life <= 0)
+		{
+			PlayerDie();
+		}
 	}
 }

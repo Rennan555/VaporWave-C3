@@ -5,6 +5,7 @@ public partial class Player : Character
 {
 	// Status do Player
 	private float Life = 3.0f;
+	private float DashSpeed = 1200.0f;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
@@ -12,6 +13,10 @@ public partial class Player : Character
 	// Timers do wall jump
 	private const float WallJumpDuration = 0.2f;
 	private float WallJumpTimer = 0.0f;
+	
+	// Timers de dash
+	private const float DashDuration = 0.2f;
+	private float DashTimer = 0.0f;
 	
 	// Signal de Dano tomado
 	[Signal]
@@ -34,9 +39,10 @@ public partial class Player : Character
 		}
 		
 		// Timer do Wall Jump
-		if (this.WallJumpTimer > 0.0f)
+		if (this.WallJumpTimer >= 0.0f || this.DashTimer >= 0.0f)
 		{
 			this.WallJumpTimer -= (float)delta;
+			this.DashTimer -= (float)delta;
 		}
 		else
 		{
@@ -53,6 +59,20 @@ public partial class Player : Character
 			
 			this.CanWalk = false;
 			this.WallJumpTimer = WallJumpDuration;
+		}
+		
+		// Dash
+		if (Input.IsActionJustPressed("Dash") && !IsOnWall())
+		{
+			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+			
+			if (direction != Vector2.Zero)
+			{
+				velocity.X = direction.X * this.DashSpeed;
+				
+				this.CanWalk = false;
+				this.DashTimer = DashDuration;
+			}
 		}
 		
 		// Movimentação horizontal
@@ -74,11 +94,13 @@ public partial class Player : Character
 		MoveAndSlide();
 	}
 	
+	// Função de morte
 	public void PlayerDie()
 	{
 		QueueFree();
 	}
 	
+	// Função de dano tomado
 	public void TakeDamage(float damage)
 	{
 		GD.Print($"Dano tomado: {damage}, Vida: {this.Life}");

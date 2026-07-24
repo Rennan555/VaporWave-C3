@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://v5swx05ffkfp"]
 
-[ext_resource type="Script" uid="uid://sjxbeliijtbc" path="res://Scenes/Entities/inimigo3/prototipoinimigo3/Espiral.cs" id="1_5xs74"]
+[ext_resource type="Script" uid="uid://sjxbeliijtbc" path="res://Scripts/inimigo3/Espiral.cs" id="1_5xs74"]
 [ext_resource type="Texture2D" uid="uid://bkd2ykqnha40y" path="res://Scenes/Entities/inimigo3/prototipoinimigo3/Archimedean_spiral.svg" id="1_8d8xw"]
 
 [node name="Espiral" type="Node2D" unique_id=256898189]
@@ -39,6 +39,7 @@ position = Vector2(-1, 207)
 position = Vector2(230, 3)
 
 [node name="ArchimedeanSpiral" type="Sprite2D" parent="." unique_id=131518300]
+visible = false
 position = Vector2(18, 18)
 scale = Vector2(0.7953846, 0.77166665)
 texture = ExtResource("1_8d8xw")

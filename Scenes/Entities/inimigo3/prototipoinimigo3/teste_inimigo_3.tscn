@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhub43w20ogrf"]
 
 [ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="1_vghjm"]
-[ext_resource type="PackedScene" uid="uid://v5swx05ffkfp" path="res://Scenes/Entities/inimigo3/prototipoinimigo3/espiral.tscn" id="3_75ilv"]
+[ext_resource type="PackedScene" uid="uid://v5swx05ffkfp" path="res://Scenes/Entities/inimigo3/espiral.tscn" id="3_75ilv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1t688"]
 animations = [{
@@ -34,7 +34,8 @@ sprite_frames = SubResource("SpriteFrames_1t688")
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_ndkhv")
 
-[node name="Espiral" parent="." unique_id=256898189 instance=ExtResource("3_75ilv")]
+[node name="Espiral" parent="." unique_id=256898189 node_paths=PackedStringArray("anchor") instance=ExtResource("3_75ilv")]
 position = Vector2(-3, 0)
+anchor = NodePath("../player")
 
 [editable path="Espiral"]

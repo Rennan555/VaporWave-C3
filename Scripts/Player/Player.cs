@@ -3,12 +3,19 @@ using System;
 
 public partial class Player : Character
 {
+	// Status do Player
+	private float Life = 10.0f;
+	
 	// Flags de movimentação
 	private bool CanWalk = true;
 	
 	// Timers do wall jump
 	private const float WallJumpDuration = 0.2f;
 	private float WallJumpTimer = 0.0f;
+	
+	// Signal de Dano tomado
+	[Signal]
+	public delegate void DamageTakenEventHandler(float damage);
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -65,5 +72,11 @@ public partial class Player : Character
 		// Aplicação do movimento
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+	
+	public void TakeDamage(float damage)
+	{
+		GD.Print($"Dano tomado: {damage}");
+		this.Life -= damage;
 	}
 }

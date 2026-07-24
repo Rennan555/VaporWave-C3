@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c1kupk7n0mgrk"]
+
+[ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="1_wkv1f"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_cafok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(1237.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
+size = Vector2(70, 595)
+
+[node name="EnemyTest" type="Node2D" unique_id=2077062812]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=242743892]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1364259749]
+position = Vector2(596, 505)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=752745902]
+position = Vector2(-10, 242.5)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1646020128]
+position = Vector2(1168, 226)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="CascadeBody" parent="." unique_id=570213956 instance=ExtResource("1_wkv1f")]
+position = Vector2(943, 78)
+
+[node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("2_cafok")]
+position = Vector2(218, 199)

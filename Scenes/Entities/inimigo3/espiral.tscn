@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://v5swx05ffkfp"]
 
-[ext_resource type="Script" uid="uid://sjxbeliijtbc" path="res://Scripts/inimigo3/Espiral.cs" id="1_5xs74"]
 [ext_resource type="Texture2D" uid="uid://bkd2ykqnha40y" path="res://Scenes/Entities/inimigo3/prototipoinimigo3/Archimedean_spiral.svg" id="1_8d8xw"]
+[ext_resource type="Script" uid="uid://sjxbeliijtbc" path="res://Scripts/inimigo3/Espiral.cs" id="1_l0uv4"]
 
 [node name="Espiral" type="Node2D" unique_id=256898189]
-script = ExtResource("1_5xs74")
+script = ExtResource("1_l0uv4")
 
 [node name="ponto1" type="Node2D" parent="." unique_id=18956552]
 
@@ -45,6 +45,12 @@ scale = Vector2(0.7953846, 0.77166665)
 texture = ExtResource("1_8d8xw")
 
 [node name="Timer" type="Timer" parent="." unique_id=625730040]
+wait_time = 1.5
+autostart = true
+
+[node name="end_timer" type="Timer" parent="." unique_id=214555593]
+wait_time = 15.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="end_timer" to="." method="_on_end_timer_timeout"]

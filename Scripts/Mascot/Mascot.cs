@@ -11,7 +11,7 @@ public partial class Mascot : Character
 	
 	private bool IsActive = false;
 	private bool IsMoving = false;
-	private int Speed = 5;
+	private int MoveSpeed = 5;
 	
 	// Signal de começar caminho do movimento
 	[Signal]
@@ -38,7 +38,7 @@ public partial class Mascot : Character
 	{
 		if (this.IsMoving)
 		{
-			this.PathFollow.Progress += this.Speed;
+			this.PathFollow.Progress += this.MoveSpeed;
 		}
 	}
 	

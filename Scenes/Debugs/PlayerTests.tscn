@@ -5,24 +5,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u41ig"]
 size = Vector2(1290, 336)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
-size = Vector2(306, 617)
+[node name="PlayerTests" type="Node2D" unique_id=1246655042]
 
-[node name="PlayerTests" type="Node2D" unique_id=478402797]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=698589074]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=903196475]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1270176161]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1312549921]
 position = Vector2(626, 629)
 shape = SubResource("RectangleShape2D_u41ig")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1904450868]
-position = Vector2(-143, 298.5)
-shape = SubResource("RectangleShape2D_nfe6u")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=365056142]
-position = Vector2(1254, 265)
-shape = SubResource("RectangleShape2D_nfe6u")
-
-[node name="PlayerBody" parent="." unique_id=1208665562 instance=ExtResource("1_mm54d")]
+[node name="PlayerBody" parent="." unique_id=94755587 instance=ExtResource("1_mm54d")]
 position = Vector2(599, 231)

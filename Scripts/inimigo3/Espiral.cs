@@ -59,4 +59,9 @@ public partial class Espiral : Node2D
 		}
 		
 	}
+
+	public void _on_end_timer_timeout()
+	{
+		QueueFree();
+	}
 }

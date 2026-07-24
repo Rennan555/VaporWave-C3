@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clpyqt5h3oor4"]
 
-[ext_resource type="Script" uid="uid://bqllvy8wqq4la" path="res://Scripts/start_menu.gd" id="1_esbur"]
+[ext_resource type="Script" uid="uid://dm4di514lua2v" path="res://Scripts/telas/StartMenu.cs" id="1_esbur"]
 [ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/windows7teste.jpeg" id="2_brn6y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndkhv"]
@@ -60,16 +60,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
 text = "Start
 "
 
-[node name="Opcoes" type="Button" parent="VBoxContainer" unique_id=240510280]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.07683603, 0.076835744, 0.0768358, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
-text = "Opcoes
-"
-
 [node name="Creditos" type="Button" parent="VBoxContainer" unique_id=1893044104]
 layout_mode = 2
 size_flags_vertical = 3
@@ -109,3 +99,7 @@ theme_override_font_sizes/font_size = 46
 text = "NOSSO JOGO"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

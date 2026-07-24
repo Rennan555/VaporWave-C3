@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dbhgdgllufyph"]
+
+[ext_resource type="Script" uid="uid://bnp7wslja0730" path="res://Scripts/Levels/GlobalWorldEnvironment.cs" id="1_moq07"]
+
+[sub_resource type="Environment" id="Environment_r71ys"]
+background_mode = 3
+adjustment_enabled = true
+
+[node name="GlobalWorldEnvironment" type="WorldEnvironment" unique_id=1050102785]
+environment = SubResource("Environment_r71ys")
+script = ExtResource("1_moq07")

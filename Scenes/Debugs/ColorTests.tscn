@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4u8cwybthkqv"]
+
+[ext_resource type="Texture2D" uid="uid://bs8haai4twcl4" path="res://Assets/Sprites/{94500AFE-3D73-45D2-B0BB-49DD4D71FBA8}.png" id="1_6w4iy"]
+[ext_resource type="Script" uid="uid://bemlyrtg7dpfp" path="res://Scripts/Levels/ColorTests.cs" id="1_gin6m"]
+[ext_resource type="PackedScene" uid="uid://dbhgdgllufyph" path="res://Scenes/GlobalWorldEnvironment.tscn" id="3_gin6m"]
+
+[node name="ColorTests" type="Node2D" unique_id=630584184]
+script = ExtResource("1_gin6m")
+
+[node name="GlobalWorldEnvironment" parent="." unique_id=1050102785 instance=ExtResource("3_gin6m")]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=362171377]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=999750870]
+position = Vector2(245, 232)
+texture = ExtResource("1_6w4iy")

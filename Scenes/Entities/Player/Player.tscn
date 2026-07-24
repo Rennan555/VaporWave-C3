@@ -16,3 +16,5 @@ shape = SubResource("CapsuleShape2D_tm67w")
 
 [node name="TestSprite" type="Sprite2D" parent="." index="2" unique_id=287378986]
 texture = ExtResource("3_akw4a")
+
+[connection signal="DamageTaken" from="." to="." method="TakeDamage"]

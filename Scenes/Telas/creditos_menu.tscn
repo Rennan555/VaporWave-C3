@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cobj30b2syx3g"]
 
-[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/windows7teste.jpeg" id="1_8fkid"]
-[ext_resource type="Script" uid="uid://cty0agckabt62" path="res://Scripts/telas/OpcoesMenu.cs" id="1_tembf"]
+[ext_resource type="Script" uid="uid://cty0agckabt62" path="res://Scripts/telas/Creditos_menu.cs" id="1_6u6l2"]
+[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/windows7teste.jpeg" id="2_o6x05"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tembf"]
-texture = ExtResource("1_8fkid")
+texture = ExtResource("2_o6x05")
 modulate_color = Color(0.427493, 0.42749307, 0.42749307, 1)
 
 [node name="Creditos_menu" type="Control" unique_id=57772042]
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tembf")
+script = ExtResource("1_6u6l2")
 
 [node name="Panel" type="Panel" parent="." unique_id=327711753]
 layout_mode = 0

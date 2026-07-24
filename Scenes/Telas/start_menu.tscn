@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://clpyqt5h3oor4"]
+
+[ext_resource type="Script" uid="uid://bqllvy8wqq4la" path="res://Scripts/start_menu.gd" id="1_esbur"]
+[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/windows7teste.jpeg" id="2_brn6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndkhv"]
+texture = ExtResource("2_brn6y")
+modulate_color = Color(0.427493, 0.42749307, 0.42749307, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t688"]
+bg_color = Color(0.96474224, 0.96474224, 0.9647421, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.7)
+
+[node name="StartMenu" type="Control" unique_id=1077087620]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_esbur")
+
+[node name="Panel" type="Panel" parent="." unique_id=824350559]
+layout_mode = 0
+offset_left = -577.0
+offset_top = -330.0
+offset_right = 575.0
+offset_bottom = 330.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ndkhv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1756707882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -4.0
+offset_right = 206.5
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=574952219]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.07683603, 0.076835744, 0.0768358, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
+text = "Start
+"
+
+[node name="Opcoes" type="Button" parent="VBoxContainer" unique_id=240510280]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.07683603, 0.076835744, 0.0768358, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
+text = "Opcoes
+"
+
+[node name="Creditos" type="Button" parent="VBoxContainer" unique_id=1893044104]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.07683603, 0.076835744, 0.0768358, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
+text = "Creditos
+"
+
+[node name="Sair" type="Button" parent="VBoxContainer" unique_id=1487030370]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.07683603, 0.076835744, 0.0768358, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1t688")
+text = "Sair
+"
+
+[node name="TextureRect" type="Label" parent="." unique_id=1324287344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -192.0
+offset_right = 51.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_font_sizes/font_size = 46
+text = "NOSSO JOGO"
+horizontal_alignment = 1
+vertical_alignment = 1

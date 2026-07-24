@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgx2y6wnkp7rg"]
+[gd_scene format=3 uid="uid://cgx2y6wnkp7rg"]
 
 [ext_resource type="PackedScene" uid="uid://djsvet7ji413l" path="res://Scenes/Entities/Character/Character.tscn" id="1_7kpwk"]
 [ext_resource type="Script" uid="uid://utemeyqi07q" path="res://Scripts/Player/Player.cs" id="2_pmdnf"]
@@ -8,11 +8,36 @@
 radius = 66.0
 height = 138.0
 
-[node name="PlayerBody" instance=ExtResource("1_7kpwk")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmdnf"]
+size = Vector2(5, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akw4a"]
+size = Vector2(5, 137)
+
+[node name="PlayerBody" unique_id=2041397587 instance=ExtResource("1_7kpwk")]
 script = ExtResource("2_pmdnf")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_tm67w")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+[node name="TestSprite" type="Sprite2D" parent="." index="2" unique_id=287378986]
 texture = ExtResource("3_akw4a")
+
+[node name="WallDetectors" type="Node2D" parent="." index="3" unique_id=856998766]
+
+[node name="LeftArea" type="Area2D" parent="WallDetectors" index="0" unique_id=2002520018]
+
+[node name="LeftCollision" type="CollisionShape2D" parent="WallDetectors/LeftArea" index="0" unique_id=951251749]
+position = Vector2(-69, 0)
+shape = SubResource("RectangleShape2D_pmdnf")
+
+[node name="RightArea" type="Area2D" parent="WallDetectors" index="1" unique_id=919879264]
+
+[node name="RightCollision" type="CollisionShape2D" parent="WallDetectors/RightArea" index="0" unique_id=1063322570]
+position = Vector2(69, 0)
+shape = SubResource("RectangleShape2D_akw4a")
+
+[connection signal="body_entered" from="WallDetectors/LeftArea" to="." method="LeftWallEntered"]
+[connection signal="body_exited" from="WallDetectors/LeftArea" to="." method="LeftWallExited"]
+[connection signal="body_entered" from="WallDetectors/RightArea" to="." method="RightWallEntered"]
+[connection signal="body_exited" from="WallDetectors/RightArea" to="." method="RightWallExited"]

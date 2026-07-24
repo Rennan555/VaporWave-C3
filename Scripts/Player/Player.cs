@@ -7,6 +7,9 @@ public partial class Player : Character
 	private float Life = 3.0f;
 	private float DashSpeed = 1200.0f;
 	
+	// Node de Player
+	private Area2D ActionArea;
+	
 	// Flags de movimentação
 	private bool CanWalk = true;
 	
@@ -21,6 +24,11 @@ public partial class Player : Character
 	// Signal de Dano tomado
 	[Signal]
 	public delegate void DamageTakenEventHandler(float damage);
+	
+	public override void _Ready()
+	{
+		this.ActionArea = GetNode<Area2D>("ActionArea");
+	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
@@ -86,6 +94,19 @@ public partial class Player : Character
 			else
 			{
 				velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			}
+		}
+		
+		if (Input.IsActionJustPressed("Action"))
+		{
+			Godot.Collections.Array<Node2D> bodies = this.ActionArea.GetOverlappingBodies();
+			foreach (Node2D body in bodies)
+			{
+				GD.Print(body);
+				if (body is Mascot mascoteNode)
+				{
+					mascoteNode.EmitSignal(Mascot.SignalName.StartPath);
+				}
 			}
 		}
 		

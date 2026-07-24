@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cj72yh0ls4qhl"]
+
+[node name="LevelManager" type="Node2D"]
+
+[node name="CurrentSceneNode" type="Node2D" parent="."]
+
+[node name="ShaderLayer" type="CanvasLayer" parent="."]
+
+[node name="HudLayer" type="CanvasLayer" parent="."]

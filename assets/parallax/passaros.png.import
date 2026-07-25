@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bid0ctehk7324"
-path="res://.godot/imported/passaros.png-1221f78c6516dd202957a5a4d6344d59.ctex"
+path="res://.godot/imported/passaros.png-cc09c6fcd3c8453cb5db23289e52a1b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/passaros.png"
-dest_files=["res://.godot/imported/passaros.png-1221f78c6516dd202957a5a4d6344d59.ctex"]
+source_file="res://Assets/parallax/passaros.png"
+dest_files=["res://.godot/imported/passaros.png-cc09c6fcd3c8453cb5db23289e52a1b0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf61hfvr4u3jt"
-path="res://.godot/imported/fundo(fixo).png-9a9cd3a9a6f18b35d174f93dee879dc5.ctex"
+path="res://.godot/imported/fundo(fixo).png-4bced731de312de3bfcc7fac36072ca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/fundo(fixo).png"
-dest_files=["res://.godot/imported/fundo(fixo).png-9a9cd3a9a6f18b35d174f93dee879dc5.ctex"]
+source_file="res://Assets/parallax/fundo(fixo).png"
+dest_files=["res://.godot/imported/fundo(fixo).png-4bced731de312de3bfcc7fac36072ca9.ctex"]
 
 [params]
 

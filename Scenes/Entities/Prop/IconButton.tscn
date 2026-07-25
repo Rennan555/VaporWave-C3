@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c07lyu7a2cgw1"]
+
+[ext_resource type="Script" uid="uid://dawuou3758jyu" path="res://Scripts/Prop/IconButton.cs" id="1_rglew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rglew"]
+size = Vector2(68, 72)
+
+[node name="IconButton" type="Sprite2D" unique_id=1508867998]
+script = ExtResource("1_rglew")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1736328721]
+
+[node name="ClickCollision" type="CollisionShape2D" parent="ClickArea" unique_id=1333885681]
+shape = SubResource("RectangleShape2D_rglew")
+
+[connection signal="input_event" from="ClickArea" to="." method="OnClick"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="EnterHoover"]
+[connection signal="mouse_exited" from="ClickArea" to="." method="ExitHoover"]

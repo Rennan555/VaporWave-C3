@@ -3,9 +3,17 @@ using System;
 
 public partial class LevelManager : Node2D
 {
+	// Atributos de Node
 	[Export]
 	private PackedScene PackedCurrentLevel = null;
 	private Node2D SceneNode;
+	
+	// Atributos dos Levels
+	private int TotalScore = 0;
+	
+	// Signal de receber pontuação do Level
+	[Signal]
+	public delegate void CallSumTotalScoreEventHandler(int score);
 	
 	// Signal para mudar de Level
 	[Signal]
@@ -13,6 +21,10 @@ public partial class LevelManager : Node2D
 	
 	public override void _Ready()
 	{
+		// Conecta Signal de somar pontuação
+		this.CallSumTotalScore += SumTotalScore;
+		
+		// Inicializa Level inicial
 		this.SceneNode = GetNode<Node2D>("CurrentSceneNode");
 		
 		if (this.PackedCurrentLevel == null)
@@ -40,5 +52,11 @@ public partial class LevelManager : Node2D
 		
 		Node2D newNode = pack.Instantiate<Node2D>();
 		this.SceneNode.AddChild(newNode);
+	}
+	
+	// Soma a pontuação nova com a total atual
+	public void SumTotalScore(int score)
+	{
+		this.TotalScore += score;
 	}
 }

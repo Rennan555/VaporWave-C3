@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://clrsmjn7fb6yb"]
+
+[ext_resource type="Script" uid="uid://csr57ncsixdk1" path="res://Scripts/popups/PopUpNotas.cs" id="1_5qhmd"]
+[ext_resource type="Texture2D" uid="uid://cxfohk7v2jcp5" path="res://assets/prototipoJv/blocodenotas-removebg-preview.png" id="2_lwjty"]
+[ext_resource type="Texture2D" uid="uid://dnwb44ibhl558" path="res://assets/prototipoJv/blocosdenotaaberto.png" id="3_sxx1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t688"]
+size = Vector2(42, 42)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1t688"]
+texture = ExtResource("3_sxx1x")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfd8d"]
+bg_color = Color(0.85991913, 0.22598252, 0.31095326, 1)
+
+[node name="pop-up_notas" type="Area2D" unique_id=610167202]
+script = ExtResource("1_5qhmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=213722880]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_lwjty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1713998952]
+position = Vector2(-3, 1)
+shape = SubResource("RectangleShape2D_1t688")
+
+[node name="popUp" type="Control" parent="." unique_id=1711430761]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 82.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="popUp" unique_id=1450530960]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -19.0
+offset_right = 131.0
+offset_bottom = 98.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1t688")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="popUp" unique_id=318643157]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -6.0
+offset_right = 105.0
+offset_bottom = 74.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 8
+text = "bla bla bla"
+
+[node name="close" type="Button" parent="popUp" unique_id=1351815671]
+layout_mode = 0
+offset_left = 112.0
+offset_top = -19.0
+offset_right = 130.0
+offset_bottom = -5.0
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfd8d")
+text = "X"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1219962737]
+
+[connection signal="pressed" from="popUp/close" to="." method="_on_close_pressed"]

@@ -6,6 +6,8 @@ public partial class Level : Node2D
 	// Atributos de Node
 	public PackedScene nextScenePacked;
 	private LevelManager ManagerNode;
+	private Camera2D CameraNode;
+	private Player CameraAnchor;
 	
 	// Atributos de Node Platform
 	[Export]
@@ -29,6 +31,12 @@ public partial class Level : Node2D
 		{
 			GD.PrintErr("Scene geral do Level não é LevelManager!");
 		}
+		
+		// Pega Camera2D
+		this.CameraNode = GetNode<Camera2D>("Camera2D");
+		
+		// Pega Anchor
+		this.CameraAnchor = GetNode<Player>("PlayerBody");
 	}
 	
 	public override void _Process(double delta)

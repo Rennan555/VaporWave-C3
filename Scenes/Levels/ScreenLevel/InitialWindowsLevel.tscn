@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://vd4tme4opb0f"]
 
 [ext_resource type="PackedScene" uid="uid://csofj0qteb266" path="res://Scenes/Levels/ScreenLevel/ScreenLevel.tscn" id="1_tuahw"]
-[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="2_bknb0"]
 [ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="3_8ew78"]
 [ext_resource type="Script" uid="uid://dawuou3758jyu" path="res://Scripts/Prop/IconButton.cs" id="3_80en1"]
+[ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://assets/parallax/fundo(fixo).png" id="4_8ew78"]
+[ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/parallax/montanhas.png" id="5_80en1"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="6_wkp85"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(1358, 20)
 
 [node name="InitialWindowsLevel" unique_id=67583462 instance=ExtResource("1_tuahw")]
 
@@ -19,5 +24,35 @@ script = ExtResource("3_80en1")
 metadata/_custom_type_script = "uid://dawuou3758jyu"
 
 [node name="ImageRect" parent="BackgroundLayer" parent_id_path=PackedInt32Array(510691960) index="0" unique_id=398374015]
-texture = ExtResource("2_bknb0")
-expand_mode = 5
+texture = ExtResource("4_8ew78")
+
+[node name="Parallax2D" type="Parallax2D" parent="." index="3" unique_id=651628425]
+scroll_scale = Vector2(2, 0)
+repeat_size = Vector2(1152, 0)
+ignore_camera_scroll = true
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" index="0" unique_id=1433669469]
+offset_right = 1152.0
+offset_bottom = 722.0
+texture = ExtResource("5_80en1")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." index="4" unique_id=564741697]
+scroll_scale = Vector2(8, 1)
+repeat_size = Vector2(100, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" index="0" unique_id=604942691]
+position = Vector2(1125, 326)
+texture = ExtResource("3_8ew78")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5" unique_id=1929484733]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1256221486]
+position = Vector2(643, 566)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="PlayerBody" parent="." index="6" unique_id=2041397587 instance=ExtResource("6_wkp85")]
+position = Vector2(337, 491)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerBody" index="4" unique_id=1859518059]
+position_smoothing_enabled = true

@@ -25,6 +25,12 @@ GlobalWorldEnvironment="*uid://dbhgdgllufyph"
 
 [display]
 
+<<<<<<< HEAD
+=======
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/mode=2
+>>>>>>> a04489bf49fd3fd80b2b627d7b1ad4e61c821cfa
 window/stretch/mode="viewport"
 
 [dotnet]

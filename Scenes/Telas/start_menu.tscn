@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://clpyqt5h3oor4"]
 
 [ext_resource type="Script" uid="uid://dm4di514lua2v" path="res://Scripts/telas/StartMenu.cs" id="1_esbur"]
-[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/windows7teste.jpeg" id="2_brn6y"]
+[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="2_brn6y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndkhv"]
 texture = ExtResource("2_brn6y")

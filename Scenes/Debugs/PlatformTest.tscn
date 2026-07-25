@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wniegbosldgo"]
+
+[ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_fvk7i"]
+[ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="2_a6s87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(1438, 354)
+
+[node name="PlatformLevel" unique_id=762110100 instance=ExtResource("1_fvk7i")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=1813560943]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=33955955]
+position = Vector2(689, 702)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="CascadeBody" parent="." index="3" unique_id=570213956 instance=ExtResource("2_a6s87")]
+position = Vector2(448, 271)
+
+[node name="CascadeBody2" parent="." index="4" unique_id=1442756380 instance=ExtResource("2_a6s87")]
+position = Vector2(847, 142)

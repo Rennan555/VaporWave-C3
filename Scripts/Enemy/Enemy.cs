@@ -3,11 +3,21 @@ using System;
 
 public abstract partial class Enemy : Character
 {
-	[Export]
-	private float Damage = 1.0f;
+	// Atributos de Node
+	private Level CurrentLevel;
+	
+	// Atributos de inimigos
+	[Export] private float Damage = 1.0f;
+	[Export] private int Score = 10;
 	
 	public override void _Ready()
 	{
+		// Pega Level pai
+		this.CurrentLevel = GetNode<Level>("..");
+		if (!(CurrentLevel is Level))
+		{
+			GD.PrintErr($"Inimigo '{this.Name}' instaciado em Scene não Level!");
+		}
 	}
 	
 	public override void _Process(double delta)
@@ -26,5 +36,6 @@ public abstract partial class Enemy : Character
 	public void EnemyDie()
 	{
 		QueueFree();
+		this.CurrentLevel.EmitSignal(Level.SignalName.CallSumLevelScore, this.Score);
 	}
 }

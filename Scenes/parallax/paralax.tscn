@@ -1,57 +1,52 @@
 [gd_scene format=3 uid="uid://dcqj031jphkce"]
 
-[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="1_a4m7g"]
-[ext_resource type="Texture2D" uid="uid://cp7jl36vmp1p1" path="res://assets/prototipoJv/windowsantigo.png" id="2_xq14w"]
-[ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="3_l72mr"]
+[ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://assets/parallax/fundo(fixo).png" id="1_o5mcb"]
+[ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/parallax/montanhas.png" id="2_tlutm"]
+[ext_resource type="Texture2D" uid="uid://bid0ctehk7324" path="res://assets/parallax/passaros.png" id="3_bcn7b"]
+[ext_resource type="Texture2D" uid="uid://dhxugqcjwblcq" path="res://assets/parallax/palmeiras.png" id="4_saadj"]
 
 [node name="Node" type="Node" unique_id=896252009]
 process_priority = -10
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1849141293]
-
-[node name="Paralax" type="CanvasLayer" parent="." unique_id=1130997966]
-follow_viewport_enabled = true
+[node name="Paralax" type="Node2D" parent="." unique_id=61838307]
+position = Vector2(342, 186)
 
 [node name="fundo" type="Parallax2D" parent="Paralax" unique_id=1435483187]
 scroll_scale = Vector2(0, 0)
-repeat_size = Vector2(1152, 0)
+repeat_size = Vector2(480, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Paralax/fundo" unique_id=1221044297]
-texture = ExtResource("1_a4m7g")
-
-[node name="sol" type="Parallax2D" parent="Paralax" unique_id=1981898923]
-scroll_scale = Vector2(0, 0)
-repeat_size = Vector2(1152, 0)
-repeat_times = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="Paralax/sol" unique_id=1563053312]
-position = Vector2(-24, 190)
-texture = ExtResource("2_xq14w")
+texture = ExtResource("1_o5mcb")
 
 [node name="motanhas" type="Parallax2D" parent="Paralax" unique_id=400016252]
 scroll_scale = Vector2(0.4, 0.4)
-repeat_size = Vector2(1152, 0)
+scroll_offset = Vector2(-203, -137)
+repeat_size = Vector2(480, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Paralax/motanhas" unique_id=2021653220]
-position = Vector2(-24, 190)
-texture = ExtResource("2_xq14w")
+texture = ExtResource("2_tlutm")
+centered = false
 
 [node name="passaros" type="Parallax2D" parent="Paralax" unique_id=943751196]
 scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(1152, 0)
+scroll_offset = Vector2(-271, -72)
+repeat_size = Vector2(480, 0)
 autoscroll = Vector2(-50, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Paralax/passaros" unique_id=1696650464]
-position = Vector2(367, 386)
-texture = ExtResource("3_l72mr")
+texture = ExtResource("3_bcn7b")
+centered = false
 
 [node name="arvore" type="Parallax2D" parent="Paralax" unique_id=1334298117]
 scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(1152, 0)
+scroll_offset = Vector2(-234, -157)
+repeat_size = Vector2(480, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Paralax/arvore" unique_id=563731625]
-position = Vector2(-586, -183)
-texture = ExtResource("2_xq14w")
+texture = ExtResource("4_saadj")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=675961700]

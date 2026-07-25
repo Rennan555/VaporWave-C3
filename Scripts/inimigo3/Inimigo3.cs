@@ -17,7 +17,7 @@ public partial class Inimigo3 : CharacterBody2D
 	public override void _Process(double delta)
 	{
 		//seguir o player
-		try {
+		/*try {
 			if (target != null)
 		{
 			Vector2 dir = (target.GlobalPosition - GlobalPosition).Normalized();
@@ -26,7 +26,13 @@ public partial class Inimigo3 : CharacterBody2D
 		} finally
 		{
 			GD.Print("AVISO: alvo eliminado");
-			target = null;
+			//target = null;
+		}*/
+
+		if (target != null)
+		{
+			Vector2 dir = (target.GlobalPosition - GlobalPosition).Normalized();
+			Velocity = dir * speed;
 		}
 		MoveAndSlide();
 
@@ -39,7 +45,7 @@ public partial class Inimigo3 : CharacterBody2D
 	//detectar a colisão player
 	public void _on_area_2d_body_entered(Node2D body)
 	{	
-		try {
+		/*try {
 		if (body.IsInGroup("Player"))
 		{
 			GD.Print("player detectado");
@@ -48,7 +54,19 @@ public partial class Inimigo3 : CharacterBody2D
 		} finally
 		{
 			GD.Print("AVISO: alvo eliminado da area");
-			target = null;
+			//target = null;
+		}*/
+
+		if (body.IsInGroup("Player"))
+		{
+			GD.Print("player detectado");
+			Player player = (Player)body;
+			player.EmitSignal(Player.SignalName.DamageTaken, 0.5f);
+			if (player.Life <= 0)
+			{
+				GetParent<Espiral>().QueueFree();
+				
+			}
 		}
 		
 	}

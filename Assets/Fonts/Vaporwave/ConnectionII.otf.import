@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bd66wpl62j3uk"
-path="res://.godot/imported/Hey November.ttf-f6e58cb0db1ae0962fb96f3c044d5385.fontdata"
+uid="uid://defl8ntqmwnlm"
+path="res://.godot/imported/ConnectionII.otf-5825a384c9ffb6d90318b57d44f5fb24.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Ruindows UI/Hey November.ttf"
-dest_files=["res://.godot/imported/Hey November.ttf-f6e58cb0db1ae0962fb96f3c044d5385.fontdata"]
+source_file="res://Assets/Fonts/Vaporwave/ConnectionII.otf"
+dest_files=["res://.godot/imported/ConnectionII.otf-5825a384c9ffb6d90318b57d44f5fb24.fontdata"]
 
 [params]
 

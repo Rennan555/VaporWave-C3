@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmm0ogfdl00q"
-path="res://.godot/imported/taskbar(fixo).png-f9180e6f96246fdd1378d486f5672908.ctex"
+uid="uid://dt2lhq74icp17"
+path="res://.godot/imported/discordia.png-2faa5987ceb82917091e1770712e5515.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/taskbar(fixo).png"
-dest_files=["res://.godot/imported/taskbar(fixo).png-f9180e6f96246fdd1378d486f5672908.ctex"]
+source_file="res://Assets/Sprites/Tiles/discordia.png"
+dest_files=["res://.godot/imported/discordia.png-2faa5987ceb82917091e1770712e5515.ctex"]
 
 [params]
 

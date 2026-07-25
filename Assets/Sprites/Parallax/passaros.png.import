@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v6uaycjf84nw"
-path="res://.godot/imported/tela de batalha.png-64fca6420ab3856cf2cd561ca44124e8.ctex"
+uid="uid://bid0ctehk7324"
+path="res://.godot/imported/passaros.png-4d12b79675ab53517052cc9dfc2e3e37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/tela de batalha.png"
-dest_files=["res://.godot/imported/tela de batalha.png-64fca6420ab3856cf2cd561ca44124e8.ctex"]
+source_file="res://Assets/Sprites/Parallax/passaros.png"
+dest_files=["res://.godot/imported/passaros.png-4d12b79675ab53517052cc9dfc2e3e37.ctex"]
 
 [params]
 

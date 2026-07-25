@@ -23,6 +23,13 @@ config/icon="res://icon.svg"
 
 GlobalWorldEnvironment="*uid://dbhgdgllufyph"
 
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/mode=2
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="C3 Winter Project"

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cf7orv16qiy8w"]
+
+[ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_0oyoc"]
+[ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://assets/parallax/fundo(fixo).png" id="2_dbtqp"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="3_govnp"]
+[ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/parallax/montanhas.png" id="4_5fivx"]
+[ext_resource type="Texture2D" uid="uid://crmm0ogfdl00q" path="res://assets/parallax/taskbar(fixo).png" id="4_tlagd"]
+[ext_resource type="Texture2D" uid="uid://dhxugqcjwblcq" path="res://assets/parallax/palmeiras.png" id="5_5yij4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(537, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
+size = Vector2(20, 302)
+
+[node name="PlatformLevel" unique_id=762110100 instance=ExtResource("1_0oyoc")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=187374743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=2058050555]
+position = Vector2(248.5, 280)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=353889361]
+position = Vector2(-10, 147)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=1236127815]
+position = Vector2(492, 129)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="PlayerBody" parent="." index="3" unique_id=2041397587 instance=ExtResource("3_govnp")]
+z_index = 1
+position = Vector2(241, 253)
+
+[node name="Node2D" type="Node2D" parent="." index="4" unique_id=1240612664]
+
+[node name="FundoTexture" type="TextureRect" parent="Node2D" index="0" unique_id=1690197123]
+z_index = -4
+offset_right = 482.0
+offset_bottom = 270.0
+texture = ExtResource("2_dbtqp")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" index="1" unique_id=1787635562]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_tlagd")
+
+[node name="CoqueiroParallax" type="Parallax2D" parent="Node2D" index="2" unique_id=742910936]
+z_index = -2
+scroll_scale = Vector2(1.3, 1)
+repeat_size = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CoqueiroParallax" index="0" unique_id=1277245514]
+position = Vector2(240, 135)
+texture = ExtResource("5_5yij4")
+
+[node name="MontanhaParallax" type="Parallax2D" parent="Node2D" index="3" unique_id=1188104790]
+z_index = -3
+scroll_scale = Vector2(0.5, 0)
+repeat_size = Vector2(480, 0)
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/MontanhaParallax" index="0" unique_id=626717837]
+position = Vector2(240, 135)
+texture = ExtResource("4_5fivx")

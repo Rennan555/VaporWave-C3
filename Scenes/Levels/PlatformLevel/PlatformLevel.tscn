@@ -17,3 +17,10 @@ offset_bottom = 120.0
 [node name="ScoreLabel" type="Label" parent="HudLayer/HContainer" unique_id=1108530965]
 layout_mode = 2
 text = "Score: "
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=11803801]
+position = Vector2(240, 135)
+limit_left = 0
+limit_top = 0
+limit_right = 480
+limit_bottom = 270

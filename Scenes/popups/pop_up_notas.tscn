@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://csr57ncsixdk1" path="res://Scripts/popups/PopUpNotas.cs" id="1_5qhmd"]
 [ext_resource type="Texture2D" uid="uid://cxfohk7v2jcp5" path="res://assets/prototipoJv/blocodenotas-removebg-preview.png" id="2_lwjty"]
 [ext_resource type="Texture2D" uid="uid://dnwb44ibhl558" path="res://assets/prototipoJv/blocosdenotaaberto.png" id="3_sxx1x"]
+[ext_resource type="PackedScene" uid="uid://cfbb3rxrxkfmk" path="res://Scenes/popups/pop_windows_11.tscn" id="4_lwjty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t688"]
 size = Vector2(42, 42)
@@ -13,8 +14,66 @@ texture = ExtResource("3_sxx1x")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfd8d"]
 bg_color = Color(0.85991913, 0.22598252, 0.31095326, 1)
 
+[sub_resource type="Animation" id="Animation_5qhmd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sxx1x"]
+resource_name = "full"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_lwjty"]
+resource_name = "write"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sxx1x"]
+_data = {
+&"RESET": SubResource("Animation_5qhmd"),
+&"full": SubResource("Animation_sxx1x"),
+&"write": SubResource("Animation_lwjty")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qhmd"]
+size = Vector2(50, 50)
+
 [node name="pop-up_notas" type="Area2D" unique_id=610167202]
 script = ExtResource("1_5qhmd")
+show = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=213722880]
 scale = Vector2(0.2, 0.2)
@@ -42,31 +101,61 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="popUp" unique_id=1450530960]
 layout_mode = 0
 offset_left = -1.0
-offset_top = -19.0
-offset_right = 131.0
-offset_bottom = 98.0
+offset_top = -21.0
+offset_right = 188.0
+offset_bottom = 139.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_1t688")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="popUp" unique_id=318643157]
+[node name="close" type="Button" parent="popUp/Panel" unique_id=1351815671]
 layout_mode = 0
-offset_left = 3.0
-offset_top = -6.0
-offset_right = 105.0
-offset_bottom = 74.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 8
-text = "bla bla bla"
-
-[node name="close" type="Button" parent="popUp" unique_id=1351815671]
-layout_mode = 0
-offset_left = 112.0
-offset_top = -19.0
-offset_right = 130.0
-offset_bottom = -5.0
+offset_left = 171.0
+offset_top = -5.0
+offset_right = 189.0
+offset_bottom = 9.0
 theme_override_font_sizes/font_size = 9
 theme_override_styles/normal = SubResource("StyleBoxFlat_nfd8d")
 text = "X"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1219962737]
+[node name="RichTextLabel" type="RichTextLabel" parent="popUp/Panel" unique_id=318643157]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 15.0
+offset_right = 180.0
+offset_bottom = 151.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 8
+text = "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
 
-[connection signal="pressed" from="popUp/close" to="." method="_on_close_pressed"]
+[node name="AnimationText" type="AnimationPlayer" parent="popUp/Panel/RichTextLabel" unique_id=1077225397]
+libraries/ = SubResource("AnimationLibrary_sxx1x")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1219962737]
+zoom = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="." unique_id=1038713279]
+one_shot = true
+
+[node name="ActionArea" type="Area2D" parent="." unique_id=1292555426]
+
+[node name="ActioCollision" type="CollisionShape2D" parent="ActionArea" unique_id=716402768]
+shape = SubResource("RectangleShape2D_5qhmd")
+
+[node name="Label" type="Label" parent="ActionArea" unique_id=612923623]
+visible = false
+offset_left = -50.0
+offset_top = -54.0
+offset_right = -10.0
+offset_bottom = -31.0
+text = "(E) to interact"
+
+[node name="Pop_windows11" parent="." unique_id=1455502249 instance=ExtResource("4_lwjty")]
+visible = false
+
+[connection signal="pressed" from="popUp/Panel/close" to="." method="_on_close_pressed"]
+[connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]
+[connection signal="body_exited" from="ActionArea" to="." method="_on_action_area_body_exited"]
+
+[editable path="Pop_windows11"]

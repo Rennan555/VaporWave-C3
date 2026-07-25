@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bd66wpl62j3uk"
-path="res://.godot/imported/Hey November.ttf-f39429d9709cef8404a901e99ca20505.fontdata"
+path="res://.godot/imported/Hey November.ttf-6fef3fcfae2613974c0440f33ee4605b.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/Hey November.ttf"
-dest_files=["res://.godot/imported/Hey November.ttf-f39429d9709cef8404a901e99ca20505.fontdata"]
+source_file="res://assets/Fonts/Ruindows UI/Hey November.ttf"
+dest_files=["res://.godot/imported/Hey November.ttf-6fef3fcfae2613974c0440f33ee4605b.fontdata"]
 
 [params]
 

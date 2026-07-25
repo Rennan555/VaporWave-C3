@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8liauj6bae10"
-path="res://.godot/imported/tela de batalhatesteverde.png-dc1017231390507bc8d9f9a1167a1f41.ctex"
+path="res://.godot/imported/tela de batalhatesteverde.png-0c84e5d1e2f0a14bf79a1c4e648d3e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/parallax/tela de batalhatesteverde.png"
-dest_files=["res://.godot/imported/tela de batalhatesteverde.png-dc1017231390507bc8d9f9a1167a1f41.ctex"]
+source_file="res://assets/parallax/tela de batalhatesteverde.png"
+dest_files=["res://.godot/imported/tela de batalhatesteverde.png-0c84e5d1e2f0a14bf79a1c4e648d3e8d.ctex"]
 
 [params]
 

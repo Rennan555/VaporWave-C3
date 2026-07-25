@@ -5,21 +5,24 @@ public partial class Player : Character
 {
 	// Status do Player
 	public float Life = 3.0f;
-	private float DashSpeed = 1200.0f;
+	private float DashSpeed = 1000.0f;
 	
 	// Node de Player
 	private Area2D ActionArea;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
+	private bool CanDash = true;
 	
 	// Timers do wall jump
-	private const float WallJumpDuration = 0.2f;
+	private const float WallJumpDuration = 0.1f;
 	private float WallJumpTimer = 0.0f;
 	
 	// Timers de dash
-	private const float DashDuration = 0.2f;
+	private const float DashDuration = 0.07f;
+	private const float DashCoolDownDuration = 0.3f;
 	private float DashTimer = 0.0f;
+	private float DashCoolDownTimer = 0.0f;
 	
 	// Signal de Dano tomado
 	[Signal]
@@ -37,7 +40,28 @@ public partial class Player : Character
 		// Gravidade
 		if (!IsOnFloor())
 		{
-			velocity += GetGravity() * (float)delta;
+			if(!IsOnWall())
+			{
+				velocity += GetGravity() * (float)delta;
+			}
+			else
+			{
+				// Grab wall
+				Vector2 wallNormal = GetWallNormal();
+				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+				
+				GD.Print(wallNormal.X);
+				GD.Print(direction.X);
+				if (wallNormal.X != direction.X && (Input.IsActionPressed("ui_left") || Input.IsActionPressed("ui_right")))
+				{
+					velocity += GetGravity() * (float)delta;
+					velocity.Y *= 0.8f;
+				}
+				else
+				{
+					velocity += GetGravity() * (float)delta;
+				}
+			}
 		}
 		
 		// Pulo
@@ -46,7 +70,7 @@ public partial class Player : Character
 			velocity.Y = JumpVelocity;
 		}
 		
-		// Timer do Wall Jump
+		// Timer de Movimentação
 		if (this.WallJumpTimer >= 0.0f || this.DashTimer >= 0.0f)
 		{
 			this.WallJumpTimer -= (float)delta;
@@ -55,6 +79,17 @@ public partial class Player : Character
 		else
 		{
 			this.CanWalk = true;
+		}
+		
+		// Timer de Dash
+		if (this.DashCoolDownTimer >= 0.0f)
+		{
+			this.DashCoolDownTimer -= (float)delta;
+		}
+		else
+		{
+			if (IsOnFloor())
+			this.CanDash = true;
 		}
 		
 		// Wall Jump
@@ -70,7 +105,7 @@ public partial class Player : Character
 		}
 		
 		// Dash
-		if (Input.IsActionJustPressed("Dash") && !IsOnWall())
+		if (Input.IsActionJustPressed("Dash") && !IsOnWall() && this.CanWalk && this.CanDash)
 		{
 			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 			
@@ -79,7 +114,9 @@ public partial class Player : Character
 				velocity.X = direction.X * this.DashSpeed;
 				
 				this.CanWalk = false;
+				this.CanDash = false;
 				this.DashTimer = DashDuration;
+				this.DashCoolDownTimer = DashCoolDownDuration;
 			}
 		}
 		

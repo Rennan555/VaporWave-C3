@@ -5,7 +5,7 @@ public partial class Player : Character
 {
 	// Status do Player
 	public float Life = 3.0f;
-	private float DashSpeed = 1200.0f;
+	private float DashSpeed = 1000.0f;
 	
 	// Node de Player
 	private Area2D ActionArea;
@@ -40,7 +40,28 @@ public partial class Player : Character
 		// Gravidade
 		if (!IsOnFloor())
 		{
-			velocity += GetGravity() * (float)delta;
+			if(!IsOnWall())
+			{
+				velocity += GetGravity() * (float)delta;
+			}
+			else
+			{
+				// Grab wall
+				Vector2 wallNormal = GetWallNormal();
+				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+				
+				GD.Print(wallNormal.X);
+				GD.Print(direction.X);
+				if (wallNormal.X != direction.X && (Input.IsActionPressed("ui_left") || Input.IsActionPressed("ui_right")))
+				{
+					velocity += GetGravity() * (float)delta;
+					velocity.Y *= 0.8f;
+				}
+				else
+				{
+					velocity += GetGravity() * (float)delta;
+				}
+			}
 		}
 		
 		// Pulo

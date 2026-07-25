@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4aafcyesk7mk"]
+
+[node name="PlatformLevel" type="Node2D" unique_id=762110100]
+
+[node name="ShadersLayer" type="CanvasLayer" parent="." unique_id=586419239]
+
+[node name="HudLayer" type="CanvasLayer" parent="." unique_id=1029834772]

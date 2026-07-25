@@ -19,13 +19,13 @@ run/main_scene="uid://csk0xe4a7fs41"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 [autoload]
 
 GlobalWorldEnvironment="*uid://dbhgdgllufyph"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -50,5 +50,7 @@ Action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
 textures/stretch/aspect="keep"
 textures/stretch/mode="disabled"

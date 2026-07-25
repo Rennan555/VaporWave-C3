@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf61hfvr4u3jt"
-path="res://.godot/imported/fundo(fixo).png-9a9cd3a9a6f18b35d174f93dee879dc5.ctex"
+uid="uid://crmm0ogfdl00q"
+path="res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/fundo(fixo).png"
-dest_files=["res://.godot/imported/fundo(fixo).png-9a9cd3a9a6f18b35d174f93dee879dc5.ctex"]
+source_file="res://Assets/Sprites/Parallax/taskbar(fixo).png"
+dest_files=["res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"]
 
 [params]
 

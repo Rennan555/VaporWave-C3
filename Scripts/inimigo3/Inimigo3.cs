@@ -17,12 +17,17 @@ public partial class Inimigo3 : CharacterBody2D
 	public override void _Process(double delta)
 	{
 		//seguir o player
-		if (target != null)
+		try {
+			if (target != null)
 		{
 			Vector2 dir = (target.GlobalPosition - GlobalPosition).Normalized();
 			Velocity = dir * speed;
 		}
-
+		} finally
+		{
+			GD.Print("AVISO: alvo eliminado");
+			target = null;
+		}
 		MoveAndSlide();
 
 		
@@ -33,13 +38,27 @@ public partial class Inimigo3 : CharacterBody2D
 	
 	//detectar a colisão player
 	public void _on_area_2d_body_entered(Node2D body)
-	{
+	{	
+		try {
 		if (body.IsInGroup("Player"))
 		{
 			GD.Print("player detectado");
+			body.EmitSignal(Player.SignalName.DamageTaken, 0.5f);
+		}
+		} finally
+		{
+			GD.Print("AVISO: alvo eliminado da area");
+			target = null;
 		}
 		
 	}
+
+	public void _on_area_2d_body_exited(Node2D body)
+	{
+		
+	}
+
+
 	//adicionar o timer
 	//surgir em um espiral
 	

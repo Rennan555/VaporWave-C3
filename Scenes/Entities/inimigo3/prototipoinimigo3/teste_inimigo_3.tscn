@@ -1,45 +1,30 @@
 [gd_scene format=3 uid="uid://dhub43w20ogrf"]
 
-[ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="1_vghjm"]
 [ext_resource type="PackedScene" uid="uid://v5swx05ffkfp" path="res://Scenes/Entities/inimigo3/espiral.tscn" id="3_75ilv"]
 [ext_resource type="PackedScene" uid="uid://clrsmjn7fb6yb" path="res://Scenes/popups/pop_up_notas.tscn" id="3_wbgt8"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="3_yvmcd"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1t688"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_vghjm")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ndkhv"]
-radius = 45.0
-height = 232.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75ilv"]
+size = Vector2(443, 105)
 
 [node name="testeInimigo3" type="Node2D" unique_id=966811937]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1765915988]
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=1460806695 groups=["Player"]]
-position = Vector2(-427, -77)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=1082909381]
-position = Vector2(2, 1)
-scale = Vector2(0.7109375, 2.1484375)
-sprite_frames = SubResource("SpriteFrames_1t688")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=415535584]
-position = Vector2(0, -3)
-shape = SubResource("CapsuleShape2D_ndkhv")
-
 [node name="Espiral" parent="." unique_id=256898189 node_paths=PackedStringArray("anchor") instance=ExtResource("3_75ilv")]
 position = Vector2(-3, 0)
-anchor = NodePath("../player")
+anchor = NodePath("../PlayerBody")
 
 [node name="pop-up_notas" parent="." unique_id=610167202 instance=ExtResource("3_wbgt8")]
 position = Vector2(-372, -81)
+
+[node name="PlayerBody" parent="." unique_id=2041397587 groups=["Player"] instance=ExtResource("3_yvmcd")]
+
+[node name="MeshInstance2D" type="CharacterBody2D" parent="." unique_id=1201653766]
+position = Vector2(0, 242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D" unique_id=1182494526]
+position = Vector2(-6, -23)
+shape = SubResource("RectangleShape2D_75ilv")
 
 [editable path="Espiral"]

@@ -33,7 +33,14 @@ public partial class Espiral : Node2D
 		//alterar a posicao
 		instance.Position = ponto.Position;
 		//atribuindo o alvo
-		instance.target = anchor;
+		try
+		{
+			instance.target = anchor;
+		}
+		finally
+		{
+			instance.target = null;
+		}
 		//print 
 		GD.Print($"ponto{pos}");
 		//addicioando

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="1_vghjm"]
 [ext_resource type="PackedScene" uid="uid://v5swx05ffkfp" path="res://Scenes/Entities/inimigo3/espiral.tscn" id="3_75ilv"]
+[ext_resource type="PackedScene" uid="uid://clrsmjn7fb6yb" path="res://Scenes/popups/pop_up_notas.tscn" id="3_wbgt8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1t688"]
 animations = [{
@@ -37,5 +38,8 @@ shape = SubResource("CapsuleShape2D_ndkhv")
 [node name="Espiral" parent="." unique_id=256898189 node_paths=PackedStringArray("anchor") instance=ExtResource("3_75ilv")]
 position = Vector2(-3, 0)
 anchor = NodePath("../player")
+
+[node name="pop-up_notas" parent="." unique_id=610167202 instance=ExtResource("3_wbgt8")]
+position = Vector2(-372, -81)
 
 [editable path="Espiral"]

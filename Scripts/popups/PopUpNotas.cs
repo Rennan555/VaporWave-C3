@@ -24,6 +24,7 @@ public partial class PopUpNotas : Area2D
 
 	private bool canInteract = true;
 
+	private bool InArea = false;
 	private PopWindows11 windows11;
 
 	[Export] public bool show;
@@ -58,6 +59,17 @@ public partial class PopUpNotas : Area2D
 			}
 		}
 
+		if (InArea)
+		{
+			//implementar a funcao para interagir
+			if (Input.IsActionJustPressed("Action")){
+				show = true;
+				canInteract = false;
+				GD.Print("açãõ");
+				textInteraact.Visible = false;
+			}
+		}
+
 	}
 
 	//fechar a janela
@@ -85,19 +97,17 @@ public partial class PopUpNotas : Area2D
 		if (canInteract)
 		{
 			textInteraact.Visible = true;
+			InArea = true;
 		}
 		
 
-		//implementar a funcao para interagir
-		if (Input.IsActionJustPressed("acao")){
-			canInteract = false;
-			show = true;
-		}
+		
 	}
 
 	public void _on_action_area_body_exited(Node2D body)
 	{
 		textInteraact.Visible = false;
+		InArea = false;
 	}
 
 	

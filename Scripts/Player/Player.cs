@@ -102,7 +102,6 @@ public partial class Player : Character
 			Godot.Collections.Array<Node2D> bodies = this.ActionArea.GetOverlappingBodies();
 			foreach (Node2D body in bodies)
 			{
-				GD.Print(body);
 				if (body is Mascot mascoteNode)
 				{
 					mascoteNode.EmitSignal(Mascot.SignalName.StartPath);

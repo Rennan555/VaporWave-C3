@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dnf1uw1s3t1td"]
+
+[ext_resource type="PackedScene" uid="uid://vl4hl131p4y" path="res://Scenes/parallax/paralax01.tscn" id="1_5lvqj"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_x1rfe"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1t688"]
+distance = -573.0
+
+[node name="Node2D" type="Node2D" unique_id=1483033568]
+
+[node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("2_x1rfe")]
+z_index = 1
+position = Vector2(158.00002, 550)
+scale = Vector2(0.2820513, 0.23076923)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerBody" unique_id=1558583002]
+position = Vector2(109.909035, -623.99994)
+scale = Vector2(0.93295115, 0.7437773)
+zoom = Vector2(1.4, 1.4)
+
+[node name="floor" type="CharacterBody2D" parent="." unique_id=1678168401]
+position = Vector2(399, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=121244491]
+position = Vector2(-10, -495)
+shape = SubResource("WorldBoundaryShape2D_1t688")
+
+[node name="Node" parent="." unique_id=896252009 instance=ExtResource("1_5lvqj")]

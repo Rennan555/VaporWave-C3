@@ -4,24 +4,26 @@
 [ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/parallax/montanhas.png" id="2_tlutm"]
 [ext_resource type="Texture2D" uid="uid://bid0ctehk7324" path="res://assets/parallax/passaros.png" id="3_bcn7b"]
 [ext_resource type="Texture2D" uid="uid://dhxugqcjwblcq" path="res://assets/parallax/palmeiras.png" id="4_saadj"]
+[ext_resource type="Texture2D" uid="uid://crmm0ogfdl00q" path="res://assets/parallax/taskbar(fixo).png" id="5_tlutm"]
 
 [node name="Node" type="Node" unique_id=896252009]
 process_priority = -10
 
 [node name="Paralax" type="Node2D" parent="." unique_id=61838307]
-position = Vector2(342, 186)
+position = Vector2(241, 136)
 
 [node name="fundo" type="Parallax2D" parent="Paralax" unique_id=1435483187]
+z_index = -5
 scroll_scale = Vector2(0, 0)
 repeat_size = Vector2(480, 0)
-repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Paralax/fundo" unique_id=1221044297]
 texture = ExtResource("1_o5mcb")
 
 [node name="motanhas" type="Parallax2D" parent="Paralax" unique_id=400016252]
+z_index = -4
 scroll_scale = Vector2(0.4, 0.4)
-scroll_offset = Vector2(-203, -137)
+scroll_offset = Vector2(-198, -134)
 repeat_size = Vector2(480, 0)
 repeat_times = 3
 
@@ -30,8 +32,9 @@ texture = ExtResource("2_tlutm")
 centered = false
 
 [node name="passaros" type="Parallax2D" parent="Paralax" unique_id=943751196]
+z_index = -3
 scroll_scale = Vector2(0.2, 0.2)
-scroll_offset = Vector2(-271, -72)
+scroll_offset = Vector2(-137, -106)
 repeat_size = Vector2(480, 0)
 autoscroll = Vector2(-50, 0)
 
@@ -40,8 +43,9 @@ texture = ExtResource("3_bcn7b")
 centered = false
 
 [node name="arvore" type="Parallax2D" parent="Paralax" unique_id=1334298117]
+z_index = -2
 scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(-234, -157)
+scroll_offset = Vector2(-216, -108)
 repeat_size = Vector2(480, 0)
 repeat_times = 3
 
@@ -49,4 +53,14 @@ repeat_times = 3
 texture = ExtResource("4_saadj")
 centered = false
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=675961700]
+[node name="taskbar" type="Parallax2D" parent="Paralax" unique_id=1194445782]
+z_index = -2
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-239, -153)
+repeat_size = Vector2(480, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/taskbar" unique_id=487619880]
+position = Vector2(-4, 18)
+texture = ExtResource("5_tlutm")
+centered = false

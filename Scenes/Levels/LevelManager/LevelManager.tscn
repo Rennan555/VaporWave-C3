@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cj72yh0ls4qhl"]
 
-[node name="LevelManager" type="Node2D"]
+[ext_resource type="Script" uid="uid://bxl18ewophin1" path="res://Scripts/Levels/LevelManager.cs" id="1_tq80f"]
 
-[node name="CurrentSceneNode" type="Node2D" parent="."]
+[node name="LevelManager" type="Node2D" unique_id=234328961]
+script = ExtResource("1_tq80f")
 
-[node name="ShaderLayer" type="CanvasLayer" parent="."]
+[node name="CurrentSceneNode" type="Node2D" parent="." unique_id=12333997]
 
-[node name="HudLayer" type="CanvasLayer" parent="."]
+[connection signal="CallChangeLevel" from="." to="." method="ChangeLevel"]

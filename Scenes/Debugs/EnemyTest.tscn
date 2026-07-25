@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c1kupk7n0mgrk"]
 
+[ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_cafok"]
 [ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="1_wkv1f"]
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_cafok"]
 
@@ -10,6 +11,7 @@ size = Vector2(1237.5, 20)
 size = Vector2(70, 595)
 
 [node name="EnemyTest" type="Node2D" unique_id=2077062812]
+script = ExtResource("1_cafok")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=242743892]
 

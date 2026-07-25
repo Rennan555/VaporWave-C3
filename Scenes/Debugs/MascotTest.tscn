@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="1_tleey"]
 [ext_resource type="PackedScene" uid="uid://coeu7u28fa6qj" path="res://Scenes/Entities/Mascot/Mascot.tscn" id="2_8s0c0"]
+[ext_resource type="Script" uid="uid://cjh1sqyl80f15" path="res://Scripts/Mascot/MascotAnimation.cs" id="3_8s0c0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
 size = Vector2(1246, 309)
@@ -9,12 +10,29 @@ size = Vector2(1246, 309)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
 size = Vector2(116, 510)
 
+[sub_resource type="Resource" id="Resource_8s0c0"]
+script = ExtResource("3_8s0c0")
+InvertV = true
+Animation = "jump"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_36kc6"]
+script = ExtResource("3_8s0c0")
+InvertV = true
+Animation = "walk"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_vk8rh"]
+script = ExtResource("3_8s0c0")
+Animation = "grab"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
 [sub_resource type="Curve2D" id="Curve2D_tleey"]
-bake_interval = 512.0
+bake_interval = 191.43
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 364, 383, 0, 0, 0, 0, 395.0139, 336.99997, 0, 0, 0, 0, 457.04166, 326.99997, 0, 0, 0, 0, 528.6944, 328.99997, 0, 0, 0, 0, 581.09717, 351.99997, 0, 0, 0, 0, 597.13885, 388.99997, 0, 0, 0, 0, 646.3333, 338.99997, 0, 0, 0, 0, 741.51385, 321.99997, 0, 0, 0, 0, 814.2361, 338.99997, 0, 0, 0, 0, 878.4028, 389.99997, 0, 0, 0, 0, 923.3194, 334.99997, 0, 0, 0, 0, 988.55554, 320.99997, 0, 0, 0, 0, 1038.8195, 321.99997, 0, 0, 0, 0, 1092.2916, 389.99997, 0, 0, 0, 0, 1024.9166, 340.99997, 0, 0, 0, 0, 999.25, 256.99997, 0, 0, 0, 0, 1034.5416, 205.99998, 0, 0, 0, 0, 1097.6388, 179.99998, 0, 0, 0, 0, 1019.56946, 134.99998, 0, 0, 0, 0, 990.69446, 68.99999, 0, 0, 0, 0, 1098.7083, -22.999998)
+"points": PackedVector2Array(0, 0, 0, 0, 346.8889, 387.99997, 0, 0, 0, 0, 227.11111, 388.99997, 0, 0, 0, 0, 153.31946, 336.99997, 0, 0, 0, 0, 49.583347, 385.99997, 0, 0, 0, 0, 50.65279, -4.9999995)
 }
-point_count = 21
+point_count = 5
 
 [node name="MascotTest" type="Node2D" unique_id=1003143019]
 
@@ -40,6 +58,11 @@ position = Vector2(189, 299)
 position = Vector2(364, 383)
 Path = NodePath("../PathsNode/Path2D")
 PathFollow = NodePath("../PathsNode/Path2D/PathFollow2D")
+ChangeAnimationPoints = Dictionary[float, ExtResource("3_8s0c0")]({
+0.0: SubResource("Resource_36kc6"),
+0.16: SubResource("Resource_8s0c0"),
+0.48: SubResource("Resource_vk8rh")
+})
 
 [node name="PathsNode" type="Node2D" parent="." unique_id=576699250]
 
@@ -48,6 +71,6 @@ position = Vector2(38.636353, 0)
 scale = Vector2(0.9350649, 1)
 curve = SubResource("Curve2D_tleey")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="PathsNode/Path2D" unique_id=1157394694]
-position = Vector2(364, 383)
-rotation = -0.9775865
+[node name="PathFollow2D" type="PathFollow2D" parent="PathsNode/Path2D" unique_id=2012046782]
+position = Vector2(346.8889, 387.99997)
+rotation = 3.133244

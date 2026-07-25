@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public partial class Mascot : Character
@@ -7,11 +8,14 @@ public partial class Mascot : Character
 	[Export] public PathFollow2D PathFollow  = null;
 	
 	private Sprite2D testSprite;
+	private AnimatedSprite2D animatedSprite;
 	private Label ActionLabel;
+	
+	[Export] Dictionary<float,MascotAnimation> ChangeAnimationPoints = new ();
 	
 	private bool IsActive = false;
 	private bool IsMoving = false;
-	private int Speed = 5;
+	private int MoveSpeed = 5;
 	
 	// Signal de começar caminho do movimento
 	[Signal]
@@ -20,13 +24,20 @@ public partial class Mascot : Character
 	public override void _Ready()
 	{
 		this.testSprite = GetNode<Sprite2D>("TestSprite");
+		this.animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		this.ActionLabel = GetNode<Label>("ActionLabel");
 		
 		if (this.Path != null && this.PathFollow != null)
 		{
 			Sprite2D newSprite = (Sprite2D)this.testSprite.Duplicate();
+			AnimatedSprite2D newAnimation = (AnimatedSprite2D)this.animatedSprite.Duplicate();
+			
 			this.testSprite.QueueFree();
+			//this.animatedSprite.QueueFree();
+			
 			this.PathFollow.AddChild(newSprite);
+			this.PathFollow.AddChild(newAnimation);
+			this.PathFollow.Visible = false;
 		}
 		else
 		{
@@ -36,9 +47,29 @@ public partial class Mascot : Character
 
 	public override void _Process(double delta)
 	{
-		if (this.IsMoving)
+		if (this.IsMoving && this.ChangeAnimationPoints.Count > 0)
 		{
-			this.PathFollow.Progress += this.Speed;
+			this.PathFollow.Progress += this.MoveSpeed;
+			float? keyToRemove = null;
+			
+			foreach (var pair in this.ChangeAnimationPoints)
+			{
+				if (pair.Key < this.PathFollow.ProgressRatio + 0.1f && pair.Key > this.PathFollow.ProgressRatio - 0.1f)
+				{
+					var change = pair.Value;
+					
+					AnimatedSprite2D animation = this.PathFollow.GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+					animation.Play(change.Animation);
+					animation.FlipH = change.InvertH;
+					animation.FlipV = change.InvertV;
+					
+					keyToRemove = pair.Key;
+					break;
+				}
+			}
+			
+			if (keyToRemove.HasValue)
+			this.ChangeAnimationPoints.Remove(keyToRemove.Value);
 		}
 	}
 	
@@ -65,8 +96,10 @@ public partial class Mascot : Character
 	// Ativa movimento do mascote via Signal
 	public void StartPathMovement()
 	{
-		this.IsMoving = true;
+		this.animatedSprite.Visible = false;
+		this.PathFollow.Visible = true;
 		
+		this.IsMoving = true;
 		this.ActionLabel.Visible = false;
 		this.IsActive = false;
 	}

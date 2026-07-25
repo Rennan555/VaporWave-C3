@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://k6ydp7yfa5wf"]
+
+[ext_resource type="PackedScene" uid="uid://kvmkappycmq6" path="res://Scenes/Entities/Prop/Slider.tscn" id="1_sldfw"]
+
+[node name="SliderTest" type="Node2D" unique_id=826172994]
+
+[node name="Slider" parent="." unique_id=538188796 instance=ExtResource("1_sldfw")]
+position = Vector2(532, 262)

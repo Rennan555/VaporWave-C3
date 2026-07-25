@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4aafcyesk7mk"]
+
+[ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_euahd"]
+
+[node name="PlatformLevel" type="Node2D" unique_id=762110100 node_paths=PackedStringArray("ScoreLabel")]
+script = ExtResource("1_euahd")
+ScoreLabel = NodePath("HudLayer/HContainer/ScoreLabel")
+
+[node name="ShadersLayer" type="CanvasLayer" parent="." unique_id=586419239]
+
+[node name="HudLayer" type="CanvasLayer" parent="." unique_id=1029834772]
+
+[node name="HContainer" type="HFlowContainer" parent="HudLayer" unique_id=1128867126]
+offset_right = 197.0
+offset_bottom = 120.0
+
+[node name="ScoreLabel" type="Label" parent="HudLayer/HContainer" unique_id=1108530965]
+layout_mode = 2
+text = "Score: "

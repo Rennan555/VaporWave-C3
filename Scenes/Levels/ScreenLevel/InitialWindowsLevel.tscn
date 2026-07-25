@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://vd4tme4opb0f"]
+
+[ext_resource type="PackedScene" uid="uid://csofj0qteb266" path="res://Scenes/Levels/ScreenLevel/ScreenLevel.tscn" id="1_tuahw"]
+[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="2_bknb0"]
+[ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="3_8ew78"]
+[ext_resource type="Script" uid="uid://dawuou3758jyu" path="res://Scripts/Prop/IconButton.cs" id="3_80en1"]
+
+[node name="InitialWindowsLevel" unique_id=67583462 instance=ExtResource("1_tuahw")]
+
+[node name="IconButton" type="Button" parent="ButtonsControl" parent_id_path=PackedInt32Array(715673277) index="0" unique_id=996048568]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 297.0
+offset_right = 707.0
+offset_bottom = 433.0
+icon = ExtResource("3_8ew78")
+icon_alignment = 1
+script = ExtResource("3_80en1")
+metadata/_custom_type_script = "uid://dawuou3758jyu"
+
+[node name="ImageRect" parent="BackgroundLayer" parent_id_path=PackedInt32Array(510691960) index="0" unique_id=398374015]
+texture = ExtResource("2_bknb0")
+expand_mode = 5

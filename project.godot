@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="C3 Winter Project"
-run/main_scene="uid://cg6h7yhluk1va"
+run/main_scene="uid://csk0xe4a7fs41"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,9 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+[autoload]
+
+GlobalWorldEnvironment="*uid://dbhgdgllufyph"
 
 [dotnet]
 

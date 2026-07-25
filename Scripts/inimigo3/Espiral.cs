@@ -43,6 +43,8 @@ public partial class Espiral : Node2D
 		{
 			instance.target = null;
 		}*/
+
+		//push
 		//print 
 		GD.Print($"ponto{pos}");
 		//addicioando

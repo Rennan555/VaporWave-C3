@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://csofj0qteb266"]
+
+[node name="ScreenLevel" type="Node2D" unique_id=67583462]
+
+[node name="ButtonsControl" type="Control" parent="." unique_id=715673277]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PopupsLayer" type="CanvasLayer" parent="." unique_id=1791396828]
+layer = 0
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=510691960]
+layer = -1
+
+[node name="ImageRect" type="TextureRect" parent="BackgroundLayer" unique_id=398374015]
+offset_right = 1152.0
+offset_bottom = 648.0

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://csk0xe4a7fs41"]
+
+[ext_resource type="PackedScene" uid="uid://cj72yh0ls4qhl" path="res://Scenes/Levels/LevelManager/LevelManager.tscn" id="1_vkqti"]
+[ext_resource type="PackedScene" uid="uid://vd4tme4opb0f" path="res://Scenes/Levels/ScreenLevel/InitialWindowsLevel.tscn" id="2_0meja"]
+
+[node name="LevelManager" unique_id=234328961 instance=ExtResource("1_vkqti")]
+PackedCurrentLevel = ExtResource("2_0meja")

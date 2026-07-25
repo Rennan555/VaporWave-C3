@@ -12,7 +12,7 @@ size = Vector2(443, 105)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1765915988]
 
 [node name="Espiral" parent="." unique_id=256898189 node_paths=PackedStringArray("anchor") instance=ExtResource("3_75ilv")]
-position = Vector2(-3, 0)
+position = Vector2(-493, -42)
 anchor = NodePath("../PlayerBody")
 
 [node name="pop-up_notas" parent="." unique_id=610167202 instance=ExtResource("3_wbgt8")]

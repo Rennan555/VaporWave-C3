@@ -4,7 +4,7 @@ using System;
 public partial class Player : Character
 {
 	// Status do Player
-	private float Life = 3.0f;
+	public float Life = 3.0f;
 	private float DashSpeed = 1200.0f;
 	
 	// Node de Player

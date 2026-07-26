@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dk23njoti6nfw"]
 
 [ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_x080g"]
+[ext_resource type="PackedScene" uid="uid://bjaagak1v72l0" path="res://Scenes/Levels/ScreenLevel/batalha_1.tscn" id="2_k4lrx"]
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_rbb87"]
 [ext_resource type="PackedScene" uid="uid://coeu7u28fa6qj" path="res://Scenes/Entities/Mascot/Mascot.tscn" id="3_fiacq"]
 [ext_resource type="Script" uid="uid://cjh1sqyl80f15" path="res://Scripts/Mascot/MascotAnimation.cs" id="4_wql14"]
+[ext_resource type="PackedScene" uid="uid://clrsmjn7fb6yb" path="res://Scenes/popups/pop_up_notas.tscn" id="6_805d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
 size = Vector2(552, 20)
@@ -11,26 +13,45 @@ size = Vector2(552, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
 size = Vector2(20, 336)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a0p7"]
+size = Vector2(350, 20)
+
 [sub_resource type="Resource" id="Resource_nfe6u"]
 script = ExtResource("4_wql14")
-InvertV = true
 Animation = "jump"
 metadata/_custom_type_script = "uid://cjh1sqyl80f15"
 
 [sub_resource type="Resource" id="Resource_r4htj"]
 script = ExtResource("4_wql14")
+Animation = "grab"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_o0cla"]
+script = ExtResource("4_wql14")
+Animation = "jump"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_vcnbr"]
+script = ExtResource("4_wql14")
+InvertH = true
+Animation = "walk"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_k4lrx"]
+script = ExtResource("4_wql14")
 InvertV = true
 InvertH = true
-Animation = "grab"
+Animation = "walk"
 metadata/_custom_type_script = "uid://cjh1sqyl80f15"
 
 [sub_resource type="Curve2D" id="Curve2D_k4lrx"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 173, 257, 0, 0, 0, 0, 56, 258, 0, 0, 0, 0, 43, 220, 0, 0, 0, 0, 8, 210, 0, 0, 0, 0, 4, -37)
+"points": PackedVector2Array(0, 0, 0, 0, 173, 257, 0, 0, 0, 0, 62, 249, 0, 0, 0, 0, 43, 220, 0, 0, 0, 0, 10, 209, 0, 0, 0, 0, 4, 63, 0, 0, 0, 0, 58, 35, 0, 0, 0, 0, 123, 61, 0, 0, 0, 0, 369, 68)
 }
-point_count = 5
+point_count = 8
 
 [node name="PlatformLevel" unique_id=762110100 instance=ExtResource("1_x080g")]
+nextScenePacked = ExtResource("2_k4lrx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="3" unique_id=178323874]
 
@@ -42,22 +63,41 @@ shape = SubResource("RectangleShape2D_nfe6u")
 position = Vector2(-9, 165)
 shape = SubResource("RectangleShape2D_r4htj")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=14157170]
+position = Vector2(236, 93)
+shape = SubResource("RectangleShape2D_8a0p7")
+
 [node name="PlayerBody" parent="." index="4" unique_id=2041397587 instance=ExtResource("2_rbb87")]
+z_index = 1
 position = Vector2(296, 247)
 
 [node name="MascotBody" parent="." index="5" unique_id=1403908216 node_paths=PackedStringArray("Path", "PathFollow") instance=ExtResource("3_fiacq")]
+z_index = 1
 position = Vector2(174, 232)
 collision_mask = 3
 Path = NodePath("../Path2D")
 PathFollow = NodePath("../Path2D/PathFollow2D")
 ChangeAnimationPoints = Dictionary[float, ExtResource("4_wql14")]({
+0.01: SubResource("Resource_k4lrx"),
 0.272: SubResource("Resource_nfe6u"),
-0.442: SubResource("Resource_r4htj")
+0.442: SubResource("Resource_r4htj"),
+0.478: SubResource("Resource_o0cla"),
+0.664: SubResource("Resource_vcnbr")
 })
 
 [node name="Path2D" type="Path2D" parent="." index="6" unique_id=1906397679]
+z_index = 1
 curve = SubResource("Curve2D_k4lrx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0" unique_id=1733020378]
 position = Vector2(173, 257)
-rotation = 3.133046
+rotation = -3.069645
+
+[node name="MontanhaParallax" parent="BackgorundNode" parent_id_path=PackedInt32Array(2056641956) index="3" unique_id=1450278430]
+scroll_offset = Vector2(63, 19)
+
+[node name="pop-up_notas" parent="." index="10" unique_id=610167202 instance=ExtResource("6_805d8")]
+position = Vector2(402, 48)
+notes = "Fase 3"
+
+[connection signal="CallChangeLevel" from="pop-up_notas" to="." method="ChangeLevel"]

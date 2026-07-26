@@ -40,7 +40,11 @@ public partial class PopWindows11 : Control
 	{	
 		if (!choice) {
 		condicao = false;
-		choice = true;}
+		choice = true;
+
+		Death death = new Death();
+		death.CallGameOver(this);
+		}
 	}
 
 

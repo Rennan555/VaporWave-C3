@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2rquotou4sfn"
-path="res://.godot/imported/jump_gato.wav-2cceb09a82d6fed4df51d41e340f94ce.sample"
+path="res://.godot/imported/jump_gato.wav-f0c8399e2a3d31c5a55eccfc498c1382.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/jump_gato.wav"
-dest_files=["res://.godot/imported/jump_gato.wav-2cceb09a82d6fed4df51d41e340f94ce.sample"]
+source_file="res://Assets/Sounds/jump_gato.wav"
+dest_files=["res://.godot/imported/jump_gato.wav-f0c8399e2a3d31c5a55eccfc498c1382.sample"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pd3pcbp2slce"
-path="res://.godot/imported/montanhas.png-c19e3f69a64d27eaff6cd75121beb8c3.ctex"
+uid="uid://hwbp6rub4c32"
+path="res://.godot/imported/popUp_base.png-9dbab4228f5d5db27e4b4cedb18bbe6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/montanhas.png"
-dest_files=["res://.godot/imported/montanhas.png-c19e3f69a64d27eaff6cd75121beb8c3.ctex"]
+source_file="res://Assets/Sprites/PopUps/popUp_base.png"
+dest_files=["res://.godot/imported/popUp_base.png-9dbab4228f5d5db27e4b4cedb18bbe6a.ctex"]
 
 [params]
 

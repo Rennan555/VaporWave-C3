@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8liauj6bae10"
+<<<<<<< HEAD:Assets/parallax/tela de batalhatesteverde.png.import
 path="res://.godot/imported/tela de batalhatesteverde.png-0c84e5d1e2f0a14bf79a1c4e648d3e8d.ctex"
+=======
+path="res://.godot/imported/tela de batalhatesteverde.png-296c2966588669d46d3e776e8f5d6774.ctex"
+>>>>>>> 120a97406e4246e9779920028df51f3b412e4f81:Assets/Sprites/Parallax/tela de batalhatesteverde.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/parallax/tela de batalhatesteverde.png.import
 source_file="res://assets/parallax/tela de batalhatesteverde.png"
 dest_files=["res://.godot/imported/tela de batalhatesteverde.png-0c84e5d1e2f0a14bf79a1c4e648d3e8d.ctex"]
+=======
+source_file="res://Assets/Sprites/Parallax/tela de batalhatesteverde.png"
+dest_files=["res://.godot/imported/tela de batalhatesteverde.png-296c2966588669d46d3e776e8f5d6774.ctex"]
+>>>>>>> 120a97406e4246e9779920028df51f3b412e4f81:Assets/Sprites/Parallax/tela de batalhatesteverde.png.import
 
 [params]
 

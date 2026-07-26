@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhxugqcjwblcq"
-path="res://.godot/imported/palmeiras.png-255625fb750232df4f5828bc51a22bce.ctex"
+uid="uid://cf61hfvr4u3jt"
+path="res://.godot/imported/fundo(fixo).png-ca9ab868da37dc087981fb6f7b49ba75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parallax/palmeiras.png"
-dest_files=["res://.godot/imported/palmeiras.png-255625fb750232df4f5828bc51a22bce.ctex"]
+source_file="res://Assets/Sprites/Parallax/fundo(fixo).png"
+dest_files=["res://.godot/imported/fundo(fixo).png-ca9ab868da37dc087981fb6f7b49ba75.ctex"]
 
 [params]
 

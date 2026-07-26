@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7jl36vmp1p1"
-path="res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"
+uid="uid://djq86ac2cgvmg"
+path="res://.godot/imported/notepad_Base.png-354a1af42c57cb4989a6961e334589bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/prototipoJv/windowsantigo.png"
-dest_files=["res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"]
+source_file="res://Assets/Sprites/PopUps/notepad_Base.png"
+dest_files=["res://.godot/imported/notepad_Base.png-354a1af42c57cb4989a6961e334589bf.ctex"]
 
 [params]
 

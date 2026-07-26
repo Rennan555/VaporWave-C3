@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7jl36vmp1p1"
-path="res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"
+uid="uid://dt2lhq74icp17"
+path="res://.godot/imported/discordia.png-2faa5987ceb82917091e1770712e5515.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/prototipoJv/windowsantigo.png"
-dest_files=["res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"]
+source_file="res://Assets/Sprites/Tiles/discordia.png"
+dest_files=["res://.godot/imported/discordia.png-2faa5987ceb82917091e1770712e5515.ctex"]
 
 [params]
 

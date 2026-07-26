@@ -216,6 +216,11 @@ public partial class Player : Character
 		if (this.AnimatedNode.Animation != this.CurrentState) this.AnimatedNode.Play(this.CurrentState);
 	}
 	
+	public void PlaySFX(string effect)
+	{
+		
+	}
+	
 	// Função de morte
 	public void PlayerDie()
 	{

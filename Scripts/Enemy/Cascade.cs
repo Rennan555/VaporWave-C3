@@ -9,5 +9,10 @@ public partial class Cascade : Enemy
 		{
 			EnemyDie();
 		}
+		
+		if (!IsOnFloor())
+		{
+			Velocity = (GetGravity()); // desacelerador;
+		}
 	}
 }

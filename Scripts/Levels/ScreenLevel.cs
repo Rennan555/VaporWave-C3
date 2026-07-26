@@ -7,12 +7,16 @@ public partial class ScreenLevel : Node2D
 	private GlobalWorldEnvironment GlobalEnv;
 	
 	// Variáveis do Level
+	private Node2D EnemiesNode;
 	private Rect2 BoundaryRect = new Rect2(71, 175, 338, 61);
 	private bool CanMoveMouse = true;
 	private int Lives = 3;
 	
 	public override void _Ready()
 	{
+		// Get Nodes
+		this.EnemiesNode = GetNode<Node2D>("EnemiesNode");
+		
 		//inicia variável de modificação de saturação
 		GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
 		GlobalEnv.Saturation = 1f;
@@ -21,6 +25,8 @@ public partial class ScreenLevel : Node2D
 	
 	public override void _Process(double delta)
 	{
+		CheckForEnemies();
+		
 		Vector2 mousePos = GetViewport().GetMousePosition();
 		
 		if (!this.BoundaryRect.HasPoint(mousePos) && !CanMoveMouse)
@@ -29,6 +35,18 @@ public partial class ScreenLevel : Node2D
 			float clampY = Mathf.Clamp(mousePos.Y, BoundaryRect.Position.Y, BoundaryRect.End.Y);
 			
 			GetViewport().WarpMouse(new Vector2(clampX, clampY));
+		}
+	}
+	
+	private void CheckForEnemies()
+	{
+		if (this.EnemiesNode.GetChildren().Count > 0)
+		{
+			this.CanMoveMouse = false;
+		}
+		else
+		{
+			this.CanMoveMouse = true;
 		}
 	}
 	

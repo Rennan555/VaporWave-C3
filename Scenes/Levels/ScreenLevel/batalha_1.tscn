@@ -5,17 +5,28 @@
 [ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="3_tvu1r"]
 [ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="3_y6okr"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(992, 20)
+
 [node name="batalha1" type="Node2D" unique_id=55605287]
 
 [node name="ScreenLevel" parent="." unique_id=67583462 instance=ExtResource("1_c6e7o")]
+
+[node name="EnemiesNode" type="Node2D" parent="ScreenLevel" unique_id=1804591430]
+
+[node name="CascadeBody" parent="ScreenLevel/EnemiesNode" unique_id=570213956 instance=ExtResource("3_y6okr")]
+position = Vector2(235, -187)
 
 [node name="ImageRect" parent="ScreenLevel/BackgroundLayer" parent_id_path=PackedInt32Array(67583462, 510691960) index="0" unique_id=398374015]
 offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("2_tvu1r")
 
-[node name="CascadeBody" parent="ScreenLevel/BackgroundLayer" parent_id_path=PackedInt32Array(67583462, 510691960) index="1" unique_id=570213956 instance=ExtResource("3_y6okr")]
-position = Vector2(235, -187)
+[node name="StaticBody2D" type="StaticBody2D" parent="ScreenLevel" unique_id=58846067]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenLevel/StaticBody2D" unique_id=246011571]
+position = Vector2(268, 346)
+shape = SubResource("RectangleShape2D_nfe6u")
 
 [node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("3_tvu1r")]
 position = Vector2(-35, 199)

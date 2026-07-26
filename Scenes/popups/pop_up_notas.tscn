@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://clrsmjn7fb6yb"]
 
 [ext_resource type="Script" uid="uid://csr57ncsixdk1" path="res://Scripts/popups/PopUpNotas.cs" id="1_5qhmd"]
-[ext_resource type="Texture2D" uid="uid://bsgn07yew0tu8" path="res://Assets/Sprites/PopUps/bloco_notas.png" id="2_lwjty"]
-[ext_resource type="Texture2D" uid="uid://djq86ac2cgvmg" path="res://Assets/Sprites/PopUps/notepad_Base.png" id="3_nfd8d"]
+[ext_resource type="Texture2D" uid="uid://bsgn07yew0tu8" path="res://assets/Sprites/PopUps/bloco_notas.png" id="2_lwjty"]
+[ext_resource type="Texture2D" uid="uid://djq86ac2cgvmg" path="res://assets/Sprites/PopUps/notepad_Base.png" id="3_nfd8d"]
 [ext_resource type="PackedScene" uid="uid://cfbb3rxrxkfmk" path="res://Scenes/popups/pop_windows_11.tscn" id="4_lwjty"]
-[ext_resource type="Texture2D" uid="uid://dm6osieuwryce" path="res://Assets/Sprites/PopUps/notepad_UnclickedClose.png" id="4_oby0b"]
-[ext_resource type="Texture2D" uid="uid://bg07cvwu01k54" path="res://Assets/Sprites/PopUps/notepad_ClickedClose.png" id="5_r6bcy"]
+[ext_resource type="Texture2D" uid="uid://dm6osieuwryce" path="res://assets/Sprites/PopUps/notepad_UnclickedClose.png" id="4_oby0b"]
+[ext_resource type="Texture2D" uid="uid://bg07cvwu01k54" path="res://assets/Sprites/PopUps/notepad_ClickedClose.png" id="5_r6bcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t688"]
 size = Vector2(42, 42)

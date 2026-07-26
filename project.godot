@@ -19,13 +19,14 @@ run/main_scene="uid://csk0xe4a7fs41"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalWorldEnvironment="*uid://dbhgdgllufyph"
+
 [display]
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-[autoload]
-
-GlobalWorldEnvironment="*uid://dbhgdgllufyph"
 
 [dotnet]
 

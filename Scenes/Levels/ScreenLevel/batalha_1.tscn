@@ -12,15 +12,90 @@ size = Vector2(992, 20)
 
 [node name="ScreenLevel" parent="." unique_id=67583462 instance=ExtResource("1_c6e7o")]
 
-[node name="EnemiesNode" type="Node2D" parent="ScreenLevel" unique_id=1804591430]
-
-[node name="CascadeBody" parent="ScreenLevel/EnemiesNode" unique_id=570213956 instance=ExtResource("3_y6okr")]
-position = Vector2(235, -187)
-
 [node name="ImageRect" parent="ScreenLevel/BackgroundLayer" parent_id_path=PackedInt32Array(67583462, 510691960) index="0" unique_id=398374015]
 offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("2_tvu1r")
+
+[node name="EnemiesNode" type="Node2D" parent="ScreenLevel" unique_id=1804591430]
+
+[node name="CascadeBody" parent="ScreenLevel/EnemiesNode" unique_id=570213956 instance=ExtResource("3_y6okr")]
+position = Vector2(89, -487)
+
+[node name="CascadeBody2" parent="ScreenLevel/EnemiesNode" unique_id=960780977 instance=ExtResource("3_y6okr")]
+position = Vector2(274, -600)
+
+[node name="CascadeBody3" parent="ScreenLevel/EnemiesNode" unique_id=1742076511 instance=ExtResource("3_y6okr")]
+position = Vector2(184, -546)
+
+[node name="CascadeBody4" parent="ScreenLevel/EnemiesNode" unique_id=1189073733 instance=ExtResource("3_y6okr")]
+position = Vector2(376, -2067)
+
+[node name="CascadeBody5" parent="ScreenLevel/EnemiesNode" unique_id=2142929420 instance=ExtResource("3_y6okr")]
+position = Vector2(294, -2117)
+
+[node name="CascadeBody6" parent="ScreenLevel/EnemiesNode" unique_id=1295493545 instance=ExtResource("3_y6okr")]
+position = Vector2(210, -2167)
+
+[node name="CascadeBody7" parent="ScreenLevel/EnemiesNode" unique_id=724439746 instance=ExtResource("3_y6okr")]
+position = Vector2(351, -3577)
+
+[node name="CascadeBody8" parent="ScreenLevel/EnemiesNode" unique_id=1673249651 instance=ExtResource("3_y6okr")]
+position = Vector2(133, -4221)
+
+[node name="CascadeBody9" parent="ScreenLevel/EnemiesNode" unique_id=198584660 instance=ExtResource("3_y6okr")]
+position = Vector2(425, -3953)
+
+[node name="CascadeBody10" parent="ScreenLevel/EnemiesNode" unique_id=1034471457 instance=ExtResource("3_y6okr")]
+position = Vector2(472, -4717)
+
+[node name="CascadeBody11" parent="ScreenLevel/EnemiesNode" unique_id=354016465 instance=ExtResource("3_y6okr")]
+position = Vector2(141, -5103)
+
+[node name="CascadeBody12" parent="ScreenLevel/EnemiesNode" unique_id=347693692 instance=ExtResource("3_y6okr")]
+position = Vector2(386, -5158)
+
+[node name="CascadeBody13" parent="ScreenLevel/EnemiesNode" unique_id=771902956 instance=ExtResource("3_y6okr")]
+position = Vector2(241, -6027)
+
+[node name="CascadeBody14" parent="ScreenLevel/EnemiesNode" unique_id=506158391 instance=ExtResource("3_y6okr")]
+position = Vector2(414, -5728)
+
+[node name="CascadeBody15" parent="ScreenLevel/EnemiesNode" unique_id=313518747 instance=ExtResource("3_y6okr")]
+position = Vector2(252, -6800)
+
+[node name="CascadeBody16" parent="ScreenLevel/EnemiesNode" unique_id=1010434920 instance=ExtResource("3_y6okr")]
+position = Vector2(617, -6486)
+
+[node name="CascadeBody17" parent="ScreenLevel/EnemiesNode" unique_id=488186836 instance=ExtResource("3_y6okr")]
+position = Vector2(451, -7269)
+
+[node name="CascadeBody18" parent="ScreenLevel/EnemiesNode" unique_id=532435037 instance=ExtResource("3_y6okr")]
+position = Vector2(233, -7913)
+
+[node name="CascadeBody19" parent="ScreenLevel/EnemiesNode" unique_id=401784986 instance=ExtResource("3_y6okr")]
+position = Vector2(525, -7645)
+
+[node name="CascadeBody20" parent="ScreenLevel/EnemiesNode" unique_id=1841449647 instance=ExtResource("3_y6okr")]
+position = Vector2(572, -8409)
+
+[node name="CascadeBody21" parent="ScreenLevel/EnemiesNode" unique_id=144361977 instance=ExtResource("3_y6okr")]
+position = Vector2(241, -8795)
+
+[node name="CascadeBody22" parent="ScreenLevel/EnemiesNode" unique_id=855611953 instance=ExtResource("3_y6okr")]
+position = Vector2(486, -8850)
+
+[node name="CascadeBody23" parent="ScreenLevel/EnemiesNode" unique_id=1959702378 instance=ExtResource("3_y6okr")]
+position = Vector2(341, -9719)
+
+[node name="CascadeBody24" parent="ScreenLevel/EnemiesNode" unique_id=569131632 instance=ExtResource("3_y6okr")]
+position = Vector2(514, -9420)
+
+[node name="CascadeBody25" parent="ScreenLevel/EnemiesNode" unique_id=1998102373 instance=ExtResource("3_y6okr")]
+position = Vector2(352, -10492)
+
+[node name="CascadeBody26" parent="ScreenLevel/EnemiesNode" unique_id=474226617 instance=ExtResource("3_y6okr")]
+position = Vector2(717, -10178)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ScreenLevel" unique_id=58846067]
 

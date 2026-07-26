@@ -16,6 +16,13 @@ size = Vector2(20, 336)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a0p7"]
 size = Vector2(350, 20)
 
+[sub_resource type="Resource" id="Resource_k4lrx"]
+script = ExtResource("4_wql14")
+InvertV = true
+InvertH = true
+Animation = "walk"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
 [sub_resource type="Resource" id="Resource_nfe6u"]
 script = ExtResource("4_wql14")
 Animation = "jump"
@@ -33,13 +40,6 @@ metadata/_custom_type_script = "uid://cjh1sqyl80f15"
 
 [sub_resource type="Resource" id="Resource_vcnbr"]
 script = ExtResource("4_wql14")
-InvertH = true
-Animation = "walk"
-metadata/_custom_type_script = "uid://cjh1sqyl80f15"
-
-[sub_resource type="Resource" id="Resource_k4lrx"]
-script = ExtResource("4_wql14")
-InvertV = true
 InvertH = true
 Animation = "walk"
 metadata/_custom_type_script = "uid://cjh1sqyl80f15"

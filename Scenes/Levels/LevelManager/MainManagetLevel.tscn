@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://csk0xe4a7fs41"]
 
 [ext_resource type="PackedScene" uid="uid://cj72yh0ls4qhl" path="res://Scenes/Levels/LevelManager/LevelManager.tscn" id="1_vkqti"]
-[ext_resource type="PackedScene" uid="uid://cf7orv16qiy8w" path="res://Scenes/Levels/PlatformLevel/Livel1.tscn" id="2_0meja"]
+[ext_resource type="PackedScene" uid="uid://c5m1g1nyoc2w4" path="res://Scenes/Levels/PlatformLevel/LobbyLevel.tscn" id="2_0meja"]
 
 [node name="LevelManager" unique_id=234328961 instance=ExtResource("1_vkqti")]
 PackedCurrentLevel = ExtResource("2_0meja")

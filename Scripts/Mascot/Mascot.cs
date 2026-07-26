@@ -10,12 +10,14 @@ public partial class Mascot : Character
 	private Sprite2D testSprite;
 	private AnimatedSprite2D animatedSprite;
 	private Label ActionLabel;
-	
+
+	private CollisionShape2D colisaoBody; 
 	[Export] Dictionary<float,MascotAnimation> ChangeAnimationPoints = new ();
 	
 	private bool IsActive = false;
 	private bool IsMoving = false;
 	private int MoveSpeed = 5;
+	
 	
 	// Signal de começar caminho do movimento
 	[Signal]
@@ -26,7 +28,7 @@ public partial class Mascot : Character
 		this.testSprite = GetNode<Sprite2D>("TestSprite");
 		this.animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		this.ActionLabel = GetNode<Label>("ActionLabel");
-		
+		this.colisaoBody = GetNode<CollisionShape2D>("CollisionShape2D");
 		if (this.Path != null && this.PathFollow != null)
 		{
 			Sprite2D newSprite = (Sprite2D)this.testSprite.Duplicate();
@@ -80,6 +82,7 @@ public partial class Mascot : Character
 		{
 			this.ActionLabel.Visible = true;
 			this.IsActive = true;
+			
 		}
 	}
 	
@@ -102,5 +105,6 @@ public partial class Mascot : Character
 		this.IsMoving = true;
 		this.ActionLabel.Visible = false;
 		this.IsActive = false;
+		colisaoBody.Disabled = true;
 	}
 }

@@ -229,11 +229,9 @@ public partial class Player : Character
 	// Função de morte
 	public void PlayerDie()
 	{
-<<<<<<< HEAD
 		AudioManager.Instance.PlayPlayerDie();
 		QueueFree();
 
-=======
 		Death death = new Death();
 		death.CallGameOver(this);
 		
@@ -242,7 +240,6 @@ public partial class Player : Character
 		GD.Print(GlobalEnv.Saturation);
 		
 		Visible = false;
->>>>>>> d084fe80b5c6175940562aab862abebb81794ddc
 	}
 	
 	// Função de dano tomado

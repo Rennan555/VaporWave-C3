@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bf2if1wc0yr5g"]
+
+[ext_resource type="Texture2D" uid="uid://cq7snykhcm211" path="res://assets/Sprites/Character/cursor_sem_cor.png" id="1_7fibq"]
+[ext_resource type="Script" uid="uid://chp75re8x5ajf" path="res://Scripts/MouseTrigger/MouseTrigger.cs" id="1_tdo3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(8, 10)
+
+[node name="MouseTrigger" type="Area2D" unique_id=327133870]
+script = ExtResource("1_tdo3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=738368992]
+visible = false
+texture = ExtResource("1_7fibq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221956725]
+position = Vector2(4, 5)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[connection signal="body_entered" from="." to="." method="BodyEntered"]

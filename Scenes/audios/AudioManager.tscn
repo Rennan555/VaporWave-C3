@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://52t615o4prqa"]
+
+[ext_resource type="Script" uid="uid://xi1glop6sdu1" path="res://Scripts/AudioManager/AudioManager.cs" id="1_yq7t1"]
+[ext_resource type="AudioStream" uid="uid://dgvpbhbdmncsd" path="res://Assets/Sounds/walk_gato.wav" id="2_sgiyi"]
+[ext_resource type="AudioStream" uid="uid://knhtmamvnllj" path="res://Assets/Sounds/andarPersonagem.wav" id="3_yq7t1"]
+[ext_resource type="AudioStream" uid="uid://bdi8j4spom3oo" path="res://Assets/Sounds/jump_personagem.wav" id="4_xjq8j"]
+[ext_resource type="AudioStream" uid="uid://b5orepuvdgstw" path="res://Assets/Sounds/dying_sound.wav" id="5_7m554"]
+[ext_resource type="AudioStream" uid="uid://cdj774hqt4ei6" path="res://Assets/Sounds/damage_taken.wav" id="6_xe25a"]
+[ext_resource type="AudioStream" uid="uid://dlllg0ucaeqvn" path="res://Assets/Sounds/dash_personagem.wav" id="7_wyrx4"]
+[ext_resource type="AudioStream" uid="uid://f7cki2rmkifm" path="res://Assets/Sounds/popup_notif_att.wav" id="8_3yrko"]
+[ext_resource type="AudioStream" uid="uid://2ob6b7kugwc7" path="res://Assets/Sounds/mouse_click.mp3" id="9_8d5qq"]
+
+[node name="AudioManager" type="Node" unique_id=411195551 node_paths=PackedStringArray("SFXAudioCatWalk", "SFXAudioPlayerWalk", "SFXAudioPlayerDash", "SFXAudioPlayerJump", "SFXAudioPlayerDamage", "SFXAudioPlayerDie", "SFXAudioPopUp", "SFXAudioMouseClick")]
+script = ExtResource("1_yq7t1")
+SFXAudioCatWalk = NodePath("WalkGato")
+SFXAudioPlayerWalk = NodePath("WalkPlayer")
+SFXAudioPlayerDash = NodePath("DashPlayer")
+SFXAudioPlayerJump = NodePath("JumpPlayer")
+SFXAudioPlayerDamage = NodePath("DamagePlayer")
+SFXAudioPlayerDie = NodePath("DiePlayer")
+SFXAudioPopUp = NodePath("PopUp")
+SFXAudioMouseClick = NodePath("MouseClick")
+
+[node name="WalkGato" type="AudioStreamPlayer" parent="." unique_id=515379989]
+stream = ExtResource("2_sgiyi")
+
+[node name="WalkPlayer" type="AudioStreamPlayer" parent="." unique_id=41032614]
+stream = ExtResource("3_yq7t1")
+
+[node name="JumpPlayer" type="AudioStreamPlayer" parent="." unique_id=364710912]
+stream = ExtResource("4_xjq8j")
+
+[node name="DiePlayer" type="AudioStreamPlayer" parent="." unique_id=1322665780]
+stream = ExtResource("5_7m554")
+
+[node name="DamagePlayer" type="AudioStreamPlayer" parent="." unique_id=1827584956]
+stream = ExtResource("6_xe25a")
+
+[node name="DashPlayer" type="AudioStreamPlayer" parent="." unique_id=1011342132]
+stream = ExtResource("7_wyrx4")
+
+[node name="PopUp" type="AudioStreamPlayer" parent="." unique_id=1748294040]
+stream = ExtResource("8_3yrko")
+
+[node name="MouseClick" type="AudioStreamPlayer" parent="." unique_id=1314641079]
+stream = ExtResource("9_8d5qq")

@@ -39,6 +39,7 @@ public partial class Player : Character
 	// Signal de Dano tomado
 	[Signal]
 	public delegate void DamageTakenEventHandler(float damage);
+
 	
 	public override void _Ready()
 	{
@@ -60,6 +61,7 @@ public partial class Player : Character
 			if(!IsOnWall())
 			{
 				velocity += GetGravity() * (float)delta;
+				
 			}
 			else
 			{
@@ -83,6 +85,7 @@ public partial class Player : Character
 		if (Input.IsActionJustPressed("up") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			AudioManager.Instance.PlayPlayerJump();
 		}
 		
 		// Timer de Movimentação
@@ -155,10 +158,12 @@ public partial class Player : Character
 			if (direction != Vector2.Zero)
 			{
 				velocity.X = direction.X * Speed;
+				if (!AudioManager.Instance.IsPlayerWalkPlaying()) AudioManager.Instance.PlayPlayerWalk();
 			}
 			else
 			{
 				velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+				AudioManager.Instance.StopPlayerWalk();
 			}
 		}
 		
@@ -224,7 +229,9 @@ public partial class Player : Character
 	// Função de morte
 	public void PlayerDie()
 	{
+		AudioManager.Instance.PlayPlayerDie();
 		QueueFree();
+
 	}
 	
 	// Função de dano tomado
@@ -249,6 +256,8 @@ public partial class Player : Character
 			
 			this.DamageTimer = DamageDuration;
 			this.CanTakeDamage = false;
+
+			AudioManager.Instance.PlayPlayerDamage();
 		}
 		else
 		{

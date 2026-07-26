@@ -17,6 +17,7 @@ public partial class PopWindows11 : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,6 +35,7 @@ public partial class PopWindows11 : Control
 		choice = true;
 		EmitSignal(SignalName.Resposta, condicao);
 		}
+		AudioManager.Instance.PlayMouseClick();
 	}
 
 	public void _on_btn_aceitar_pressed()
@@ -41,6 +43,8 @@ public partial class PopWindows11 : Control
 		if (!choice) {
 		condicao = false;
 		choice = true;}
+
+		AudioManager.Instance.PlayMouseClick();
 	}
 
 

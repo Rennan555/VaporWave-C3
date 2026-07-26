@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dd1wu30qyosog"]
+
+[ext_resource type="AudioStream" uid="uid://be7760rd1l5uk" path="res://Assets/Sounds/lobby_djully.ogg" id="1_3ht1i"]
+
+[node name="musicaLobby" type="AudioStreamPlayer" unique_id=844425864]
+stream = ExtResource("1_3ht1i")
+autoplay = true
+parameters/looping = true

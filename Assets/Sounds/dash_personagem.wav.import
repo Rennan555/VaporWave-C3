@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dlllg0ucaeqvn"
-path="res://.godot/imported/dash_personagem.wav-f3f3fba1e7ba634c61d071ff561f7336.sample"
+path="res://.godot/imported/dash_personagem.wav-47ec568de493e458b7c4e72288ab69f5.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/dash_personagem.wav"
-dest_files=["res://.godot/imported/dash_personagem.wav-f3f3fba1e7ba634c61d071ff561f7336.sample"]
+source_file="res://Assets/Sounds/dash_personagem.wav"
+dest_files=["res://.godot/imported/dash_personagem.wav-47ec568de493e458b7c4e72288ab69f5.sample"]
 
 [params]
 

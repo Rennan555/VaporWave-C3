@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dk23njoti6nfw"]
+
+[ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_x080g"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_rbb87"]
+[ext_resource type="PackedScene" uid="uid://coeu7u28fa6qj" path="res://Scenes/Entities/Mascot/Mascot.tscn" id="3_fiacq"]
+[ext_resource type="Script" uid="uid://cjh1sqyl80f15" path="res://Scripts/Mascot/MascotAnimation.cs" id="4_wql14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
+size = Vector2(552, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
+size = Vector2(20, 336)
+
+[sub_resource type="Resource" id="Resource_nfe6u"]
+script = ExtResource("4_wql14")
+InvertV = true
+Animation = "jump"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_r4htj"]
+script = ExtResource("4_wql14")
+InvertV = true
+InvertH = true
+Animation = "grab"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Curve2D" id="Curve2D_k4lrx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 173, 257, 0, 0, 0, 0, 56, 258, 0, 0, 0, 0, 43, 220, 0, 0, 0, 0, 8, 210, 0, 0, 0, 0, 4, -37)
+}
+point_count = 5
+
+[node name="PlatformLevel" unique_id=762110100 instance=ExtResource("1_x080g")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3" unique_id=178323874]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1319019850]
+position = Vector2(265, 276)
+shape = SubResource("RectangleShape2D_nfe6u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=203812255]
+position = Vector2(-9, 165)
+shape = SubResource("RectangleShape2D_r4htj")
+
+[node name="PlayerBody" parent="." index="4" unique_id=2041397587 instance=ExtResource("2_rbb87")]
+position = Vector2(296, 247)
+
+[node name="MascotBody" parent="." index="5" unique_id=1403908216 node_paths=PackedStringArray("Path", "PathFollow") instance=ExtResource("3_fiacq")]
+position = Vector2(174, 232)
+collision_mask = 3
+Path = NodePath("../Path2D")
+PathFollow = NodePath("../Path2D/PathFollow2D")
+ChangeAnimationPoints = Dictionary[float, ExtResource("4_wql14")]({
+0.272: SubResource("Resource_nfe6u"),
+0.442: SubResource("Resource_r4htj")
+})
+
+[node name="Path2D" type="Path2D" parent="." index="6" unique_id=1906397679]
+curve = SubResource("Curve2D_k4lrx")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0" unique_id=1733020378]
+position = Vector2(173, 257)
+rotation = 3.133046

@@ -9,10 +9,15 @@ public partial class Player : Character
 	
 	// Node de Player
 	private Area2D ActionArea;
+	private AnimatedSprite2D AnimatedNode;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
 	private bool CanDash = true;
+	private bool CanTakeDamage = true;
+	
+	// Flags de animação
+	private string CurrentState = "idle";
 	
 	// Timers do wall jump
 	private const float WallJumpDuration = 0.1f;
@@ -24,6 +29,10 @@ public partial class Player : Character
 	private float DashTimer = 0.0f;
 	private float DashCoolDownTimer = 0.0f;
 	
+	// Timers de dano
+	private const float DamageDuration = 1.0f;
+	private float DamageTimer = 0.0f;
+	
 	// Signal de Dano tomado
 	[Signal]
 	public delegate void DamageTakenEventHandler(float damage);
@@ -31,11 +40,14 @@ public partial class Player : Character
 	public override void _Ready()
 	{
 		this.ActionArea = GetNode<Area2D>("ActionArea");
+		this.AnimatedNode = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
+		
+		CheckState();
 		
 		// Gravidade
 		if (!IsOnFloor())
@@ -50,8 +62,6 @@ public partial class Player : Character
 				Vector2 wallNormal = GetWallNormal();
 				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 				
-				GD.Print(wallNormal.X);
-				GD.Print(direction.X);
 				if (wallNormal.X != direction.X && (Input.IsActionPressed("ui_left") || Input.IsActionPressed("ui_right")))
 				{
 					velocity += GetGravity() * (float)delta;
@@ -90,6 +100,19 @@ public partial class Player : Character
 		{
 			if (IsOnFloor())
 			this.CanDash = true;
+		}
+		
+		// Timer de dano
+		if (this.DamageTimer >= 0.0f)
+		{
+			this.DamageTimer -= (float)delta;
+		}
+		else
+		{
+			this.CanTakeDamage = true;
+			
+			ShaderMaterial material = (ShaderMaterial)this.AnimatedNode.Material;
+			material.SetShaderParameter("active", false);
 		}
 		
 		// Wall Jump
@@ -151,6 +174,44 @@ public partial class Player : Character
 		MoveAndSlide();
 	}
 	
+	public void CheckState()
+	{
+		if (Input.IsActionJustPressed("ui_left"))
+		{
+			this.AnimatedNode.FlipH = true;
+		}
+		else if (Input.IsActionJustPressed("ui_right"))
+		{
+			this.AnimatedNode.FlipH = false;
+		}
+		
+		Vector2 velocity = Velocity;
+		
+		if (IsOnFloor())
+		{
+			if (velocity.X == 0) this.CurrentState = "idle";
+			else this.CurrentState = "walk";
+		}
+		else
+		{
+			if (velocity.Y < 0) this.CurrentState = "jump_start";
+			else
+			{
+				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+				if (IsOnWall() && direction.X != 0) this.CurrentState = "grab";
+				else this.CurrentState = "jump_end";
+			}
+		}
+		
+		if (!this.CanDash)
+		{
+			this.CurrentState = "dash";
+		}
+		
+		if (this.AnimatedNode.Animation != this.CurrentState) this.AnimatedNode.Play(this.CurrentState);
+		GD.Print(this.CurrentState);
+	}
+	
 	// Função de morte
 	public void PlayerDie()
 	{
@@ -160,12 +221,25 @@ public partial class Player : Character
 	// Função de dano tomado
 	public void TakeDamage(float damage)
 	{
-		GD.Print($"Dano tomado: {damage}, Vida: {this.Life}");
-		this.Life -= damage;
-		
-		if (this.Life <= 0)
+		if (this.CanTakeDamage)
 		{
-			PlayerDie();
+			GD.Print($"Dano tomado - {damage}, Vida: {this.Life}");
+			this.Life -= damage;
+			
+			ShaderMaterial material = (ShaderMaterial)this.AnimatedNode.Material;
+			material.SetShaderParameter("active", true);
+			
+			if (this.Life <= 0)
+			{
+				PlayerDie();
+			}
+			
+			this.DamageTimer = DamageDuration;
+			this.CanTakeDamage = false;
+		}
+		else
+		{
+			GD.Print($"Dano pulado - Vida: {this.Life}");
 		}
 	}
 }

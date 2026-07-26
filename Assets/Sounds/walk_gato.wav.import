@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dgvpbhbdmncsd"
-path="res://.godot/imported/walk_gato.wav-142645a487a0577085936cb8452f2e0d.sample"
+path="res://.godot/imported/walk_gato.wav-02fc83e659a3b351c1c3d8ee1d8bfa49.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/walk_gato.wav"
-dest_files=["res://.godot/imported/walk_gato.wav-142645a487a0577085936cb8452f2e0d.sample"]
+source_file="res://Assets/Sounds/walk_gato.wav"
+dest_files=["res://.godot/imported/walk_gato.wav-02fc83e659a3b351c1c3d8ee1d8bfa49.sample"]
 
 [params]
 

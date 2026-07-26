@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cjp5bidbq2sej"
-path="res://.godot/imported/Bistro.ttf-18dd4deb33b080a25c080962a464014b.fontdata"
+path="res://.godot/imported/Bistro.ttf-5b7158989ee7154325161ddd58f65273.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/Ruindows UI/Bistro.ttf"
-dest_files=["res://.godot/imported/Bistro.ttf-18dd4deb33b080a25c080962a464014b.fontdata"]
+source_file="res://Assets/Fonts/Ruindows UI/Bistro.ttf"
+dest_files=["res://.godot/imported/Bistro.ttf-5b7158989ee7154325161ddd58f65273.fontdata"]
 
 [params]
 

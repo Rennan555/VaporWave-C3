@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cobj30b2syx3g"]
 
 [ext_resource type="Script" uid="uid://cty0agckabt62" path="res://Scripts/telas/CreditosMenu.cs" id="1_6u6l2"]
-[ext_resource type="Texture2D" uid="uid://b7melaoa4ncbx" path="res://assets/Sprites/Menus/menu_city.png" id="2_6u6l2"]
+[ext_resource type="Texture2D" uid="uid://b7melaoa4ncbx" path="res://Assets/Sprites/Menus/menu_city.png" id="2_6u6l2"]
+[ext_resource type="FontFile" uid="uid://dfqcnp38fuwbn" path="res://Assets/Fonts/Vaporwave/whitrabt.ttf" id="2_v67re"]
+[ext_resource type="FontFile" uid="uid://dprwkbd6w12qt" path="res://Assets/Fonts/Ruindows UI/Hey November.ttf" id="3_uijtt"]
 
 [node name="CreditosMenu" type="Control" unique_id=57772042]
 layout_mode = 3
@@ -22,6 +24,8 @@ anchor_bottom = 1.0
 offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0.9411765, 0.98039216, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_v67re")
 text = "Voltar"
 
 [node name="TextureRect" type="Label" parent="." unique_id=733350995]
@@ -30,10 +34,12 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.9411765, 0.98039216, 0.78431374, 1)
+theme_override_colors/font_shadow_color = Color(0.2627451, 0.078431375, 0.5019608, 1)
 theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_uijtt")
 theme_override_font_sizes/font_size = 46
-text = "NOSSO JOGO"
+text = "Controles"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -50,7 +56,13 @@ offset_right = 195.5
 offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Texto de credito bla bla"
+theme_override_colors/font_color = Color(0.9411765, 0.98039216, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_v67re")
+theme_override_font_sizes/font_size = 25
+text = "WASD: Andar
+Space: Pular
+Shift: Dash
+E: Interagir"
 horizontal_alignment = 1
 vertical_alignment = 1
 

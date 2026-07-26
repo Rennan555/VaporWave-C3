@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dv1qfeibk0en8"]
+
+[ext_resource type="Script" uid="uid://d32mdyuis2240" path="res://Scripts/telas/GameOverMenu.cs" id="1_m470w"]
+[ext_resource type="Texture2D" uid="uid://bklbedytlotkm" path="res://assets/Sprites/Menus/game_over.png" id="1_wtuii"]
+[ext_resource type="FontFile" uid="uid://dfqcnp38fuwbn" path="res://assets/Fonts/Vaporwave/whitrabt.ttf" id="2_0mp5x"]
+[ext_resource type="PackedScene" uid="uid://clpyqt5h3oor4" path="res://Scenes/Telas/start_menu.tscn" id="2_bywd7"]
+
+[node name="GameOverMenu" type="Control" unique_id=1138698379]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m470w")
+MenuScene = ExtResource("2_bywd7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1412507728]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 270.0
+grow_horizontal = 2
+texture = ExtResource("1_wtuii")
+
+[node name="Label" type="Label" parent="." unique_id=949177940]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45208332
+anchor_top = 0.2037037
+anchor_right = 0.55
+anchor_bottom = 0.2037037
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_0mp5x")
+theme_override_font_sizes/font_size = 46
+text = "Game Over"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=204282860]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -77.0
+offset_right = 64.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Voltar ao Menu"
+
+[connection signal="pressed" from="Button" to="." method="BackToMenu"]

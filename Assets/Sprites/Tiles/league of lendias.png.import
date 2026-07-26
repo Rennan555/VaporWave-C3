@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b72nai0ti0ha5"
-path="res://.godot/imported/league of lendias.png-799fd50ddab8ed23e9c02da9363034b4.ctex"
+path="res://.godot/imported/league of lendias.png-66d60cb309f4a21cf6138e128adb3b13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/league of lendias.png"
-dest_files=["res://.godot/imported/league of lendias.png-799fd50ddab8ed23e9c02da9363034b4.ctex"]
+source_file="res://assets/Sprites/Tiles/league of lendias.png"
+dest_files=["res://.godot/imported/league of lendias.png-66d60cb309f4a21cf6138e128adb3b13.ctex"]
 
 [params]
 

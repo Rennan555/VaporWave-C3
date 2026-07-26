@@ -214,7 +214,6 @@ public partial class Player : Character
 		}
 		
 		if (this.AnimatedNode.Animation != this.CurrentState) this.AnimatedNode.Play(this.CurrentState);
-		GD.Print(this.CurrentState);
 	}
 	
 	// Função de morte

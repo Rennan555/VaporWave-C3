@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsgn07yew0tu8"
-path="res://.godot/imported/bloco_notas.png-961f9d5fa2500747df8d8ad497af43bd.ctex"
+path="res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/bloco_notas.png"
-dest_files=["res://.godot/imported/bloco_notas.png-961f9d5fa2500747df8d8ad497af43bd.ctex"]
+source_file="res://assets/Sprites/PopUps/bloco_notas.png"
+dest_files=["res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"]
 
 [params]
 

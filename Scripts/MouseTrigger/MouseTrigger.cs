@@ -3,6 +3,10 @@ using System;
 
 public partial class MouseTrigger : Area2D
 {
+	// Signals
+	[Signal]
+	public delegate void CallDamageTakenEventHandler();
+	
 	public override void _Ready()
 	{
 	}
@@ -17,6 +21,7 @@ public partial class MouseTrigger : Area2D
 		if (body is Enemy enemy)
 		{
 			GD.Print(enemy.Name);
+			EmitSignal(SignalName.CallDamageTaken);
 		}
 	}
 }

@@ -5,20 +5,22 @@ public partial class Level : Node2D
 {
 	// Atributos de Node
 	[Export] public PackedScene nextScenePacked;
+	[Export] private Player CameraAnchor;
 	private LevelManager ManagerNode;
 	private Camera2D CameraNode;
-	private Player CameraAnchor;
 	
 	// Atributos de Node Platform
 	[Export]
 	public Label ScoreLabel;
+	private Parallax2D CoqueiroLayer;
+	private Parallax2D MontanhaLayer; 
 	
 	// Atributos do Level
 	public int LevelScore = 0;
+	public Vector2 LayerInitialPosition;
 
 	//gerenciamento de saturação pelo world environment
 	private GlobalWorldEnvironment GlobalEnv;
-	
 	
 	// Signal de receber pontuação dos inimigos
 	[Signal]
@@ -46,6 +48,11 @@ public partial class Level : Node2D
 		
 		// Pega Anchor
 		this.CameraAnchor = GetNode<Player>("PlayerBody");
+		
+		// Pegar parallax
+		this.CoqueiroLayer = GetNode<Parallax2D>("BackgorundNode/CoqueiroParallax");
+		this.MontanhaLayer = GetNode<Parallax2D>("BackgorundNode/MontanhaParallax");
+		this.LayerInitialPosition = this.CoqueiroLayer.Position;
 	}
 	
 	public override void _Process(double delta)
@@ -54,6 +61,20 @@ public partial class Level : Node2D
 		{
 			string scoreText = $"Score: {this.LevelScore}";
 			this.ScoreLabel.Text = scoreText;
+		}
+		
+		MoveBackground();
+	}
+	
+	// Aplica movimento de parallax
+	public void MoveBackground()
+	{
+		if (this.CameraAnchor != null)
+		{
+			Vector2 playerDelta = CameraAnchor.GlobalPosition - this.LayerInitialPosition;
+			
+			this.CoqueiroLayer.ScrollOffset = playerDelta * this.CoqueiroLayer.ScrollScale;
+			this.MontanhaLayer.ScrollOffset = playerDelta * this.MontanhaLayer.ScrollScale;
 		}
 	}
 	

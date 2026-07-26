@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bf2if1wc0yr5g"]
 
-[ext_resource type="Texture2D" uid="uid://cq7snykhcm211" path="res://assets/Sprites/Character/cursor_sem_cor.png" id="1_7fibq"]
+[ext_resource type="Texture2D" uid="uid://bcd3fkd25b72r" path="res://assets/Sprites/Character/cursor_sem_cor.png" id="1_7fibq"]
 [ext_resource type="Script" uid="uid://chp75re8x5ajf" path="res://Scripts/MouseTrigger/MouseTrigger.cs" id="1_tdo3n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]

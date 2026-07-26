@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_cafok"]
 [ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="1_wkv1f"]
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="2_cafok"]
+[ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="4_h6idi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
 size = Vector2(1237.5, 20)
@@ -38,3 +39,6 @@ position = Vector2(228, -307)
 
 [node name="CascadeBody8" parent="." unique_id=1637810224 instance=ExtResource("1_wkv1f")]
 position = Vector2(231, -162)
+
+[node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("4_h6idi")]
+position = Vector2(-326, 363)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4aafcyesk7mk"]
 
 [ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_euahd"]
+[ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="2_ng2ex"]
 
 [node name="PlatformLevel" type="Node2D" unique_id=762110100 node_paths=PackedStringArray("ScoreLabel")]
 script = ExtResource("1_euahd")
@@ -34,3 +35,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 480
 limit_bottom = 270
+
+[node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("2_ng2ex")]
+position = Vector2(-62, 180)

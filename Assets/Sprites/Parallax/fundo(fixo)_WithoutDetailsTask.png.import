@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpywj75s1mg3n"
-path="res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-64128d626ad8b76134307da725960593.ctex"
+path="res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-1c71bb32368cfb4fe7779feee0c3b40c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Parallax/fundo(fixo)_WithoutDetailsTask.png"
-dest_files=["res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-64128d626ad8b76134307da725960593.ctex"]
+source_file="res://assets/Sprites/Parallax/fundo(fixo)_WithoutDetailsTask.png"
+dest_files=["res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-1c71bb32368cfb4fe7779feee0c3b40c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drpau6ceavcw5"
-path="res://.godot/imported/fundo(fixo)_WithoutDetailsBlue.png-0f47bdb8198427a1fb0022b5b4399ad8.ctex"
+path="res://.godot/imported/fundo(fixo)_WithoutDetailsBlue.png-fd8576db8385b5b7c25f0e0c7e0fdd1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Parallax/fundo(fixo)_WithoutDetailsBlue.png"
-dest_files=["res://.godot/imported/fundo(fixo)_WithoutDetailsBlue.png-0f47bdb8198427a1fb0022b5b4399ad8.ctex"]
+source_file="res://assets/Sprites/Parallax/fundo(fixo)_WithoutDetailsBlue.png"
+dest_files=["res://.godot/imported/fundo(fixo)_WithoutDetailsBlue.png-fd8576db8385b5b7c25f0e0c7e0fdd1e.ctex"]
 
 [params]
 

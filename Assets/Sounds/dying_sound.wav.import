@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b5orepuvdgstw"
-path="res://.godot/imported/dying_sound.wav-ea4d9e1df674441754a27f64117860b1.sample"
+path="res://.godot/imported/dying_sound.wav-94f59b43380d0c37a87ca409d88ac9e0.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/dying_sound.wav"
-dest_files=["res://.godot/imported/dying_sound.wav-ea4d9e1df674441754a27f64117860b1.sample"]
+source_file="res://assets/Sounds/dying_sound.wav"
+dest_files=["res://.godot/imported/dying_sound.wav-94f59b43380d0c37a87ca409d88ac9e0.sample"]
 
 [params]
 

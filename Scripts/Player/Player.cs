@@ -230,7 +230,6 @@ public partial class Player : Character
 	public void PlayerDie()
 	{
 		AudioManager.Instance.PlayPlayerDie();
-		QueueFree();
 
 		Death death = new Death();
 		death.CallGameOver(this);

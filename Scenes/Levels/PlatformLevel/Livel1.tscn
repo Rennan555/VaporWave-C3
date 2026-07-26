@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://cf7orv16qiy8w"]
 
 [ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_0oyoc"]
-[ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://Assets/Sprites/Parallax/fundo(fixo).png" id="2_dbtqp"]
+[ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://assets/Sprites/Parallax/fundo(fixo).png" id="2_dbtqp"]
 [ext_resource type="PackedScene" uid="uid://clrsmjn7fb6yb" path="res://Scenes/popups/pop_up_notas.tscn" id="2_hasdh"]
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="3_govnp"]
-[ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://Assets/Sprites/Parallax/montanhas.png" id="4_5fivx"]
-[ext_resource type="Texture2D" uid="uid://crmm0ogfdl00q" path="res://Assets/Sprites/Parallax/taskbar(fixo).png" id="4_tlagd"]
-[ext_resource type="Texture2D" uid="uid://dhxugqcjwblcq" path="res://Assets/Sprites/Parallax/palmeiras.png" id="5_5yij4"]
-[ext_resource type="PackedScene" uid="uid://csk0xe4a7fs41" path="res://Scenes/Levels/LevelManager/MainManagetLevel.tscn" id="8_q8acl"]
+[ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/Sprites/Parallax/montanhas.png" id="4_5fivx"]
+[ext_resource type="Texture2D" uid="uid://crmm0ogfdl00q" path="res://assets/Sprites/Parallax/taskbar(fixo).png" id="4_tlagd"]
+[ext_resource type="Texture2D" uid="uid://dhxugqcjwblcq" path="res://assets/Sprites/Parallax/palmeiras.png" id="5_5yij4"]
 [ext_resource type="PackedScene" uid="uid://bhqwrcvva0lvb" path="res://Scenes/Debugs/damage_teste.tscn" id="9_ftfas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfe6u"]
@@ -78,8 +77,6 @@ texture = ExtResource("4_5fivx")
 [node name="pop-up_notas" parent="." index="6" unique_id=610167202 instance=ExtResource("2_hasdh")]
 position = Vector2(308, 226)
 notes = "Teste teste"
-
-[node name="LevelManager" parent="." index="7" unique_id=234328961 instance=ExtResource("8_q8acl")]
 
 [node name="DamageTeste" parent="." index="8" unique_id=478507420 instance=ExtResource("9_ftfas")]
 position = Vector2(133, 253)

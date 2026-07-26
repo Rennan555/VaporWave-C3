@@ -42,9 +42,17 @@ public partial class PopWindows11 : Control
 	{	
 		if (!choice) {
 		condicao = false;
+<<<<<<< HEAD
 		choice = true;}
 
 		AudioManager.Instance.PlayMouseClick();
+=======
+		choice = true;
+
+		Death death = new Death();
+		death.CallGameOver(this);
+		}
+>>>>>>> d084fe80b5c6175940562aab862abebb81794ddc
 	}
 
 

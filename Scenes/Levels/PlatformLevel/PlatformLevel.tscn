@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_euahd"]
 [ext_resource type="PackedScene" uid="uid://dbhgdgllufyph" path="res://Scenes/GlobalWorldEnvironment.tscn" id="2_ng2ex"]
 [ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="3_1xj3r"]
-[ext_resource type="Texture2D" uid="uid://jwxujrn3sac3" path="res://assets/Sprites/Parallax/fundo(fixo).png" id="4_8m44s"]
-[ext_resource type="Texture2D" uid="uid://b4ocg0ujf3ojb" path="res://assets/Sprites/Parallax/taskbar(fixo).png" id="5_ji3er"]
-[ext_resource type="Texture2D" uid="uid://bwnnn4mgw1m5j" path="res://assets/Sprites/Parallax/palmeiras.png" id="6_v0158"]
-[ext_resource type="Texture2D" uid="uid://b71mhgql48d4y" path="res://assets/Sprites/Parallax/montanhas.png" id="7_nmpou"]
+[ext_resource type="Texture2D" uid="uid://jwxujrn3sac3" path="res://Assets/Sprites/Parallax/fundo(fixo).png" id="4_8m44s"]
+[ext_resource type="Texture2D" uid="uid://b4ocg0ujf3ojb" path="res://Assets/Sprites/Parallax/taskbar(fixo).png" id="5_ji3er"]
+[ext_resource type="Texture2D" uid="uid://bwnnn4mgw1m5j" path="res://Assets/Sprites/Parallax/palmeiras.png" id="6_v0158"]
+[ext_resource type="Texture2D" uid="uid://b71mhgql48d4y" path="res://Assets/Sprites/Parallax/montanhas.png" id="7_nmpou"]
 
 [node name="PlatformLevel" type="Node2D" unique_id=762110100 node_paths=PackedStringArray("ScoreLabel")]
 script = ExtResource("1_euahd")
@@ -17,6 +17,7 @@ ScoreLabel = NodePath("HudLayer/HContainer/ScoreLabel")
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1029834772]
 
 [node name="HContainer" type="HFlowContainer" parent="HudLayer" unique_id=1128867126]
+visible = false
 offset_right = 197.0
 offset_bottom = 120.0
 

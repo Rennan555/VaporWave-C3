@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bahu0ihdivhcb"
-path="res://.godot/imported/icon_personagem.png-4a10356bde80b8f88ba97e2bed08f5d4.ctex"
+path="res://.godot/imported/icon_personagem.png-6811d4592b07d680416da4932682213b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/HUD/icon_personagem.png"
-dest_files=["res://.godot/imported/icon_personagem.png-4a10356bde80b8f88ba97e2bed08f5d4.ctex"]
+source_file="res://assets/Sprites/HUD/icon_personagem.png"
+dest_files=["res://.godot/imported/icon_personagem.png-6811d4592b07d680416da4932682213b.ctex"]
 
 [params]
 

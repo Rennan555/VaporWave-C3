@@ -30,6 +30,11 @@ public partial class PopUpNotas : Area2D
 	[Export] public bool show;
 
 	[Export] public string notes = "lorem jad jdad jad jad";
+	
+	// Signal de emitir resposta
+	[Signal]
+	public delegate void CallChangeLevelEventHandler();
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -69,6 +74,7 @@ public partial class PopUpNotas : Area2D
 				textInteraact.Visible = false;
 			}
 		}
+		
 
 	}
 
@@ -89,6 +95,7 @@ public partial class PopUpNotas : Area2D
 	//mostrar a janela do bloco de notas
 	public void ShowPopUp()
 	{
+		text.Text = notes;
 		popUp.Visible = true;
 	}
 
@@ -110,5 +117,11 @@ public partial class PopUpNotas : Area2D
 		InArea = false;
 	}
 
-	
+	public void _on_pop_windows_11_resposta(bool response)
+	{
+		if (response)
+		{
+			EmitSignal(SignalName.CallChangeLevel);
+		}
+	}
 }

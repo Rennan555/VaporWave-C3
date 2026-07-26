@@ -21,7 +21,7 @@ public partial class LevelManager : Node2D
 	
 	public override void _Ready()
 	{
-		// Conecta Signal de somar pontuação
+		// Conecta Signal de somar pontuação e  mudar Level
 		this.CallSumTotalScore += SumTotalScore;
 		
 		// Inicializa Level inicial

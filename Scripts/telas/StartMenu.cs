@@ -34,5 +34,7 @@ public partial class StartMenu : Control
 	public void _on_sair_pressed()
 	{
 		GD.Print("apertou sair");
+		
+		GetTree().Quit();
 	}
 }

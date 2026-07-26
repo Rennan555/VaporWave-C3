@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjaagak1v72l0"]
+
+[ext_resource type="PackedScene" uid="uid://csofj0qteb266" path="res://Scenes/Levels/ScreenLevel/ScreenLevel.tscn" id="1_c6e7o"]
+[ext_resource type="Texture2D" uid="uid://bqdvfketcfh78" path="res://Assets/Sprites/Parallax/tela de batalhatesteverde.png" id="2_tvu1r"]
+
+[node name="batalha1" type="Node2D" unique_id=55605287]
+
+[node name="ScreenLevel" parent="." unique_id=67583462 instance=ExtResource("1_c6e7o")]
+
+[node name="ImageRect" parent="ScreenLevel/BackgroundLayer" parent_id_path=PackedInt32Array(67583462, 510691960) index="0" unique_id=398374015]
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_tvu1r")
+
+[editable path="ScreenLevel"]

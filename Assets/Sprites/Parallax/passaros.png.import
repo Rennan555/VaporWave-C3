@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bid0ctehk7324"
-<<<<<<< HEAD:Assets/Sprites/Parallax/passaros.png.import
+uid="uid://sos0o5mqmy4r"
 path="res://.godot/imported/passaros.png-4d12b79675ab53517052cc9dfc2e3e37.ctex"
-=======
-path="res://.godot/imported/passaros.png-cc09c6fcd3c8453cb5db23289e52a1b0.ctex"
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/passaros.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Assets/Sprites/Parallax/passaros.png.import
 source_file="res://Assets/Sprites/Parallax/passaros.png"
 dest_files=["res://.godot/imported/passaros.png-4d12b79675ab53517052cc9dfc2e3e37.ctex"]
-=======
-source_file="res://Assets/parallax/passaros.png"
-dest_files=["res://.godot/imported/passaros.png-cc09c6fcd3c8453cb5db23289e52a1b0.ctex"]
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/passaros.png.import
 
 [params]
 

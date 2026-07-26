@@ -2,23 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD:Assets/Fonts/Ruindows UI/Bistro.ttf.import
-uid="uid://bq7yb0fcshmlg"
+uid="uid://cjp5bidbq2sej"
 path="res://.godot/imported/Bistro.ttf-5b7158989ee7154325161ddd58f65273.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/Ruindows UI/Bistro.ttf"
 dest_files=["res://.godot/imported/Bistro.ttf-5b7158989ee7154325161ddd58f65273.fontdata"]
-=======
-uid="uid://ce52m5k80v7wp"
-path="res://.godot/imported/Bistro.ttf-6d7328b3ffec552b4ca327b40fbad2d9.fontdata"
-
-[deps]
-
-source_file="res://Assets/Fonts/Bistro.ttf"
-dest_files=["res://.godot/imported/Bistro.ttf-6d7328b3ffec552b4ca327b40fbad2d9.fontdata"]
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:Assets/Fonts/Bistro.ttf.import
 
 [params]
 

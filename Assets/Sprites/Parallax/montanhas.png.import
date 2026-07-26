@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pd3pcbp2slce"
-<<<<<<< HEAD:Assets/Sprites/Parallax/montanhas.png.import
+uid="uid://b71mhgql48d4y"
 path="res://.godot/imported/montanhas.png-f1153313e8bef64acd74e030496e9840.ctex"
-=======
-path="res://.godot/imported/montanhas.png-7fd07d83fdedf922c65a69fde6afb833.ctex"
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/montanhas.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Assets/Sprites/Parallax/montanhas.png.import
 source_file="res://Assets/Sprites/Parallax/montanhas.png"
 dest_files=["res://.godot/imported/montanhas.png-f1153313e8bef64acd74e030496e9840.ctex"]
-=======
-source_file="res://Assets/parallax/montanhas.png"
-dest_files=["res://.godot/imported/montanhas.png-7fd07d83fdedf922c65a69fde6afb833.ctex"]
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/montanhas.png.import
 
 [params]
 

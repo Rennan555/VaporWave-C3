@@ -3,11 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://djsvet7ji413l" path="res://Scenes/Entities/Character/Character.tscn" id="1_vlobg"]
 [ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="2_kigwy"]
 [ext_resource type="Script" uid="uid://den2j0jmiirqe" path="res://Scripts/Mascot/Mascot.cs" id="2_vk8rh"]
-[ext_resource type="Texture2D" uid="uid://yumq5j3denbn" path="res://assets/Sprites/Character/gato-Sheet.png" id="3_vk8rh"]
+[ext_resource type="Texture2D" uid="uid://yumq5j3denbn" path="res://Assets/Sprites/Character/gato-Sheet.png" id="3_vk8rh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tkw6"]
-radius = 27.0
-height = 54.0
+radius = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tkw6"]
 atlas = ExtResource("3_vk8rh")

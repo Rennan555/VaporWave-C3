@@ -2,23 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD:Assets/Fonts/Vaporwave/whitrabt.ttf.import
-uid="uid://l4k72e1qousc"
+uid="uid://dfqcnp38fuwbn"
 path="res://.godot/imported/whitrabt.ttf-9a8a5b8240b7df1482f01da37b7e5cc4.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/Vaporwave/whitrabt.ttf"
 dest_files=["res://.godot/imported/whitrabt.ttf-9a8a5b8240b7df1482f01da37b7e5cc4.fontdata"]
-=======
-uid="uid://cu4b8jcjm143b"
-path="res://.godot/imported/whitrabt.ttf-763d6fdd669931a1a52853fd55db5d84.fontdata"
-
-[deps]
-
-source_file="res://Assets/Fonts/whitrabt.ttf"
-dest_files=["res://.godot/imported/whitrabt.ttf-763d6fdd669931a1a52853fd55db5d84.fontdata"]
->>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:Assets/Fonts/whitrabt.ttf.import
 
 [params]
 

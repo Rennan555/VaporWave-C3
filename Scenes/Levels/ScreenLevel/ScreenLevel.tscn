@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://csofj0qteb266"]
 
+[ext_resource type="Script" uid="uid://1tsa46u3cg1f" path="res://Scripts/Levels/ScreenLevel.cs" id="1_5umi5"]
+[ext_resource type="PackedScene" uid="uid://dbhgdgllufyph" path="res://Scenes/GlobalWorldEnvironment.tscn" id="2_e6yna"]
+
 [node name="ScreenLevel" type="Node2D" unique_id=67583462]
+script = ExtResource("1_5umi5")
 
 [node name="ButtonsControl" type="Control" parent="." unique_id=715673277]
 layout_mode = 3
@@ -17,3 +21,5 @@ layer = -1
 [node name="ImageRect" type="TextureRect" parent="BackgroundLayer" unique_id=398374015]
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="GlobalWorldEnvironment" parent="." unique_id=1050102785 instance=ExtResource("2_e6yna")]

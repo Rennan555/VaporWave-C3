@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://5uq3h828qqgb"]
+
+[ext_resource type="PackedScene" uid="uid://b35bxiyj7i0y1" path="res://Scenes/Entities/inimigo_2.tscn" id="1_nj3ua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k41lo"]
+size = Vector2(36, 725)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ungyi"]
+size = Vector2(1201, 42)
+
+[node name="TesteInimigo2" type="Node2D" unique_id=2047515515]
+
+[node name="Inimigo2" parent="." unique_id=1508178366 instance=ExtResource("1_nj3ua")]
+position = Vector2(71, 60)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1713799911]
+position = Vector2(-48, 225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1561681832]
+position = Vector2(29, 78)
+shape = SubResource("RectangleShape2D_k41lo")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1830126237]
+position = Vector2(-96, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1538209019]
+position = Vector2(1270, -143.5)
+shape = SubResource("RectangleShape2D_k41lo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1839865106]
+position = Vector2(546, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1159506440]
+position = Vector2(38.5, 11)
+shape = SubResource("RectangleShape2D_ungyi")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=741514368]
+position = Vector2(1092, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1293600445]
+position = Vector2(-519, 732)
+shape = SubResource("RectangleShape2D_ungyi")

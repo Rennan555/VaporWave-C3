@@ -33,7 +33,7 @@ public partial class Player : Character
 	private float DashCoolDownTimer = 0.0f;
 	
 	// Timers de dano
-	private const float DamageDuration = 1.0f;
+	private const float DamageDuration = 0.3f;
 	private float DamageTimer = 0.0f;
 	
 	// Signal de Dano tomado

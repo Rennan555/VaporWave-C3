@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsgn07yew0tu8"
-path="res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"
+uid="uid://dwg51daavydr4"
+path="res://.godot/imported/cursor_sem_cor.png-d99f8ef433d44403c3bc80e5df2ec569.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/PopUps/bloco_notas.png"
-dest_files=["res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"]
+source_file="res://assets/Sprites/HUD/cursor_sem_cor.png"
+dest_files=["res://.godot/imported/cursor_sem_cor.png-d99f8ef433d44403c3bc80e5df2ec569.ctex"]
 
 [params]
 

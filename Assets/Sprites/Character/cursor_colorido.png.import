@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:Assets/Sprites/Character/cursor_colorido.png.import
 uid="uid://b2cohdx5ppnn5"
-path="res://.godot/imported/cursor_colorido.png-d3b2c5033c4e1baf74e9e2df1585938b.ctex"
-=======
-uid="uid://byxpwpy6vpuix"
-path="res://.godot/imported/ClickedButton_PopUp.png-83fce70dae8e2c36afca89b65101eb4b.ctex"
->>>>>>> fd6774bd76d698ae7192c800c6cf5ad83ac26103:Assets/Sprites/PopUps/ClickedButton_PopUp.png.import
+path="res://.godot/imported/cursor_colorido.png-ab78ec3cbdf787f433255e14779872b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Assets/Sprites/Character/cursor_colorido.png.import
-source_file="res://Assets/Sprites/Character/cursor_colorido.png"
-dest_files=["res://.godot/imported/cursor_colorido.png-d3b2c5033c4e1baf74e9e2df1585938b.ctex"]
-=======
-source_file="res://assets/Sprites/PopUps/ClickedButton_PopUp.png"
-dest_files=["res://.godot/imported/ClickedButton_PopUp.png-83fce70dae8e2c36afca89b65101eb4b.ctex"]
->>>>>>> fd6774bd76d698ae7192c800c6cf5ad83ac26103:Assets/Sprites/PopUps/ClickedButton_PopUp.png.import
+source_file="res://assets/Sprites/Character/cursor_colorido.png"
+dest_files=["res://.godot/imported/cursor_colorido.png-ab78ec3cbdf787f433255e14779872b7.ctex"]
 
 [params]
 

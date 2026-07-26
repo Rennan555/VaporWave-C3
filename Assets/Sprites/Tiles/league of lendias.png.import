@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsgn07yew0tu8"
-path="res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"
+uid="uid://b72nai0ti0ha5"
+path="res://.godot/imported/league of lendias.png-66d60cb309f4a21cf6138e128adb3b13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/PopUps/bloco_notas.png"
-dest_files=["res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"]
+source_file="res://assets/Sprites/Tiles/league of lendias.png"
+dest_files=["res://.godot/imported/league of lendias.png-66d60cb309f4a21cf6138e128adb3b13.ctex"]
 
 [params]
 

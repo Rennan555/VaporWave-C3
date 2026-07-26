@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://f8g75lkc627f" path="res://Scripts/Levels/Level.cs" id="1_euahd"]
 [ext_resource type="PackedScene" uid="uid://dbhgdgllufyph" path="res://Scenes/GlobalWorldEnvironment.tscn" id="2_ng2ex"]
 [ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="3_1xj3r"]
+[ext_resource type="Texture2D" uid="uid://jwxujrn3sac3" path="res://assets/Sprites/Parallax/fundo(fixo).png" id="4_8m44s"]
+[ext_resource type="Texture2D" uid="uid://b4ocg0ujf3ojb" path="res://assets/Sprites/Parallax/taskbar(fixo).png" id="5_ji3er"]
+[ext_resource type="Texture2D" uid="uid://bwnnn4mgw1m5j" path="res://assets/Sprites/Parallax/palmeiras.png" id="6_v0158"]
+[ext_resource type="Texture2D" uid="uid://b71mhgql48d4y" path="res://assets/Sprites/Parallax/montanhas.png" id="7_nmpou"]
 
 [node name="PlatformLevel" type="Node2D" unique_id=762110100 node_paths=PackedStringArray("ScoreLabel")]
 script = ExtResource("1_euahd")
@@ -41,3 +45,37 @@ limit_bottom = 270
 
 [node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("3_1xj3r")]
 position = Vector2(-156, 170)
+
+[node name="BackgorundNode" type="Node2D" parent="." unique_id=2056641956]
+
+[node name="FundoTexture" type="TextureRect" parent="BackgorundNode" unique_id=511110110]
+z_index = -4
+offset_right = 482.0
+offset_bottom = 270.0
+texture = ExtResource("4_8m44s")
+
+[node name="TextureRect" type="TextureRect" parent="BackgorundNode" unique_id=896754383]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_ji3er")
+
+[node name="CoqueiroParallax" type="Parallax2D" parent="BackgorundNode" unique_id=276613463]
+z_index = -2
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(480, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgorundNode/CoqueiroParallax" unique_id=436532858]
+position = Vector2(240, 135)
+texture = ExtResource("6_v0158")
+
+[node name="MontanhaParallax" type="Parallax2D" parent="BackgorundNode" unique_id=1450278430]
+z_index = -3
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(480, 0)
+repeat_times = 2
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgorundNode/MontanhaParallax" unique_id=769251575]
+position = Vector2(240, 135)
+texture = ExtResource("7_nmpou")

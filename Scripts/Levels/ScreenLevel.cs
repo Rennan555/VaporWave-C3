@@ -60,7 +60,8 @@ public partial class ScreenLevel : Node2D
 		
 		if (this.Lives <= 0)
 		{
-			// Game Over
+			Death death = new Death();
+			death.CallGameOver(this);
 		}
 	}
 }

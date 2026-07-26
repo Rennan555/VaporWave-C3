@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bjaagak1v72l0"]
 
 [ext_resource type="PackedScene" uid="uid://csofj0qteb266" path="res://Scenes/Levels/ScreenLevel/ScreenLevel.tscn" id="1_c6e7o"]
-[ext_resource type="Texture2D" uid="uid://bqdvfketcfh78" path="res://Assets/Sprites/Parallax/tela de batalhatesteverde.png" id="2_tvu1r"]
+[ext_resource type="Texture2D" uid="uid://bqdvfketcfh78" path="res://assets/Sprites/Parallax/tela de batalhatesteverde.png" id="2_tvu1r"]
+[ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="3_tvu1r"]
 
 [node name="batalha1" type="Node2D" unique_id=55605287]
 
@@ -11,5 +12,8 @@
 offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("2_tvu1r")
+
+[node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("3_tvu1r")]
+position = Vector2(-35, 199)
 
 [editable path="ScreenLevel"]

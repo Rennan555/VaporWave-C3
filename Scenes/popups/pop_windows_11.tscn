@@ -1,22 +1,31 @@
 [gd_scene format=3 uid="uid://cfbb3rxrxkfmk"]
 
 [ext_resource type="Script" uid="uid://chyf4ecji0vsc" path="res://Scripts/popups/PopWindows11.cs" id="1_ok52a"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tuyhn"]
-load_path = "res://.godot/imported/windowsantigo.png-180b07d4ccc6c998054ac6e474d740b7.ctex"
+[ext_resource type="Texture2D" uid="uid://hwbp6rub4c32" path="res://Assets/Sprites/PopUps/popUp_base.png" id="2_f5jwu"]
+[ext_resource type="FontFile" uid="uid://b26f1aowfnanh" path="res://Assets/Fonts/Vaporwave/ConnectionII.otf" id="3_c1hmp"]
+[ext_resource type="Texture2D" uid="uid://bc185mth80urf" path="res://Assets/Sprites/PopUps/UnclickedButton.png" id="4_d57xt"]
+[ext_resource type="Texture2D" uid="uid://omnla7d1wpvw" path="res://Assets/Sprites/PopUps/ClickedButton.png" id="5_nbmwk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tuyhn"]
-texture = SubResource("CompressedTexture2D_tuyhn")
-texture_margin_top = 15.0
-expand_margin_left = 189.0
-expand_margin_top = 314.0
-expand_margin_right = 199.0
-expand_margin_bottom = 375.0
+texture = ExtResource("2_f5jwu")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sllgy"]
-bg_color = Color(0.8471719, 0.8155079, 0.6908928, 1)
-shadow_size = 1
-shadow_offset = Vector2(2.5, 3.4)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5woau"]
+texture = ExtResource("4_d57xt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0owht"]
+texture = ExtResource("5_nbmwk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f5jwu"]
+texture = ExtResource("4_d57xt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0lj5"]
+texture = ExtResource("4_d57xt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db85u"]
+texture = ExtResource("5_nbmwk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c1hmp"]
+texture = ExtResource("4_d57xt")
 
 [node name="Pop_windows11" type="Control" unique_id=1455502249]
 layout_mode = 3
@@ -31,45 +40,54 @@ script = ExtResource("1_ok52a")
 
 [node name="Panel" type="Panel" parent="." unique_id=426730880]
 layout_mode = 0
-offset_left = -578.0
-offset_top = -325.0
-offset_right = 568.0
-offset_bottom = 332.0
+offset_left = -72.0
+offset_top = -36.0
+offset_right = 184.0
+offset_bottom = 92.0
+scale = Vector2(1, 0.9)
 theme_override_styles/panel = SubResource("StyleBoxTexture_tuyhn")
 
 [node name="BtnRecusar" type="Button" parent="." unique_id=105733387]
 layout_mode = 0
-offset_left = -359.0
-offset_top = 100.0
-offset_right = -144.0
-offset_bottom = 203.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxFlat_sllgy")
+offset_top = 27.0
+offset_right = 42.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.02745098, 0.0627451, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("3_c1hmp")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_5woau")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0owht")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f5jwu")
 text = "Recusar
 "
+icon_alignment = 1
 
 [node name="BtnAceitar" type="Button" parent="." unique_id=2082166665]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 98.0
-offset_right = 347.0
-offset_bottom = 201.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxFlat_sllgy")
+offset_left = 73.0
+offset_top = 27.0
+offset_right = 115.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.02745098, 0.0627451, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("3_c1hmp")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_j0lj5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_db85u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c1hmp")
 text = "Aceitar
 "
 
 [node name="Label" type="Label" parent="." unique_id=1958870160]
 layout_mode = 0
-offset_left = -271.0
-offset_top = -144.0
-offset_right = 287.0
-offset_bottom = -53.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 45
-text = "Atualize para Windows 11"
+offset_left = 15.999998
+offset_top = -18.0
+offset_right = 146.0
+offset_bottom = -1.0
+scale = Vector2(0.6, 0.6)
+theme_override_colors/font_color = Color(0.02745098, 0.0627451, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("3_c1hmp")
+theme_override_font_sizes/font_size = 16
+text = "Update Available"
 
 [connection signal="pressed" from="BtnRecusar" to="." method="_on_btn_recusar_pressed"]
 [connection signal="pressed" from="BtnAceitar" to="." method="_on_btn_aceitar_pressed"]

@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://clrsmjn7fb6yb"]
 
 [ext_resource type="Script" uid="uid://csr57ncsixdk1" path="res://Scripts/popups/PopUpNotas.cs" id="1_5qhmd"]
-[ext_resource type="Texture2D" uid="uid://cxfohk7v2jcp5" path="res://assets/prototipoJv/blocodenotas-removebg-preview.png" id="2_lwjty"]
-[ext_resource type="Texture2D" uid="uid://dnwb44ibhl558" path="res://assets/prototipoJv/blocosdenotaaberto.png" id="3_sxx1x"]
+[ext_resource type="Texture2D" uid="uid://bsgn07yew0tu8" path="res://Assets/Sprites/PopUps/bloco_notas.png" id="2_lwjty"]
+[ext_resource type="Texture2D" uid="uid://djq86ac2cgvmg" path="res://Assets/Sprites/PopUps/notepad_Base.png" id="3_nfd8d"]
 [ext_resource type="PackedScene" uid="uid://cfbb3rxrxkfmk" path="res://Scenes/popups/pop_windows_11.tscn" id="4_lwjty"]
+[ext_resource type="Texture2D" uid="uid://dm6osieuwryce" path="res://Assets/Sprites/PopUps/notepad_UnclickedClose.png" id="4_oby0b"]
+[ext_resource type="Texture2D" uid="uid://bg07cvwu01k54" path="res://Assets/Sprites/PopUps/notepad_ClickedClose.png" id="5_r6bcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t688"]
 size = Vector2(42, 42)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1t688"]
-texture = ExtResource("3_sxx1x")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwjty"]
+texture = ExtResource("3_nfd8d")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfd8d"]
-bg_color = Color(0.85991913, 0.22598252, 0.31095326, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxx1x"]
+texture = ExtResource("4_oby0b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfd8d"]
+texture = ExtResource("5_r6bcy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oby0b"]
+texture = ExtResource("4_oby0b")
 
 [sub_resource type="Animation" id="Animation_5qhmd"]
 length = 0.001
@@ -75,7 +83,6 @@ size = Vector2(50, 50)
 script = ExtResource("1_5qhmd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=213722880]
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lwjty")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1713998952]
@@ -101,26 +108,28 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = -1.0
 offset_top = -21.0
-offset_right = 188.0
-offset_bottom = 139.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_1t688")
+offset_right = 255.0
+offset_bottom = 235.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lwjty")
 
 [node name="close" type="Button" parent="popUp/Panel" unique_id=1351815671]
 layout_mode = 0
-offset_left = 171.0
-offset_top = -5.0
-offset_right = 189.0
-offset_bottom = 9.0
+offset_left = 189.0
+offset_top = 34.0
+offset_right = 200.0
+offset_bottom = 45.0
+scale = Vector2(1.1, 1.1)
 theme_override_font_sizes/font_size = 9
-theme_override_styles/normal = SubResource("StyleBoxFlat_nfd8d")
-text = "X"
+theme_override_styles/normal = SubResource("StyleBoxTexture_sxx1x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nfd8d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oby0b")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="popUp/Panel" unique_id=318643157]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 15.0
-offset_right = 180.0
-offset_bottom = 151.0
+offset_left = -10.0
+offset_top = 33.0
+offset_right = 163.0
+offset_bottom = 169.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 8
 text = "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
@@ -149,7 +158,6 @@ text = "(E) to interact"
 
 [node name="Pop_windows11" parent="." unique_id=1455502249 instance=ExtResource("4_lwjty")]
 visible = false
-scale = Vector2(0.2, 0.2)
 
 [connection signal="pressed" from="popUp/Panel/close" to="." method="_on_close_pressed"]
 [connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]

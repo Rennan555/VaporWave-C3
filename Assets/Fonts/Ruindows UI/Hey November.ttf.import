@@ -2,6 +2,15 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD
+uid="uid://bugntrem7ynsm"
+path="res://.godot/imported/Hey November.ttf-f6e58cb0db1ae0962fb96f3c044d5385.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/Ruindows UI/Hey November.ttf"
+dest_files=["res://.godot/imported/Hey November.ttf-f6e58cb0db1ae0962fb96f3c044d5385.fontdata"]
+=======
 uid="uid://7oc6707mkig7"
 path="res://.godot/imported/Hey November.ttf-6fef3fcfae2613974c0440f33ee4605b.fontdata"
 
@@ -9,6 +18,7 @@ path="res://.godot/imported/Hey November.ttf-6fef3fcfae2613974c0440f33ee4605b.fo
 
 source_file="res://assets/Fonts/Ruindows UI/Hey November.ttf"
 dest_files=["res://.godot/imported/Hey November.ttf-6fef3fcfae2613974c0440f33ee4605b.fontdata"]
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 
 [params]
 

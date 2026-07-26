@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddxlp0ge17gfd"
-path="res://.godot/imported/valorama.png-f28eadd79b70e21d59c7d7ae9d6cfe38.ctex"
+path="res://.godot/imported/valorama.png-f94d89ae7dd5a708446005186caf29a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Tiles/valorama.png"
-dest_files=["res://.godot/imported/valorama.png-f28eadd79b70e21d59c7d7ae9d6cfe38.ctex"]
+source_file="res://Assets/Sprites/Tiles/valorama.png"
+dest_files=["res://.godot/imported/valorama.png-f94d89ae7dd5a708446005186caf29a2.ctex"]
 
 [params]
 

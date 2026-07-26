@@ -9,7 +9,7 @@ public partial class ColorTests : Node2D
     public override void _Ready()
     {
         GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
-        GlobalEnv.SetSaturation(0f);
+        //GlobalEnv.SetSaturation(0f);
         //menção honrosa joao miguel
     }
 

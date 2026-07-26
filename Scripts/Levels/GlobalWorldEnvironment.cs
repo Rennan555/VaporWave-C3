@@ -3,8 +3,9 @@ using System;
 
 public partial class GlobalWorldEnvironment : WorldEnvironment
 {
-	public void SetSaturation(float number)
+	public float Saturation;
+	public void SetSaturation(float Saturation)
 	{
-		Environment.AdjustmentSaturation = number;
+		Environment.AdjustmentSaturation = Saturation;
 	}
 }

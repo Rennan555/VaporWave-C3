@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://csofj0qteb266" path="res://Scenes/Levels/ScreenLevel/ScreenLevel.tscn" id="1_c6e7o"]
 [ext_resource type="Texture2D" uid="uid://bqdvfketcfh78" path="res://assets/Sprites/Parallax/tela de batalhatesteverde.png" id="2_tvu1r"]
 [ext_resource type="PackedScene" uid="uid://bf2if1wc0yr5g" path="res://Scenes/Entities/MouseTrigger/MouseTrigger.tscn" id="3_tvu1r"]
+[ext_resource type="PackedScene" uid="uid://c0kb8krt615u4" path="res://Scenes/Entities/Enemy/Cascade.tscn" id="3_y6okr"]
 
 [node name="batalha1" type="Node2D" unique_id=55605287]
 
@@ -13,7 +14,12 @@ offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("2_tvu1r")
 
+[node name="CascadeBody" parent="ScreenLevel/BackgroundLayer" parent_id_path=PackedInt32Array(67583462, 510691960) index="1" unique_id=570213956 instance=ExtResource("3_y6okr")]
+position = Vector2(235, -187)
+
 [node name="MouseTrigger" parent="." unique_id=327133870 instance=ExtResource("3_tvu1r")]
 position = Vector2(-35, 199)
+
+[connection signal="CallDamageTaken" from="MouseTrigger" to="ScreenLevel" method="takeDamage"]
 
 [editable path="ScreenLevel"]

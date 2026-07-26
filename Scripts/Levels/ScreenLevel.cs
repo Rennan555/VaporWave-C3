@@ -9,6 +9,7 @@ public partial class ScreenLevel : Node2D
 	// Variáveis do Level
 	private Rect2 BoundaryRect = new Rect2(71, 175, 338, 61);
 	private bool CanMoveMouse = true;
+	private int Lives = 3;
 	
 	public override void _Ready()
 	{
@@ -28,6 +29,20 @@ public partial class ScreenLevel : Node2D
 			float clampY = Mathf.Clamp(mousePos.Y, BoundaryRect.Position.Y, BoundaryRect.End.Y);
 			
 			GetViewport().WarpMouse(new Vector2(clampX, clampY));
+		}
+	}
+	
+	public void takeDamage()
+	{
+		this.Lives--;
+		
+		GlobalEnv.Saturation -= 0.3f;
+		GlobalEnv.SetSaturation(GlobalEnv.Saturation);
+		GD.Print(GlobalEnv.Saturation);
+		
+		if (this.Lives <= 0)
+		{
+			// Game Over
 		}
 	}
 }

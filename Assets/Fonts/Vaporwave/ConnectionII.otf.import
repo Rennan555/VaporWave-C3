@@ -2,23 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-<<<<<<< HEAD
-uid="uid://b26f1aowfnanh"
+uid="uid://dnw4ru2ebd7vb"
 path="res://.godot/imported/ConnectionII.otf-5825a384c9ffb6d90318b57d44f5fb24.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/Vaporwave/ConnectionII.otf"
 dest_files=["res://.godot/imported/ConnectionII.otf-5825a384c9ffb6d90318b57d44f5fb24.fontdata"]
-=======
-uid="uid://5blv1512uasy"
-path="res://.godot/imported/ConnectionII.otf-4fcc2cc88abace1715da29210992418f.fontdata"
-
-[deps]
-
-source_file="res://assets/Fonts/Vaporwave/ConnectionII.otf"
-dest_files=["res://.godot/imported/ConnectionII.otf-4fcc2cc88abace1715da29210992418f.fontdata"]
->>>>>>> fd6774bd76d698ae7192c800c6cf5ad83ac26103
 
 [params]
 

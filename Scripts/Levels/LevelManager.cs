@@ -10,6 +10,10 @@ public partial class LevelManager : Node2D
 	
 	// Atributos dos Levels
 	private int TotalScore = 0;
+
+	//gerenciamento de saturação pelo world environment
+	private GlobalWorldEnvironment GlobalEnv;
+	
 	
 	// Signal de receber pontuação do Level
 	[Signal]
@@ -26,6 +30,10 @@ public partial class LevelManager : Node2D
 		
 		// Inicializa Level inicial
 		this.SceneNode = GetNode<Node2D>("CurrentSceneNode");
+
+		//inicia variável de modificação de saturação
+		GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
+		GlobalEnv.SetSaturation(GlobalEnv.Saturation);
 		
 		if (this.PackedCurrentLevel == null)
 		{
@@ -42,7 +50,7 @@ public partial class LevelManager : Node2D
 	{
 	}
 	
-	// Remove Level atual a adiociona novo via PackedScene
+	// Remove Level atual a adiciona novo via PackedScene
 	public void ChangeLevel(PackedScene pack)
 	{
 		foreach (Node child in this.SceneNode.GetChildren())

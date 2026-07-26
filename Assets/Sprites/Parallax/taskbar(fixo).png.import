@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crmm0ogfdl00q"
-path="res://.godot/imported/taskbar(fixo).png-0aa2cb90d123383f10a2bc42ae567804.ctex"
+path="res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Parallax/taskbar(fixo).png"
-dest_files=["res://.godot/imported/taskbar(fixo).png-0aa2cb90d123383f10a2bc42ae567804.ctex"]
+source_file="res://Assets/Sprites/Parallax/taskbar(fixo).png"
+dest_files=["res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"]
 
 [params]
 

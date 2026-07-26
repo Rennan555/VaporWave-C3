@@ -14,6 +14,7 @@ public partial class Player : Character
 	// Flags de movimentação
 	private bool CanWalk = true;
 	private bool CanDash = true;
+	private bool CanTakeDamage = true;
 	
 	// Flags de animação
 	private string CurrentState = "idle";
@@ -27,6 +28,10 @@ public partial class Player : Character
 	private const float DashCoolDownDuration = 0.3f;
 	private float DashTimer = 0.0f;
 	private float DashCoolDownTimer = 0.0f;
+	
+	// Timers de dano
+	private const float DamageDuration = 1.0f;
+	private float DamageTimer = 0.0f;
 	
 	// Signal de Dano tomado
 	[Signal]
@@ -95,6 +100,19 @@ public partial class Player : Character
 		{
 			if (IsOnFloor())
 			this.CanDash = true;
+		}
+		
+		// Timer de dano
+		if (this.DamageTimer >= 0.0f)
+		{
+			this.DamageTimer -= (float)delta;
+		}
+		else
+		{
+			this.CanTakeDamage = true;
+			
+			ShaderMaterial material = (ShaderMaterial)this.AnimatedNode.Material;
+			material.SetShaderParameter("active", false);
 		}
 		
 		// Wall Jump
@@ -203,12 +221,25 @@ public partial class Player : Character
 	// Função de dano tomado
 	public void TakeDamage(float damage)
 	{
-		GD.Print($"Dano tomado: {damage}, Vida: {this.Life}");
-		this.Life -= damage;
-		
-		if (this.Life <= 0)
+		if (this.CanTakeDamage)
 		{
-			PlayerDie();
+			GD.Print($"Dano tomado - {damage}, Vida: {this.Life}");
+			this.Life -= damage;
+			
+			ShaderMaterial material = (ShaderMaterial)this.AnimatedNode.Material;
+			material.SetShaderParameter("active", true);
+			
+			if (this.Life <= 0)
+			{
+				PlayerDie();
+			}
+			
+			this.DamageTimer = DamageDuration;
+			this.CanTakeDamage = false;
+		}
+		else
+		{
+			GD.Print($"Dano pulado - Vida: {this.Life}");
 		}
 	}
 }

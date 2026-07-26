@@ -2,11 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://djsvet7ji413l" path="res://Scenes/Entities/Character/Character.tscn" id="1_7kpwk"]
 [ext_resource type="Script" uid="uid://utemeyqi07q" path="res://Scripts/Player/Player.cs" id="2_pmdnf"]
+[ext_resource type="Shader" uid="uid://cgxpbpx38gekb" path="res://assets/Shaders/Player.gdshader" id="3_84utv"]
 [ext_resource type="Texture2D" uid="uid://tkp6ifpn55q5" path="res://icon.svg" id="3_akw4a"]
 [ext_resource type="Texture2D" uid="uid://cojmk2ob6slm2" path="res://assets/Sprites/Character/sprites_personagem.png" id="3_tm67w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm67w"]
 height = 34.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_akw4a"]
+shader = ExtResource("3_84utv")
+shader_parameter/active = false
+shader_parameter/flash_color = Color(1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tm67w"]
 atlas = ExtResource("3_tm67w")
@@ -212,8 +218,9 @@ script = ExtResource("2_pmdnf")
 shape = SubResource("CapsuleShape2D_tm67w")
 
 [node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_akw4a")
 sprite_frames = SubResource("SpriteFrames_0meja")
-animation = &"dash"
+animation = &"jump_start"
 autoplay = "idle"
 
 [node name="TestSprite" type="Sprite2D" parent="." index="2" unique_id=287378986]

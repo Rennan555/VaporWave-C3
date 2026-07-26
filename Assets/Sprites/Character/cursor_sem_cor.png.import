@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://ba4n8f8i1ujj3"
 path="res://.godot/imported/cursor_sem_cor.png-3ebb869928b8b0183f638a0c27c403ba.ctex"
+=======
+uid="uid://cq7snykhcm211"
+path="res://.godot/imported/cursor_sem_cor.png-075987c674df7aeeb57369495bd37b5c.ctex"
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/Sprites/Character/cursor_sem_cor.png"
 dest_files=["res://.godot/imported/cursor_sem_cor.png-3ebb869928b8b0183f638a0c27c403ba.ctex"]
+=======
+source_file="res://assets/Sprites/Character/cursor_sem_cor.png"
+dest_files=["res://.godot/imported/cursor_sem_cor.png-075987c674df7aeeb57369495bd37b5c.ctex"]
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 
 [params]
 

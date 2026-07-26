@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bso2y1bry8cog"
 path="res://.godot/imported/ClickedButton.png-3491f18699b9a86ac45cc98f569dbba0.ctex"
+=======
+uid="uid://omnla7d1wpvw"
+path="res://.godot/imported/ClickedButton.png-6e482d91c8b12fb7b02533fafcae1386.ctex"
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/Sprites/PopUps/ClickedButton.png"
 dest_files=["res://.godot/imported/ClickedButton.png-3491f18699b9a86ac45cc98f569dbba0.ctex"]
+=======
+source_file="res://assets/Sprites/PopUps/ClickedButton.png"
+dest_files=["res://.godot/imported/ClickedButton.png-6e482d91c8b12fb7b02533fafcae1386.ctex"]
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 
 [params]
 

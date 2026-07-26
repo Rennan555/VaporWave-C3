@@ -19,6 +19,16 @@ offset_bottom = 120.0
 layout_mode = 2
 text = "Score: "
 
+[node name="Control" type="Control" parent="HudLayer" unique_id=303727612]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=11803801]
 position = Vector2(240, 135)
 limit_left = 0

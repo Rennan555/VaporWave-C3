@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bipwh82dqx3cx"
 path="res://.godot/imported/cursor_colorido.png-d3b2c5033c4e1baf74e9e2df1585938b.ctex"
+=======
+uid="uid://b2cohdx5ppnn5"
+path="res://.godot/imported/cursor_colorido.png-ab78ec3cbdf787f433255e14779872b7.ctex"
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/Sprites/Character/cursor_colorido.png"
 dest_files=["res://.godot/imported/cursor_colorido.png-d3b2c5033c4e1baf74e9e2df1585938b.ctex"]
+=======
+source_file="res://assets/Sprites/Character/cursor_colorido.png"
+dest_files=["res://.godot/imported/cursor_colorido.png-ab78ec3cbdf787f433255e14779872b7.ctex"]
+>>>>>>> ce67321307e3a3a8023796a4c8aec18b862ea216
 
 [params]
 

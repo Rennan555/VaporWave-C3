@@ -18,6 +18,8 @@ public partial class StartMenu : Control
 	public void _on_start_pressed()
 	{
 		GD.Print("apertou start");
+		
+		GetTree().ChangeSceneToFile("res://Scenes/Levels/LevelManager/MainManagetLevel.tscn");
 	}
 
 	
@@ -25,6 +27,8 @@ public partial class StartMenu : Control
 	public void _on_creditos_pressed()
 	{
 		GD.Print("apertou creditos");
+		
+		GetTree().ChangeSceneToFile("res://Scenes/Telas/creditos_menu.tscn");
 	}
 
 	public void _on_sair_pressed()

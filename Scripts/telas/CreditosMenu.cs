@@ -16,6 +16,5 @@ public partial class CreditosMenu : Control
 	public void _on_voltar_pressed()
 	{
 		GetTree().ChangeSceneToFile("res://Scenes/Telas/start_menu.tscn");
-		
 	}
 }

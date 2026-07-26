@@ -1,13 +1,9 @@
 [gd_scene format=3 uid="uid://cobj30b2syx3g"]
 
-[ext_resource type="Script" path="res://Scripts/telas/Creditos_menu.cs" id="1_6u6l2"]
-[ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="2_o6x05"]
+[ext_resource type="Script" uid="uid://cty0agckabt62" path="res://Scripts/telas/CreditosMenu.cs" id="1_6u6l2"]
+[ext_resource type="Texture2D" uid="uid://b7melaoa4ncbx" path="res://assets/Sprites/Menus/menu_city.png" id="2_6u6l2"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tembf"]
-texture = ExtResource("2_o6x05")
-modulate_color = Color(0.427493, 0.42749307, 0.42749307, 1)
-
-[node name="Creditos_menu" type="Control" unique_id=57772042]
+[node name="CreditosMenu" type="Control" unique_id=57772042]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,12 +12,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6u6l2")
 
-[node name="Panel" type="Panel" parent="." unique_id=327711753]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 480.0
-offset_bottom = 270.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_tembf")
+[node name="voltar" type="Button" parent="." unique_id=1122919413]
+z_index = 3
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Voltar"
 
 [node name="TextureRect" type="Label" parent="." unique_id=733350995]
 layout_mode = 1
@@ -53,15 +54,12 @@ text = "Texto de credito bla bla"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="voltar" type="Button" parent="." unique_id=1122919413]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -31.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Voltar"
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1778207335]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_6u6l2")
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

@@ -10,6 +10,9 @@ public partial class Player : Character
 	// Node de Player
 	private Area2D ActionArea;
 	private AnimatedSprite2D AnimatedNode;
+
+	//gerenciamento de saturação pelo world environment
+	private GlobalWorldEnvironment GlobalEnv;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
@@ -41,6 +44,8 @@ public partial class Player : Character
 	{
 		this.ActionArea = GetNode<Area2D>("ActionArea");
 		this.AnimatedNode = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		//inicia variável de modificação de saturação
+		GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -60,9 +65,9 @@ public partial class Player : Character
 			{
 				// Grab wall
 				Vector2 wallNormal = GetWallNormal();
-				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+				Vector2 direction = Input.GetVector("left", "right", "up", "down");
 				
-				if (wallNormal.X != direction.X && (Input.IsActionPressed("ui_left") || Input.IsActionPressed("ui_right")))
+				if (wallNormal.X != direction.X && (Input.IsActionPressed("left") || Input.IsActionPressed("right")))
 				{
 					velocity += GetGravity() * (float)delta;
 					velocity.Y *= 0.8f;
@@ -75,7 +80,7 @@ public partial class Player : Character
 		}
 		
 		// Pulo
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		if (Input.IsActionJustPressed("up") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
 		}
@@ -116,7 +121,7 @@ public partial class Player : Character
 		}
 		
 		// Wall Jump
-		if (Input.IsActionJustPressed("ui_accept") && IsOnWall() && !IsOnFloor())
+		if (Input.IsActionJustPressed("up") && IsOnWall() && !IsOnFloor())
 		{
 			Vector2 wallNormal = GetWallNormal();
 			
@@ -130,7 +135,7 @@ public partial class Player : Character
 		// Dash
 		if (Input.IsActionJustPressed("Dash") && !IsOnWall() && this.CanWalk && this.CanDash)
 		{
-			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+			Vector2 direction = Input.GetVector("left", "right", "up", "down");
 			
 			if (direction != Vector2.Zero)
 			{
@@ -146,7 +151,7 @@ public partial class Player : Character
 		// Movimentação horizontal
 		if (this.CanWalk)
 		{
-			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+			Vector2 direction = Input.GetVector("left", "right", "up", "down");
 			if (direction != Vector2.Zero)
 			{
 				velocity.X = direction.X * Speed;
@@ -176,11 +181,11 @@ public partial class Player : Character
 	
 	public void CheckState()
 	{
-		if (Input.IsActionJustPressed("ui_left"))
+		if (Input.IsActionJustPressed("left"))
 		{
 			this.AnimatedNode.FlipH = true;
 		}
-		else if (Input.IsActionJustPressed("ui_right"))
+		else if (Input.IsActionJustPressed("right"))
 		{
 			this.AnimatedNode.FlipH = false;
 		}
@@ -197,7 +202,7 @@ public partial class Player : Character
 			if (velocity.Y < 0) this.CurrentState = "jump_start";
 			else
 			{
-				Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+				Vector2 direction = Input.GetVector("left", "right", "up", "down");
 				if (IsOnWall() && direction.X != 0) this.CurrentState = "grab";
 				else this.CurrentState = "jump_end";
 			}
@@ -228,6 +233,10 @@ public partial class Player : Character
 			
 			ShaderMaterial material = (ShaderMaterial)this.AnimatedNode.Material;
 			material.SetShaderParameter("active", true);
+
+			GlobalEnv.Saturation -= 0.3f;
+			GlobalEnv.SetSaturation(GlobalEnv.Saturation);
+			GD.Print(GlobalEnv.Saturation);
 			
 			if (this.Life <= 0)
 			{

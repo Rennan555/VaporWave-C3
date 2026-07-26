@@ -15,6 +15,10 @@ public partial class Level : Node2D
 	
 	// Atributos do Level
 	public int LevelScore = 0;
+
+	//gerenciamento de saturação pelo world environment
+	private GlobalWorldEnvironment GlobalEnv;
+	
 	
 	// Signal de receber pontuação dos inimigos
 	[Signal]
@@ -31,6 +35,11 @@ public partial class Level : Node2D
 		{
 			GD.PrintErr("Scene geral do Level não é LevelManager!");
 		}
+
+		//inicia variável de modificação de saturação
+		GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
+		GlobalEnv.Saturation = 1f;
+		GlobalEnv.SetSaturation(GlobalEnv.Saturation);
 		
 		// Pega Camera2D
 		this.CameraNode = GetNode<Camera2D>("Camera2D");

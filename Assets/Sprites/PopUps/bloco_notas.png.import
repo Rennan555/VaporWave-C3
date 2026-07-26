@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxpwpy6vpuix"
-path="res://.godot/imported/ClickedButton_PopUp.png-d98969fb7bc430dc4359d2b52c132a64.ctex"
+uid="uid://bsgn07yew0tu8"
+path="res://.godot/imported/bloco_notas.png-961f9d5fa2500747df8d8ad497af43bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/ClickedButton_PopUp.png"
-dest_files=["res://.godot/imported/ClickedButton_PopUp.png-d98969fb7bc430dc4359d2b52c132a64.ctex"]
+source_file="res://Assets/Sprites/PopUps/bloco_notas.png"
+dest_files=["res://.godot/imported/bloco_notas.png-961f9d5fa2500747df8d8ad497af43bd.ctex"]
 
 [params]
 

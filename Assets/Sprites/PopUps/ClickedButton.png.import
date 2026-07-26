@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqdvfketcfh78"
-path="res://.godot/imported/tela de batalhatesteverde.png-296c2966588669d46d3e776e8f5d6774.ctex"
+uid="uid://omnla7d1wpvw"
+path="res://.godot/imported/ClickedButton.png-3491f18699b9a86ac45cc98f569dbba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Parallax/tela de batalhatesteverde.png"
-dest_files=["res://.godot/imported/tela de batalhatesteverde.png-296c2966588669d46d3e776e8f5d6774.ctex"]
+source_file="res://Assets/Sprites/PopUps/ClickedButton.png"
+dest_files=["res://.godot/imported/ClickedButton.png-3491f18699b9a86ac45cc98f569dbba0.ctex"]
 
 [params]
 

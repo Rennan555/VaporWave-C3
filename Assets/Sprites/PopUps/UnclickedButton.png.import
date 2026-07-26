@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwt3im30i2f47"
-path="res://.godot/imported/UnclickedButton_PopUp.png-ae126a151cc366cece17f7d5becceb6c.ctex"
+uid="uid://bc185mth80urf"
+path="res://.godot/imported/UnclickedButton.png-41e05fc5b0412321db310a582c6fd1cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/UnclickedButton_PopUp.png"
-dest_files=["res://.godot/imported/UnclickedButton_PopUp.png-ae126a151cc366cece17f7d5becceb6c.ctex"]
+source_file="res://Assets/Sprites/PopUps/UnclickedButton.png"
+dest_files=["res://.godot/imported/UnclickedButton.png-41e05fc5b0412321db310a582c6fd1cb.ctex"]
 
 [params]
 

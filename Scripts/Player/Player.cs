@@ -9,6 +9,7 @@ public partial class Player : Character
 	
 	// Node de Player
 	private Area2D ActionArea;
+	private AnimatedSprite2D AnimatedNode;
 	
 	// Flags de movimentação
 	private bool CanWalk = true;
@@ -31,11 +32,22 @@ public partial class Player : Character
 	public override void _Ready()
 	{
 		this.ActionArea = GetNode<Area2D>("ActionArea");
+		this.AnimatedNode = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
+		
+		// Lado do Sprite
+		if (Input.IsActionJustPressed("ui_left"))
+		{
+			this.AnimatedNode.FlipH = true;
+		}
+		else if (Input.IsActionJustPressed("ui_right"))
+		{
+			this.AnimatedNode.FlipH = false;
+		}
 		
 		// Gravidade
 		if (!IsOnFloor())

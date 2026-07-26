@@ -29,6 +29,7 @@ window/size/viewport_width=480
 window/size/viewport_height=270
 window/size/mode=2
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://dwg51daavydr4"
 
 [dotnet]

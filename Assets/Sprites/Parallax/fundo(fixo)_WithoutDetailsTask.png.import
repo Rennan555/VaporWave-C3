@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b72nai0ti0ha5"
-path="res://.godot/imported/league of lendias.png-799fd50ddab8ed23e9c02da9363034b4.ctex"
+uid="uid://cpywj75s1mg3n"
+path="res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-64128d626ad8b76134307da725960593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/league of lendias.png"
-dest_files=["res://.godot/imported/league of lendias.png-799fd50ddab8ed23e9c02da9363034b4.ctex"]
+source_file="res://Assets/Sprites/Parallax/fundo(fixo)_WithoutDetailsTask.png"
+dest_files=["res://.godot/imported/fundo(fixo)_WithoutDetailsTask.png-64128d626ad8b76134307da725960593.ctex"]
 
 [params]
 

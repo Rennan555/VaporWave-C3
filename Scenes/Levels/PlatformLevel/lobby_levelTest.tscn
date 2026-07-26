@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bhpx6l1poqh2p"]
+
+[ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_5fuib"]
+[ext_resource type="Texture2D" uid="uid://b72nai0ti0ha5" path="res://Assets/Sprites/Tiles/league of lendias.png" id="6_tyl2d"]
+[ext_resource type="Texture2D" uid="uid://ddxlp0ge17gfd" path="res://Assets/Sprites/Tiles/valorama.png" id="6_xv8uw"]
+[ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="7_qn1y6"]
+[ext_resource type="Texture2D" uid="uid://dt2lhq74icp17" path="res://Assets/Sprites/Tiles/discordia.png" id="7_xv8uw"]
+[ext_resource type="PackedScene" uid="uid://coeu7u28fa6qj" path="res://Scenes/Entities/Mascot/Mascot.tscn" id="9_qn1y6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2sdxe"]
+size = Vector2(537, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpuyy"]
+size = Vector2(20, 302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndkhv"]
+size = Vector2(30, 30)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tm67w"]
+
+[node name="LobbyLevel" type="Node2D" unique_id=829216421]
+
+[node name="PlatformLevel" parent="." unique_id=762110100 node_paths=PackedStringArray("CameraAnchor") instance=ExtResource("1_5fuib")]
+CameraAnchor = NodePath("../PlayerBody")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1875097595]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=653347291]
+position = Vector2(248.5, 280)
+shape = SubResource("RectangleShape2D_2sdxe")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1369313410]
+position = Vector2(-10, 147)
+shape = SubResource("RectangleShape2D_mpuyy")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1151654922]
+position = Vector2(492, 129)
+shape = SubResource("RectangleShape2D_mpuyy")
+
+[node name="icons" type="Node2D" parent="." unique_id=1419072191]
+position = Vector2(-1, 43)
+
+[node name="iconPlataform01" type="StaticBody2D" parent="icons" unique_id=1147421231]
+position = Vector2(49, 162)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform01" unique_id=1916041044]
+texture = ExtResource("6_xv8uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform01" unique_id=1813756485]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="iconPlataform02" type="StaticBody2D" parent="icons" unique_id=1592170021]
+position = Vector2(85, 162)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform02" unique_id=869432425]
+texture = ExtResource("6_tyl2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform02" unique_id=142954968]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="iconPlataform03" type="StaticBody2D" parent="icons" unique_id=1682324045]
+position = Vector2(123, 162)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform03" unique_id=438189647]
+texture = ExtResource("7_xv8uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform03" unique_id=1957485959]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="iconPlataform04" type="StaticBody2D" parent="icons" unique_id=1772922508]
+position = Vector2(165, 111)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform04" unique_id=1956776668]
+texture = ExtResource("6_xv8uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform04" unique_id=1210002167]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="iconPlataform05" type="StaticBody2D" parent="icons" unique_id=883389371]
+position = Vector2(337, 111)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform05" unique_id=1597184768]
+texture = ExtResource("7_xv8uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform05" unique_id=1387948016]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="iconPlataform06" type="StaticBody2D" parent="icons" unique_id=68275825]
+position = Vector2(375, 111)
+
+[node name="Sprite2D" type="Sprite2D" parent="icons/iconPlataform06" unique_id=327184384]
+position = Vector2(-1, -1)
+texture = ExtResource("6_tyl2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icons/iconPlataform06" unique_id=1201236540]
+shape = SubResource("RectangleShape2D_ndkhv")
+
+[node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("7_qn1y6")]
+z_index = 1
+position = Vector2(48, 123)
+
+[node name="MascotBody" parent="." unique_id=1403908216 instance=ExtResource("9_qn1y6")]
+position = Vector2(379, 121)
+collision_layer = 3
+collision_mask = 3
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=394400901]
+
+[node name="DamageCollision" type="CollisionShape2D" parent="DamageArea" unique_id=337736425]
+position = Vector2(70, 240)
+shape = SubResource("WorldBoundaryShape2D_tm67w")

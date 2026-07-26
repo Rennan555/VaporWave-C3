@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jvtsm8n2m1l0"
-path="res://.godot/imported/walk_personagem.wav-ed423b5d02ab086fa826c05cff2df1b6.sample"
+path="res://.godot/imported/walk_personagem.wav-42808b699b77391ba03d47edac8da16d.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/walk_personagem.wav"
-dest_files=["res://.godot/imported/walk_personagem.wav-ed423b5d02ab086fa826c05cff2df1b6.sample"]
+source_file="res://Assets/Sounds/walk_personagem.wav"
+dest_files=["res://.godot/imported/walk_personagem.wav-42808b699b77391ba03d47edac8da16d.sample"]
 
 [params]
 

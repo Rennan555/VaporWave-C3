@@ -214,6 +214,7 @@ size = Vector2(38, 17)
 
 [node name="PlayerBody" unique_id=2041397587 instance=ExtResource("1_7kpwk")]
 script = ExtResource("2_pmdnf")
+Speed = 200.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_tm67w")

@@ -86,6 +86,8 @@ public partial class PopUpNotas : Area2D
 		if (canClose) {
 		popUp.Visible = false;
 		windows11.Visible = true;
+		AudioManager.Instance.PlayMouseClick();
+		
 
 		//adicionar a tela de atualizacao
 
@@ -97,6 +99,8 @@ public partial class PopUpNotas : Area2D
 	{
 		text.Text = notes;
 		popUp.Visible = true;
+		AudioManager.Instance.PlayPopUp();
+		
 	}
 
 	public void _on_action_area_body_entered(Node2D body)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7jl36vmp1p1"
-path="res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"
+uid="uid://olaghqxrxggm"
+path="res://.godot/imported/botao_controles.png-0f5aed304be29b112c46735948010ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/prototipoJv/windowsantigo.png"
-dest_files=["res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"]
+source_file="res://Assets/Sprites/PopUps/botao_controles.png"
+dest_files=["res://.godot/imported/botao_controles.png-0f5aed304be29b112c46735948010ac7.ctex"]
 
 [params]
 

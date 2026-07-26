@@ -22,6 +22,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalWorldEnvironment="*uid://dbhgdgllufyph"
+AudioManager="*uid://52t615o4prqa"
+MusicaLobby="*uid://dd1wu30qyosog"
 
 [display]
 

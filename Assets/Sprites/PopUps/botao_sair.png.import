@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7jl36vmp1p1"
-path="res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"
+uid="uid://7f85m4x0jhfg"
+path="res://.godot/imported/botao_sair.png-d30421bfabd5bb7677ed7015be4d2ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/prototipoJv/windowsantigo.png"
-dest_files=["res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"]
+source_file="res://Assets/Sprites/PopUps/botao_sair.png"
+dest_files=["res://.godot/imported/botao_sair.png-d30421bfabd5bb7677ed7015be4d2ad5.ctex"]
 
 [params]
 

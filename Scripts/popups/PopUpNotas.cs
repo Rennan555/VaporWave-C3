@@ -121,6 +121,7 @@ public partial class PopUpNotas : Area2D
 	{
 		if (response)
 		{
+			GD.Print();
 			EmitSignal(SignalName.CallChangeLevel);
 		}
 	}

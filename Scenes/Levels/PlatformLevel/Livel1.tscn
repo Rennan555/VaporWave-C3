@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b4aafcyesk7mk" path="res://Scenes/Levels/PlatformLevel/PlatformLevel.tscn" id="1_0oyoc"]
 [ext_resource type="Texture2D" uid="uid://cf61hfvr4u3jt" path="res://assets/parallax/fundo(fixo).png" id="2_dbtqp"]
+[ext_resource type="PackedScene" uid="uid://clrsmjn7fb6yb" path="res://Scenes/popups/pop_up_notas.tscn" id="2_hasdh"]
+[ext_resource type="PackedScene" uid="uid://cg6h7yhluk1va" path="res://Scenes/Debugs/MascotTest.tscn" id="2_nqbdh"]
 [ext_resource type="PackedScene" uid="uid://cgx2y6wnkp7rg" path="res://Scenes/Entities/Player/Player.tscn" id="3_govnp"]
 [ext_resource type="Texture2D" uid="uid://pd3pcbp2slce" path="res://assets/parallax/montanhas.png" id="4_5fivx"]
 [ext_resource type="Texture2D" uid="uid://crmm0ogfdl00q" path="res://assets/parallax/taskbar(fixo).png" id="4_tlagd"]
@@ -17,6 +19,7 @@ size = Vector2(20, 302)
 size = Vector2(20, 162)
 
 [node name="PlatformLevel" unique_id=762110100 instance=ExtResource("1_0oyoc")]
+nextScenePacked = ExtResource("2_nqbdh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=187374743]
 
@@ -71,3 +74,9 @@ follow_viewport = false
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/MontanhaParallax" index="0" unique_id=626717837]
 position = Vector2(240, 135)
 texture = ExtResource("4_5fivx")
+
+[node name="pop-up_notas" parent="." index="6" unique_id=610167202 instance=ExtResource("2_hasdh")]
+position = Vector2(308, 226)
+notes = "Teste teste"
+
+[connection signal="CallChangeLevel" from="pop-up_notas" to="." method="ChangeLevel"]

@@ -10,16 +10,16 @@ size = Vector2(1246, 309)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4htj"]
 size = Vector2(116, 510)
 
-[sub_resource type="Resource" id="Resource_8s0c0"]
-script = ExtResource("3_8s0c0")
-InvertV = true
-Animation = "jump"
-metadata/_custom_type_script = "uid://cjh1sqyl80f15"
-
 [sub_resource type="Resource" id="Resource_36kc6"]
 script = ExtResource("3_8s0c0")
 InvertV = true
 Animation = "walk"
+metadata/_custom_type_script = "uid://cjh1sqyl80f15"
+
+[sub_resource type="Resource" id="Resource_8s0c0"]
+script = ExtResource("3_8s0c0")
+InvertV = true
+Animation = "jump"
 metadata/_custom_type_script = "uid://cjh1sqyl80f15"
 
 [sub_resource type="Resource" id="Resource_vk8rh"]
@@ -52,7 +52,7 @@ position = Vector2(1146, 209)
 shape = SubResource("RectangleShape2D_r4htj")
 
 [node name="PlayerBody" parent="." unique_id=2041397587 instance=ExtResource("1_tleey")]
-position = Vector2(189, 299)
+position = Vector2(219, 122)
 
 [node name="MascotBody" parent="." unique_id=1403908216 node_paths=PackedStringArray("Path", "PathFollow") instance=ExtResource("2_8s0c0")]
 position = Vector2(364, 383)

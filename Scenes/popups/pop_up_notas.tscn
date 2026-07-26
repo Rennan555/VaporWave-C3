@@ -149,9 +149,11 @@ text = "(E) to interact"
 
 [node name="Pop_windows11" parent="." unique_id=1455502249 instance=ExtResource("4_lwjty")]
 visible = false
+scale = Vector2(0.2, 0.2)
 
 [connection signal="pressed" from="popUp/Panel/close" to="." method="_on_close_pressed"]
 [connection signal="body_entered" from="ActionArea" to="." method="_on_action_area_body_entered"]
 [connection signal="body_exited" from="ActionArea" to="." method="_on_action_area_body_exited"]
+[connection signal="Resposta" from="Pop_windows11" to="." method="_on_pop_windows_11_resposta"]
 
 [editable path="Pop_windows11"]

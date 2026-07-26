@@ -4,7 +4,7 @@ using System;
 public partial class Level : Node2D
 {
 	// Atributos de Node
-	public PackedScene nextScenePacked;
+	[Export] public PackedScene nextScenePacked;
 	private LevelManager ManagerNode;
 	private Camera2D CameraNode;
 	private Player CameraAnchor;
@@ -53,5 +53,11 @@ public partial class Level : Node2D
 	{
 		this.LevelScore += score;
 		this.ManagerNode.EmitSignal(LevelManager.SignalName.CallSumTotalScore, score);
+	}
+	
+	// Envia Level novo a carregar
+	public void ChangeLevel()
+	{
+		this.ManagerNode.EmitSignal(LevelManager.SignalName.CallChangeLevel, this.nextScenePacked);
 	}
 }

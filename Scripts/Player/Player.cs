@@ -224,7 +224,14 @@ public partial class Player : Character
 	// Função de morte
 	public void PlayerDie()
 	{
-		QueueFree();
+		Death death = new Death();
+		death.CallGameOver(this);
+		
+		GlobalEnv.Saturation = 1;
+		GlobalEnv.SetSaturation(GlobalEnv.Saturation);
+		GD.Print(GlobalEnv.Saturation);
+		
+		Visible = false;
 	}
 	
 	// Função de dano tomado

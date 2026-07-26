@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsgn07yew0tu8"
-path="res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"
+uid="uid://d37g8koq7elnm"
+path="res://.godot/imported/inimigo1_32x.png-1f46aa513907827346b7f62e666947ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/PopUps/bloco_notas.png"
-dest_files=["res://.godot/imported/bloco_notas.png-256d483e501abbecbea9c38542a11866.ctex"]
+source_file="res://assets/Sprites/Enemies/Enemy1/inimigo1_32x.png"
+dest_files=["res://.godot/imported/inimigo1_32x.png-1f46aa513907827346b7f62e666947ba.ctex"]
 
 [params]
 

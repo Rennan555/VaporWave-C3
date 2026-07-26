@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cobj30b2syx3g"]
 
-[ext_resource type="Script" uid="uid://cty0agckabt62" path="res://Scripts/telas/Creditos_menu.cs" id="1_6u6l2"]
+[ext_resource type="Script" path="res://Scripts/telas/Creditos_menu.cs" id="1_6u6l2"]
 [ext_resource type="Texture2D" uid="uid://74l7aocn6k0i" path="res://assets/prototipoJv/windows7teste.jpeg" id="2_o6x05"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tembf"]
@@ -19,23 +19,16 @@ script = ExtResource("1_6u6l2")
 [node name="Panel" type="Panel" parent="." unique_id=327711753]
 layout_mode = 0
 offset_top = -1.0
-offset_right = 1152.0
-offset_bottom = 659.0
+offset_right = 480.0
+offset_bottom = 270.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_tembf")
 
 [node name="TextureRect" type="Label" parent="." unique_id=733350995]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.0
-offset_top = -192.0
-offset_right = 51.0
-offset_bottom = -152.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
 theme_override_font_sizes/font_size = 46
@@ -44,19 +37,31 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Creditos" type="Label" parent="." unique_id=1535970368]
-layout_mode = 0
-offset_left = 376.0
-offset_top = 254.0
-offset_right = 767.0
-offset_bottom = 440.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.5
+offset_top = -93.0
+offset_right = 195.5
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Texto de credito bla bla"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="voltar" type="Button" parent="." unique_id=1122919413]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 28.0
-offset_right = 155.0
-offset_bottom = 77.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Volta"
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

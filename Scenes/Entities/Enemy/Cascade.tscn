@@ -2,12 +2,43 @@
 
 [ext_resource type="PackedScene" uid="uid://pka0yn5vhdf" path="res://Scenes/Entities/Enemy/Enemy.tscn" id="1_pu38e"]
 [ext_resource type="Script" uid="uid://w5jpvfgwi5a1" path="res://Scripts/Enemy/Cascade.cs" id="2_4ro4t"]
+[ext_resource type="Texture2D" uid="uid://d37g8koq7elnm" path="res://assets/Sprites/Enemies/Enemy1/inimigo1_32x.png" id="3_g0put"]
+[ext_resource type="Texture2D" uid="uid://ce6xg1xklwxcn" path="res://assets/Sprites/Enemies/Enemy1/inimigo_1_16x.png" id="4_tj185"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0rlf"]
+atlas = ExtResource("3_g0put")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp0vq"]
+atlas = ExtResource("4_tj185")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cafok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0rlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp0vq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6idi"]
 size = Vector2(68, 123)
 
 [node name="CascadeBody" unique_id=570213956 instance=ExtResource("1_pu38e")]
 script = ExtResource("2_4ro4t")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_cafok")
+autoplay = "default"
+
+[node name="TestSprite" parent="." index="2" unique_id=1609984944]
+visible = false
 
 [node name="DamageCollision" parent="DamageArea" parent_id_path=PackedInt32Array(567196179) index="0" unique_id=174066155]
 position = Vector2(0, 26.5)

@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v6uaycjf84nw"
+<<<<<<< HEAD:Assets/Sprites/Parallax/tela de batalha.png.import
 path="res://.godot/imported/tela de batalha.png-5a96e8875de8ad4cc550a915bbfd2685.ctex"
+=======
+path="res://.godot/imported/tela de batalha.png-18bf67aef741ffa7a2882397516a0364.ctex"
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/tela de batalha.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/Sprites/Parallax/tela de batalha.png.import
 source_file="res://Assets/Sprites/Parallax/tela de batalha.png"
 dest_files=["res://.godot/imported/tela de batalha.png-5a96e8875de8ad4cc550a915bbfd2685.ctex"]
+=======
+source_file="res://Assets/parallax/tela de batalha.png"
+dest_files=["res://.godot/imported/tela de batalha.png-18bf67aef741ffa7a2882397516a0364.ctex"]
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/tela de batalha.png.import
 
 [params]
 

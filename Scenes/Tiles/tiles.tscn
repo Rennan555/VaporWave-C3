@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dt2lhq74icp17" path="res://Assets/Sprites/Tiles/discordia.png" id="1_ltv4n"]
 [ext_resource type="Texture2D" uid="uid://ddxlp0ge17gfd" path="res://Assets/Sprites/Tiles/valorama.png" id="2_8lg5b"]
+[ext_resource type="Texture2D" uid="uid://b72nai0ti0ha5" path="res://Assets/Sprites/Tiles/league of lendias.png" id="3_8lg5b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ltv4n"]
 texture = ExtResource("1_ltv4n")
@@ -15,11 +16,18 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lhk6x"]
+texture = ExtResource("3_8lg5b")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
 [sub_resource type="TileSet" id="TileSet_r71ys"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_ltv4n")
 sources/3 = SubResource("TileSetAtlasSource_8lg5b")
+sources/4 = SubResource("TileSetAtlasSource_lhk6x")
 
 [node name="Tiles" type="TileMapLayer" unique_id=1976470278]
 tile_set = SubResource("TileSet_r71ys")

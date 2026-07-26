@@ -2,6 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD:Assets/Fonts/Ruindows UI/Pricedown Bl.otf.import
 uid="uid://c3vbgsdy0bvlk"
 path="res://.godot/imported/Pricedown Bl.otf-afa70ee8b1a7ff3fa35c5239e3b6ca53.fontdata"
 
@@ -9,6 +10,15 @@ path="res://.godot/imported/Pricedown Bl.otf-afa70ee8b1a7ff3fa35c5239e3b6ca53.fo
 
 source_file="res://Assets/Fonts/Ruindows UI/Pricedown Bl.otf"
 dest_files=["res://.godot/imported/Pricedown Bl.otf-afa70ee8b1a7ff3fa35c5239e3b6ca53.fontdata"]
+=======
+uid="uid://dcrcrfpqd7vk4"
+path="res://.godot/imported/Pricedown Bl.otf-c9ff9dcadf4be2398976ec1d7f4b1a77.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/Pricedown Bl.otf"
+dest_files=["res://.godot/imported/Pricedown Bl.otf-c9ff9dcadf4be2398976ec1d7f4b1a77.fontdata"]
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:Assets/Fonts/Pricedown Bl.otf.import
 
 [params]
 

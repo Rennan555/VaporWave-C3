@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf61hfvr4u3jt"
+<<<<<<< HEAD:Assets/Sprites/Parallax/fundo(fixo).png.import
 path="res://.godot/imported/fundo(fixo).png-ca9ab868da37dc087981fb6f7b49ba75.ctex"
+=======
+path="res://.godot/imported/fundo(fixo).png-4bced731de312de3bfcc7fac36072ca9.ctex"
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/fundo(fixo).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/Sprites/Parallax/fundo(fixo).png.import
 source_file="res://Assets/Sprites/Parallax/fundo(fixo).png"
 dest_files=["res://.godot/imported/fundo(fixo).png-ca9ab868da37dc087981fb6f7b49ba75.ctex"]
+=======
+source_file="res://Assets/parallax/fundo(fixo).png"
+dest_files=["res://.godot/imported/fundo(fixo).png-4bced731de312de3bfcc7fac36072ca9.ctex"]
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/fundo(fixo).png.import
 
 [params]
 

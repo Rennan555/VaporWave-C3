@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crmm0ogfdl00q"
+<<<<<<< HEAD:Assets/Sprites/Parallax/taskbar(fixo).png.import
 path="res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"
+=======
+path="res://.godot/imported/taskbar(fixo).png-81a8e672df1fa027b9dca479b2e9e7e9.ctex"
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/taskbar(fixo).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/Sprites/Parallax/taskbar(fixo).png.import
 source_file="res://Assets/Sprites/Parallax/taskbar(fixo).png"
 dest_files=["res://.godot/imported/taskbar(fixo).png-1bb55972e41bd29abcc9596ebc30c5dd.ctex"]
+=======
+source_file="res://Assets/parallax/taskbar(fixo).png"
+dest_files=["res://.godot/imported/taskbar(fixo).png-81a8e672df1fa027b9dca479b2e9e7e9.ctex"]
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/taskbar(fixo).png.import
 
 [params]
 

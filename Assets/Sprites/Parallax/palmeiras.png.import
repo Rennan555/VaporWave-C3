@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhxugqcjwblcq"
+<<<<<<< HEAD:Assets/Sprites/Parallax/palmeiras.png.import
 path="res://.godot/imported/palmeiras.png-1899d59ed96686b8c5168473a23b51a9.ctex"
+=======
+path="res://.godot/imported/palmeiras.png-64cf4bee6ed017aaaa8263779a7a5a65.ctex"
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/palmeiras.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:Assets/Sprites/Parallax/palmeiras.png.import
 source_file="res://Assets/Sprites/Parallax/palmeiras.png"
 dest_files=["res://.godot/imported/palmeiras.png-1899d59ed96686b8c5168473a23b51a9.ctex"]
+=======
+source_file="res://Assets/parallax/palmeiras.png"
+dest_files=["res://.godot/imported/palmeiras.png-64cf4bee6ed017aaaa8263779a7a5a65.ctex"]
+>>>>>>> 2f57a4bd74c06223f0383ad372fa3831be934f97:assets/parallax/palmeiras.png.import
 
 [params]
 

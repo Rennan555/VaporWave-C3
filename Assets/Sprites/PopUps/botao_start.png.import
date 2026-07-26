@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bklbedytlotkm"
-path="res://.godot/imported/game_over.png-a4cadab48d2b9b7bb4906c2a728d1fe7.ctex"
+uid="uid://cmegivhrxwqbn"
+path="res://.godot/imported/botao_start.png-bdae798a1d1285c6861cc0b3c0b0cb0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Menus/game_over.png"
-dest_files=["res://.godot/imported/game_over.png-a4cadab48d2b9b7bb4906c2a728d1fe7.ctex"]
+source_file="res://Assets/Sprites/PopUps/botao_start.png"
+dest_files=["res://.godot/imported/botao_start.png-bdae798a1d1285c6861cc0b3c0b0cb0e.ctex"]
 
 [params]
 

@@ -32,7 +32,7 @@ E aqui está a decisão central do jogo:
 
 A cada hit de dano recebido, a "área de trabalho" vai se degradando um pouco mais. Essa ideia reflete o tema vaporwave de nostalgia digital, decadência tecnológica e a sensação de que o sistema (e talvez você) está sendo lentamente "sobrescrito" por algo mais novo.
 
-🎞️ Sprites Animados
+## 🎞️ Sprites Animados
 <table> <tr> <td align="center"><b>Personagem</b><br/><img src="Assets/readme/personagem.gif" alt="Gif do personagem" width="120"/></td> <td align="center"><b>Pet</b><br/><img src="Assets/readme/gato.gif" alt="Gif do gato" width="120"/></td> </tr> </table>
 
 ## 🎮 Como jogar

@@ -53,7 +53,7 @@ A cada hit de dano recebido, a "área de trabalho" vai se degradando um pouco ma
 - **Batalha**: você controla um mouse e precisa esquivar dos ataques movendo o cursor. Cada estágio conta com pelo menos 2 inimigos diferentes, cada um com um padrão de movimento próprio sincronizado com a música. Ao final de cada estágio, aparece uma roda de skill check, acertar o centro multiplica o score acumulado até aquele ponto.
 
 ## 🎨 Estética & Trilha sonora
-
+![Paleta de cores vaporwave](Assets/readme/s-sunset7-32x.png)
 - Visual pixel art com paleta vaporwave (referência: [Lospec](https://lospec.com/))
 - Trilha sonora original composta em LMMS, com influências lo-fi/chase-music e a técnica clássica de "oitava mais baixa = efeito vaporwave"
 

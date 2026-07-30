@@ -1,6 +1,11 @@
 # Down Grade
 
-![Banner Down Grade](Assets/readme/banner.png)
+<table>
+<tr>
+<td><img src="Assets/readme/banner2.png" alt="Banner Down Grade 1" width="400"/></td>
+<td><img src="Assets/readme/banner.png" alt="Banner Down Grade 2" width="400"/></td>
+</tr>
+</table>
 
 > Um jogo feito em **48 horas** para game jam, tema **Vaporwave**.
 

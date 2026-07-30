@@ -1,6 +1,6 @@
 # Down Grade
 
-![Banner Down Grade](docs/banner.png)
+![Banner Down Grade](Assets/readme/banner.png)
 
 > Um jogo feito em **48 horas** para game jam, tema **Vaporwave**.
 

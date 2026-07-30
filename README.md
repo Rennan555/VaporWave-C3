@@ -42,7 +42,7 @@ A cada hit de dano recebido, a "área de trabalho" vai se degradando um pouco ma
 - **Pet-guia**: indica o caminho "invisível" através do desktop.
 - **Bloco de Notas / Lore**: fragmentos de história desbloqueados progressivamente.
 - **Escolha binária (Atualizar / Negar)**: decisão narrativa com consequência direta no gameplay.
-- **Batalha estilo Undertale**: você controla um mouse (o animal 🐁) e precisa esquivar dos ataques movendo o cursor. Cada estágio conta com pelo menos 2 inimigos diferentes, cada um com um padrão de movimento próprio sincronizado com a música. Ao final de cada estágio, aparece uma roda de skill check (no estilo *Dead by Daylight*) — acertar o centro multiplica o score acumulado até aquele ponto.
+- **Batalha estilo Undertale**: você controla um mouse e precisa esquivar dos ataques movendo o cursor. Cada estágio conta com pelo menos 2 inimigos diferentes, cada um com um padrão de movimento próprio sincronizado com a música. Ao final de cada estágio, aparece uma roda de skill check (no estilo *Dead by Daylight*), acertar o centro multiplica o score acumulado até aquele ponto.
 
 ## 🎨 Estética & Trilha sonora
 

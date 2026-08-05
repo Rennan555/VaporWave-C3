@@ -230,13 +230,9 @@ public partial class Player : Character
 	public void PlayerDie()
 	{
 		AudioManager.Instance.PlayPlayerDie();
-
+		
 		Death death = new Death();
 		death.CallGameOver(this);
-		
-		GlobalEnv.Saturation = 1;
-		GlobalEnv.SetSaturation(GlobalEnv.Saturation);
-		GD.Print(GlobalEnv.Saturation);
 		
 		Visible = false;
 	}

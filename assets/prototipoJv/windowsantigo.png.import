@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp7jl36vmp1p1"
-path="res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"
+path="res://.godot/imported/windowsantigo.png-085f59dcddfbd9111f92e4ad0b3ef2d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/prototipoJv/windowsantigo.png"
-dest_files=["res://.godot/imported/windowsantigo.png-dfb9a54db143f06b5b063eebc60c36e8.ctex"]
+source_file="res://assets/prototipoJv/windowsantigo.png"
+dest_files=["res://.godot/imported/windowsantigo.png-085f59dcddfbd9111f92e4ad0b3ef2d1.ctex"]
 
 [params]
 

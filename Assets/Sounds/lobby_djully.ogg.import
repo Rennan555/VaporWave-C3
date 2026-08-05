@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://be7760rd1l5uk"
-path="res://.godot/imported/lobby_djully.ogg-ae2fd08311bc394667975b4ffc7fcc4e.oggvorbisstr"
+path="res://.godot/imported/lobby_djully.ogg-5a6426f75dac9ef3a3d3c45039c6ce13.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Sounds/lobby_djully.ogg"
-dest_files=["res://.godot/imported/lobby_djully.ogg-ae2fd08311bc394667975b4ffc7fcc4e.oggvorbisstr"]
+source_file="res://assets/Sounds/lobby_djully.ogg"
+dest_files=["res://.godot/imported/lobby_djully.ogg-5a6426f75dac9ef3a3d3c45039c6ce13.oggvorbisstr"]
 
 [params]
 

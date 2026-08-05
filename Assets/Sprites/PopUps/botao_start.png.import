@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmegivhrxwqbn"
-path="res://.godot/imported/botao_start.png-bdae798a1d1285c6861cc0b3c0b0cb0e.ctex"
+path="res://.godot/imported/botao_start.png-0825bdb443d8575a2edd5ec665d0382a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/botao_start.png"
-dest_files=["res://.godot/imported/botao_start.png-bdae798a1d1285c6861cc0b3c0b0cb0e.ctex"]
+source_file="res://assets/Sprites/PopUps/botao_start.png"
+dest_files=["res://.godot/imported/botao_start.png-0825bdb443d8575a2edd5ec665d0382a.ctex"]
 
 [params]
 

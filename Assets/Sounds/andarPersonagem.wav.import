@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://knhtmamvnllj"
-path="res://.godot/imported/andarPersonagem.wav-397ba270902097124caa34d0edcc8470.sample"
+path="res://.godot/imported/andarPersonagem.wav-9bb8ac713f5358f6c545156fc0a70ced.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/andarPersonagem.wav"
-dest_files=["res://.godot/imported/andarPersonagem.wav-397ba270902097124caa34d0edcc8470.sample"]
+source_file="res://assets/Sounds/andarPersonagem.wav"
+dest_files=["res://.godot/imported/andarPersonagem.wav-9bb8ac713f5358f6c545156fc0a70ced.sample"]
 
 [params]
 

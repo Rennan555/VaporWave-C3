@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djq86ac2cgvmg"
-path="res://.godot/imported/notepad_Base.png-354a1af42c57cb4989a6961e334589bf.ctex"
+path="res://.godot/imported/notepad_Base.png-a796cabb726b8c3c2b95ad1a0e6c5310.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/notepad_Base.png"
-dest_files=["res://.godot/imported/notepad_Base.png-354a1af42c57cb4989a6961e334589bf.ctex"]
+source_file="res://assets/Sprites/PopUps/notepad_Base.png"
+dest_files=["res://.godot/imported/notepad_Base.png-a796cabb726b8c3c2b95ad1a0e6c5310.ctex"]
 
 [params]
 

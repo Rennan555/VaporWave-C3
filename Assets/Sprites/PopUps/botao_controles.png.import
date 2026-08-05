@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://olaghqxrxggm"
-path="res://.godot/imported/botao_controles.png-0f5aed304be29b112c46735948010ac7.ctex"
+path="res://.godot/imported/botao_controles.png-b070fb4cc74cf983b268ed1acff50344.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PopUps/botao_controles.png"
-dest_files=["res://.godot/imported/botao_controles.png-0f5aed304be29b112c46735948010ac7.ctex"]
+source_file="res://assets/Sprites/PopUps/botao_controles.png"
+dest_files=["res://.godot/imported/botao_controles.png-b070fb4cc74cf983b268ed1acff50344.ctex"]
 
 [params]
 

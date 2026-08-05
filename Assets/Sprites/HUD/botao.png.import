@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bytk63cbu6ndc"
-path="res://.godot/imported/botao_creditos.png-9fb601aea9ee2407f9f171a492c31440.ctex"
+uid="uid://bn5g45pxw261"
+path="res://.godot/imported/botao.png-26b2a875eb72c3b248c28afeef138b00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/PopUps/botao_creditos.png"
-dest_files=["res://.godot/imported/botao_creditos.png-9fb601aea9ee2407f9f171a492c31440.ctex"]
+source_file="res://assets/Sprites/HUD/botao.png"
+dest_files=["res://.godot/imported/botao.png-26b2a875eb72c3b248c28afeef138b00.ctex"]
 
 [params]
 

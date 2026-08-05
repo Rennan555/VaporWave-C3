@@ -3,6 +3,7 @@ using System;
 
 public partial class Death : Node
 {
+	private GlobalWorldEnvironment GlobalEnv;
 	private PackedScene GameOverPack;
 	
 	private const float Duration = 4f;
@@ -10,6 +11,7 @@ public partial class Death : Node
 	
 	public override void _Ready()
 	{
+		GlobalEnv = GetNode<GlobalWorldEnvironment>("/root/GlobalWorldEnvironment");
 		GameOverPack = GD.Load<PackedScene>("res://Scenes/Telas/GameOverMenu.tscn");
 	}
 	
@@ -21,6 +23,8 @@ public partial class Death : Node
 		}
 		else
 		{
+			GlobalEnv.Saturation = 1f;
+			GlobalEnv.SetSaturation(GlobalEnv.Saturation);
 			GetTree().ChangeSceneToPacked(this.GameOverPack);
 		}
 	}
